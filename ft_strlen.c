@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 19:51:40 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 14:44:28 by luciama2         ###   ########.fr       */
+/*   Created: 2023/09/13 14:52:52 by luciama2          #+#    #+#             */
+/*   Updated: 2023/09/13 17:25:21 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- * int	isalnum(int c);
- * Tests for any character or which isalpha or isdigit is true.
- * Return
- * 		zero if the characterr tests false
- * 		non-zero if the character tests true
+/* string.h
+ *
+ * int	strlen(const char *s)
+ * Computes the length of the string s.
+ * Returns the number of characters that precede the terminating Nul character.
  */
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-
-int	ft_isalnum(int c)
+int	ft_strlen(const char *s)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

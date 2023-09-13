@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 19:51:40 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 14:44:28 by luciama2         ###   ########.fr       */
+/*   Created: 2023/09/13 15:58:02 by luciama2          #+#    #+#             */
+/*   Updated: 2023/09/13 16:31:14 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- * int	isalnum(int c);
- * Tests for any character or which isalpha or isdigit is true.
- * Return
- * 		zero if the characterr tests false
- * 		non-zero if the character tests true
+#include "libft.h"
+
+/* ctype.h
+ * 
+ * int toupper(int c)
+ * converts lower-case to the corresponding upper-case
+ * returns the corresponding uppercase letter, otherwise the argument is
+ * returned unchanged
  */
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-
-int	ft_isalnum(int c)
+int	ft_toupper(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	int	a;
+
+	a = c;
+	if (ft_islower(c))
+		a -= 32;
+	return (a);
 }

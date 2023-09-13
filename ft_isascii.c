@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 19:51:40 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 14:44:28 by luciama2         ###   ########.fr       */
+/*   Created: 2023/09/13 14:37:47 by luciama2          #+#    #+#             */
+/*   Updated: 2023/09/13 16:34:52 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- * int	isalnum(int c);
- * Tests for any character or which isalpha or isdigit is true.
- * Return
- * 		zero if the characterr tests false
- * 		non-zero if the character tests true
+/* ctype.h
+ * int	isascii(int c)
+ *
+ * test for an ascii character
+ * ascii decimal 0..127 included
  */
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-
-int	ft_isalnum(int c)
+int	ft_isascii(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	int	option;
+
+	option = 0;
+	if (c >= 0 && c <= 127)
+		option = 1;
+	return (option);
 }
