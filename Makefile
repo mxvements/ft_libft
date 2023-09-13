@@ -1,0 +1,35 @@
+CC=cc
+
+CFLAGS=-Wall -Wextra -Werror
+
+NAME=libft.a
+
+MY_SOURCES= ft_islower.c \
+			ft_isupper.c \
+			ft_isalpha.c \
+			ft_isdigit.c \
+			ft_isalnum.c
+
+MY_OBJECTS=$(MY_SOURCES:%.c=%.o)	
+
+all: $(NAME)
+
+$(NAME): $(MY_OBJECTS)
+	ar crs $@ $^
+
+test: main.o
+	$(CC) main.o -o o-libft -L. -lft
+
+%.o: %.c
+	$(CC) $(CFLAGS)	-c $<
+
+clean:
+	rm -rf *.o $(MY_OBJECTS)
+
+fclean: clean
+	rm -rf $(NAME)
+
+norminette:
+	norminette $(MY_SOURCES)
+
+re:	fclean all

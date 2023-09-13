@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 20:30:16 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 12:14:31 by luciama2         ###   ########.fr       */
+/*   Created: 2023/09/13 11:23:04 by luciama2          #+#    #+#             */
+/*   Updated: 2023/09/13 12:07:25 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT
+#define LIBFT
 
-/* ctype.h
- * int	isdigit(int c)
- * test for decimal digit character (asccii 48 to 57)
- * return
- * 0 if false
- * non-zero (1) if true
- */
+int	ft_islower(int c);
+int ft_isupper(int c);
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
 
-int	ft_isdigit(int c)
-{
-	int	option;
+#endif
 
-	option = 0;
-	if (c >= 48 && c <= 57)
-		option = 1;
-	return (option);
-}
