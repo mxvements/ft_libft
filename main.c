@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:05:46 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 17:27:39 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/13 17:32:13 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,19 +61,19 @@ int	main(void)
 	
 	//ft_isascii
 	printf("\nft_isasccii\n");
-	printf("%d: %d - should be %d\n", num1, ft_isdigit(num3), isascii(num1));
+	printf("%d: %d - should be %d\n", num1, ft_isdigit(num1), isascii(num1));
 	printf("%d: %d - should be %d\n", num2, ft_isascii(num2), isascii(num2));
 	printf("%d: %d - should be %d\n", num3, ft_isascii(num3), isascii(num3));
-	printf("%d: %d - should be %d\n", num4, ft_isascii(num2), isascii(num4));
+	printf("%d: %d - should be %d\n", num4, ft_isascii(num4), isascii(num4));
 	printf("%d: %d - should be %d\n", limitPos, ft_isascii(limitPos), isascii(limitPos));
 	printf("%d: %d - should be %d\n", limitNeg, ft_isascii(limitNeg), isascii(limitNeg));
 	
 	//ft_isprint
 	printf("\nft_isprint\n");
-	printf("%d: %d - should be %d\n", num1, ft_isprint(num3), isprint(num1));
+	printf("%d: %d - should be %d\n", num1, ft_isprint(num1), isprint(num1));
 	printf("%d: %d - should be %d\n", num2, ft_isprint(num2), isprint(num2));
 	printf("%d: %d - should be %d\n", num3, ft_isprint(num3), isascii(num3));
-	printf("%d: %d - should be %d\n", num4, ft_isprint(num2), isprint(num4));
+	printf("%d: %d - should be %d\n", num4, ft_isprint(num4), isprint(num4));
 	printf("%d: %d - should be %d\n", limitPos, ft_isprint(limitPos), isprint(limitPos));
 	printf("%d: %d - should be %d\n", limitNeg, ft_isprint(limitNeg), isprint(limitNeg));
 	
@@ -84,17 +84,17 @@ int	main(void)
 
 	//ft_toupper
 	printf("\nft_toupper\n");
-	printf("%d: %d - should be %d\n", num1, ft_toupper(num3), toupper(num1));
+	printf("%d: %d - should be %d\n", num1, ft_toupper(num1), toupper(num1));
 	printf("%d: %d - should be %d\n", num2, ft_toupper(num2), toupper(num2));
 	printf("%d: %d - should be %d\n", num3, ft_toupper(num3), toupper(num3));
-	printf("%d: %d - should be %d\n", num4, ft_toupper(num2), toupper(num4));
+	printf("%d: %d - should be %d\n", num4, ft_toupper(num4), toupper(num4));
 	
 	//ft_tolower
 	printf("\nft_tolower\n");
-	printf("%d: %d - should be %d\n", num1, ft_tolower(num3), tolower(num1));
+	printf("%d: %d - should be %d\n", num1, ft_tolower(num1), tolower(num1));
 	printf("%d: %d - should be %d\n", num2, ft_tolower(num2), tolower(num2));
 	printf("%d: %d - should be %d\n", num3, ft_tolower(num3), tolower(num3));
-	printf("%d: %d - should be %d\n", num4, ft_tolower(num2), tolower(num4));
+	printf("%d: %d - should be %d\n", num4, ft_tolower(num4), tolower(num4));
 	
 	return (0);
 }
