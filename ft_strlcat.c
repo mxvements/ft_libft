@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:07:49 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/14 15:24:23 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/14 15:57:44 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	while (j++ <= dstsize)
 		dst[dstlen + j] = '\0';
 	return (dstlen + srclen);
+}
+
+int	main(void)
+{
+	
 }
