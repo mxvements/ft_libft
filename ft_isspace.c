@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 15:58:02 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/14 10:31:10 by luciama2         ###   ########.fr       */
+/*   Created: 2023/09/14 14:47:49 by luciama2          #+#    #+#             */
+/*   Updated: 2023/09/14 14:52:27 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/* ctype.h
- * 
- * int toupper(int c)
- * converts lower-case to the corresponding upper-case
- * returns the corresponding uppercase letter, otherwise the argument is
- * returned unchanged
- */
-
-int	ft_toupper(int c)
+int	ft_isspace(int c)
 {
-	int	a;
+	int	option;
 
-	a = c;
-	if (ft_islower(c))
-		a -= 32;
-	return (a);
+	option = 0;
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f' ||
+		c == '\r' || c == 32)
+	{
+		option = 1;
+	}
+	return (option);
 }

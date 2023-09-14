@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:05:46 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 17:32:13 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/14 13:48:40 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,11 @@ int	main(void)
 	printf("%d: %d - should be %d\n", num3, ft_tolower(num3), tolower(num3));
 	printf("%d: %d - should be %d\n", num4, ft_tolower(num4), tolower(num4));
 	
+	//ft_strnstr
+	printf("\nft_strnstr\n");
+	const char *haystack = "Hola mundo!";
+	const char *needle = "mundo";
+	size_t len = 4;
+	printf"%s\n", ft_strnstr(haystack, needle, len);
 	return (0);
 }

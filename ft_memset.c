@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 15:58:02 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/14 10:31:10 by luciama2         ###   ########.fr       */
+/*   Created: 2023/09/14 14:55:02 by luciama2          #+#    #+#             */
+/*   Updated: 2023/09/14 15:19:11 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* ctype.h
- * 
- * int toupper(int c)
- * converts lower-case to the corresponding upper-case
- * returns the corresponding uppercase letter, otherwise the argument is
- * returned unchanged
+/* string.h
+ * void	*memset(void *b, int c, size_t len)
+ * writes len bytes of value c (converted to unsigned char to the str b.
  */
 
-int	ft_toupper(int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int	a;
+	unsigned int	i;
 
-	a = c;
-	if (ft_islower(c))
-		a -= 32;
-	return (a);
+	while (i < len || b[i] != '\0')
+	{
+		b[i] = (unsigned char)c;
+		i++;
+	}
+	return (b);
 }

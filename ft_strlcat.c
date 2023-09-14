@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:07:49 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 18:45:10 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/14 15:24:23 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* string.h
  *
- * int strlcat(char *dst, char *src, int dstsize)
+ * size_t strlcat(char *dst, const char *src, size_t dstsize)
  * size-bounded string copying and concatenation
  *
  * appends string src to the end of dst, 
@@ -26,18 +26,18 @@
  * (dstsize + srcsize)
  */
 
-int	ft_strlcat(char *dst, char *src, int dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
-	int	j;
+	const size_t	dstlen = ft_strlen(dst);
+	const size_t	srclen = ft_strlen(src);
+	unsigned int	j;
 
-	i = ft_strlen(dst);
 	j = 0;
-	if (dstsize = 0 || i > dstsize)
-		return (i);
+	if (dstsize == 0 || dstlen >= dstsize)
+		return (dstlen);
 	while (j++ < dstsize && src[j] != '\0')
-		dst[i + j] = src[j];
+		dst[dstlen + j] = src[j];
 	while (j++ <= dstsize)
-		dst[i + j] = '\0';
-	return (i + ft_strlen(src));
+		dst[dstlen + j] = '\0';
+	return (dstlen + srclen);
 }
