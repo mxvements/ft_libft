@@ -6,13 +6,14 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:23:04 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/14 15:44:19 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/15 20:57:32 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <stdio.h>
 
 int		ft_islower(int c);
 int		ft_isupper(int c);

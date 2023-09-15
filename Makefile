@@ -15,7 +15,10 @@ MY_SOURCES= ft_islower.c \
 			ft_isprint.c \
 			ft_strlen.c \
 			ft_toupper.c \
-			ft_tolower.c
+			ft_tolower.c \
+			ft_strlcat.c \
+			ft_strchr.c \
+			ft_strrchr.c
 
 MY_OBJECTS=$(MY_SOURCES:%.c=%.o)	
 

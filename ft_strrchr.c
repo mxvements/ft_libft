@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:53:34 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/14 15:34:59 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/15 22:18:41 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,14 @@ char	*ft_strrchr(const char *s, int c)
 	const size_t	srcsize = ft_strlen(s);
 	unsigned int	i;
 
-	i = srcsize - 1;
-	cpy = s + i;
-	while (*cpy != c && i-- >= 0)
+	i = srcsize;
+	cpy = (char *)s + i;
+	if ((char)c == '\0')
+		return (cpy);
+	cpy--;
+	while(s <= cpy && *cpy != (char)c)
 		cpy--;
-	if (c == '\0' || i == 0)
-		cpy = src[srcsize + 1];
+	if (cpy < s)
+		return (0);
 	return (cpy);
 }
