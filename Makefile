@@ -14,11 +14,17 @@ MY_SOURCES= ft_islower.c \
 			ft_isalnum.c \
 			ft_isprint.c \
 			ft_strlen.c \
+			ft_memset.c \
+			ft_bzero.c \
+			ft_strlcpy.c \
+			ft_strlcat.c \
 			ft_toupper.c \
 			ft_tolower.c \
-			ft_strlcat.c \
 			ft_strchr.c \
-			ft_strrchr.c
+			ft_strrchr.c \
+			ft_strncmp.c \
+			ft_strnstr.c \
+			ft_strdup.c
 
 MY_OBJECTS=$(MY_SOURCES:%.c=%.o)	
 

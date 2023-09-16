@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 14:55:02 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/16 16:33:54 by luciama2         ###   ########.fr       */
+/*   Created: 2023/09/16 16:36:32 by luciama2          #+#    #+#             */
+/*   Updated: 2023/09/16 16:41:08 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* string.h
- * void	*memset(void *b, int c, size_t len)
- * writes len bytes of value c (converted to unsigned char to the str b.
- */
+ * void	*memcpy(void *dst, void *src, size_t n);
+ *
+ * copy n bytes from src to dst
+ * If dst and src overlap, behaviour is undefined. 
+ * */
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memcpy(void *dst, const oid *src, size_t n)
 {
-	size_t	i;
-	char	*cpy;
 
-	i = 0;
-	cpy = (char *)b;
-	while (i < len)
-	{
-		cpy[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
 }

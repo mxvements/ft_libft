@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:21:33 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/14 15:38:02 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/16 16:28:44 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,16 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (*needle == '\0')
 		return ((char *)haystack);
 	i = 0;
-	while (haystack[i++] != '\0')
+	while (i < len && haystack[i] != '\0')
 	{
 		j = 0;
-		while (j++ < len && haystack[i + j] == needle[j])
+		while (i + j < len && haystack[i + j] == needle[j])
 		{
-			if ((j + 1) == len)
+			if (needle[j + 1] == '\0')
 				return ((char *)haystack + i);
+			j++;
 		}
+		i++;
 	}
 	return (0);
 }
