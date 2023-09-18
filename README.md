@@ -22,33 +22,55 @@ Click here</a> for the subject of this project.
 
 ## Mandatory part
 
-### Check and manipulate characters:
+### Check and manipulate characters
 
-| Name    | Prototype| Part | Status |
-| -------- | ------- | ---- | ------ |
-| ft_isalpha  |   |   |  |
-| ft_isdigit  |   |   |  |
-| ft_isalnum  |   |   |  |
-| ft_isascii  |   |   |  |
-| ft_isprint  |   |   |  |
-| ft_toupper  |   |   |  |
-| ft_tolower  |   |   |  |
+| **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
+| ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
+| **ft_isalpha** | [x] | int ft_isalpha(int c) | ctype.h | Test for any character for whis isupper or islower is true. Returns: (0) if false, (non-zero) if true | ft_isupper*, ft_islower* | libc |
+| **ft_isdigit**  | [x] | int ft_isdigit(int c) | ctype.h | Test for decimal digit character (ascii 48..57). Return: (0) if false, (non-zero) if true |   | libc |
+| **ft_isalnum**  | [x] | int ft_isalnum(int c) | ctype.h | Tests for any character or which isalpha or isdigit is true. Return: (0) if false, (non-zero) if true. | ft_isdigit, ft_isalpha | libc |
+| **ft_isascii**  | [x] | int ft_isascii(int c) | ctype.h | Test for ascii character (dec 0..127 included). Return: (0) if false, (non-zero) if true |   | libc |
+| **ft_isprint**  | [x] | int ft_isprint(int c) | ctype.h | Tets for any printing character (ascii dec 32..136). Return: (0) if false, (nonzero) if true |   | libc |
+| **ft_toupper**  | [x] | int ft_toupper(int c) | ctype.h | Converts lower-case to the corresponding upper-case. Return: the corresponding upper-case char, otherwise the argument is returned unchanged (was already uppercase or not a char) | ft_islower* | libc |
+| **ft_tolower**  | [x] | int ft_tolower(int c) | ctype.h | Converts upper-case to the corresponding lower-case. Return: the corresponding lower-case char, otherwise the argument is returned unchanged (was already lower-case or not a char)  | ft_isupper* | libc |
+
+ft_isupper, ft_islower -> added after completion of the project, included as static where needed.
 
 ### Manipulate strings
 
-+ ft_strlen
-+ ft_strlcpy
-+ ft_strlcat
-+ ft_strchr
-+ ft_strrchr
-+ ft_strncmp
-+ ft_strnstr
+| **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
+| ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
+| **ft_strlen** | [ ] |   |   |   |   | libc |
+| **ft_strlcpy**  | [ ] |   |   |   |   | libc |
+| **ft_strlcat**  | [ ] |   |   |   |   | libc |
+| **ft_strchr**  | [ ] |   |   |   |   | libc |
+| **ft_strrchr**  | [ ] |   |   |   |   | libc |
+| **ft_strncmp**  | [ ] |   |   |   |   | libc |
+| **ft_strnstr**  | [ ] |   |   |    |   | libc |
+| **ft_strjoin**  | [ ] |   |   |    |   | add |
+| **ft_strtrim**  | [ ] |   |   |    |   | add |
+| **ft_split**  | [ ] |   |   |    |   | add |
+| **ft_strmapi**  | [ ] |   |   |    |   | add |
+| **ft_striteri**  | [ ] |   |   |    |   | add |
 
 ### Manipulate numbers
 
-+ ft_atoi
+| **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
+| ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
+| **ft_atoi** | [ ] |   |   |   |   | libc |
+| **ft_itoa**  | [ ] |   |   |   |   | add |
 
 ### Manipulate memory
+
+| **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
+| ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
+| **ft_strlen** | [ ] |   |   |   |   |   |
+| **ft_strlcpy**  | [ ] |   |   |   |   |   |
+| **ft_strlcat**  | [ ] |   |   |   |   |   |
+| **ft_strchr**  | [ ] |   |   |   |   |   |
+| **ft_strrchr**  | [ ] |   |   |   |   |   |
+| **ft_strncmp**  | [ ] |   |   |   |   |   |
+| **ft_strnstr**  | [ ] |   |   |    |   |   |
 
 + ft_memset
 + ft_bzero
