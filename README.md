@@ -4,11 +4,15 @@
     <img src="https://img.shields.io/badge/score---%20%2F%20100-success?color=008485&style=flat-square" />
     <img src="https://img.shields.io/github/languages/top/mxvements/ft_libft?color=008485&style=flat-square" />
     <img src="https://img.shields.io/github/last-commit/mxvements/ft_libft?color=008485&style=flat-square" />
+    <br>
     <a href='https://www.linkedin.com/in/luciami' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-100000?style=flat-square&logo=Linkedin&logoColor=white&labelColor=black&color=black'/></a>
     <a href='https://profile.intra.42.fr/users/luciama2' target="_blank"><img alt='42' src='https://img.shields.io/badge/Madrid-100000?style=flat-square&logo=42&logoColor=white&labelColor=000000&color=000000'/></a>
+    <br>
+    <a href="#about-the-project-pushpin">About the project</a> / <a href="#how-to-use-bulb">How to use</a> / <a href="#ft_libft-star">ft_libft</a> / <a href="#other">Other</a>
+    <br><br>
 </div>
 
-# About
+# About the project :pushpin:
 
 The first project at 42, libft, involves learning how the standard functions of C programming work by writing them from scratch and creating a personal library. This project is vital as the library will be used in future assignments at 42.
 
@@ -16,9 +20,9 @@ The first project at 42, libft, involves learning how the standard functions of 
 
 Click here</a> for the subject of this project.
 
-# How to use
+# How to use :bulb:
 
-# :star: ft_ibft
+# ft_libft :star:
 
 ## Mandatory part
 
@@ -88,3 +92,11 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 + ft_putnbr_fd
 
 ## Bonus
+
+# Other
+
+## Contact
+
+## License
+
+## Aknowledgments
