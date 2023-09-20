@@ -1,9 +1,9 @@
 <div align="center">
-    <img src="https://img.shields.io/badge/status-ongoing-success?color=008485&style=flat-square" />
-    <img src="https://img.shields.io/badge/started-11%20%2F%2009%20%2F%202023-success?color=008485&style=flat-square" />
-    <img src="https://img.shields.io/badge/score---%20%2F%20100-success?color=008485&style=flat-square" />
-    <img src="https://img.shields.io/github/languages/top/mxvements/ft_libft?color=008485&style=flat-square" />
-    <img src="https://img.shields.io/github/last-commit/mxvements/ft_libft?color=008485&style=flat-square" />
+    <img src="https://img.shields.io/badge/status-ongoing-success?color=00ABAD&style=flat-square" />
+    <img src="https://img.shields.io/badge/started-11%20%2F%2009%20%2F%202023-success?color=00ABAD&style=flat-square" />
+    <img src="https://img.shields.io/badge/score---%20%2F%20100-success?color=00ABAD&style=flat-square" />
+    <img src="https://img.shields.io/github/languages/top/mxvements/ft_libft?color=00ABAD&style=flat-square" />
+    <img src="https://img.shields.io/github/last-commit/mxvements/ft_libft?color=00ABAD&style=flat-square" />
     <br>
     <a href='https://www.linkedin.com/in/luciami' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-100000?style=flat-square&logo=Linkedin&logoColor=white&labelColor=black&color=black'/></a>
     <a href='https://profile.intra.42.fr/users/luciama2' target="_blank"><img alt='42' src='https://img.shields.io/badge/Madrid-100000?style=flat-square&logo=42&logoColor=white&labelColor=000000&color=000000'/></a>
@@ -43,13 +43,14 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 
 | **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
-| **ft_strlen** | [ ] |   |   |   |   | libc |
-| **ft_strlcpy**  | [ ] |   |   |   |   | libc |
-| **ft_strlcat**  | [ ] |   |   |   |   | libc |
-| **ft_strchr**  | [ ] |   |   |   |   | libc |
-| **ft_strrchr**  | [ ] |   |   |   |   | libc |
-| **ft_strncmp**  | [ ] |   |   |   |   | libc |
-| **ft_strnstr**  | [ ] |   |   |    |   | libc |
+| **ft_strlen** | [x] |   |   |   |   | libc |
+| **ft_strlcpy**  | [x] |   |   |   |   | libc |
+| **ft_strlcat**  | [x] |   |   |   |   | libc |
+| **ft_strchr**  | [x] |   |   |   |   | libc |
+| **ft_strrchr**  | [x] |   |   |   |   | libc |
+| **ft_strncmp**  | [x] |   |   |   |   | libc |
+| **ft_strnstr**  | [x] |   |   |    |   | libc |
+| **ft_substr**  | [ ] |   |   |    |   | add |
 | **ft_strjoin**  | [ ] |   |   |    |   | add |
 | **ft_strtrim**  | [ ] |   |   |    |   | add |
 | **ft_split**  | [ ] |   |   |    |   | add |
@@ -67,30 +68,40 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 
 | **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
-| **ft_strlen** | [ ] |   |   |   |   |   |
-| **ft_strlcpy**  | [ ] |   |   |   |   |   |
-| **ft_strlcat**  | [ ] |   |   |   |   |   |
-| **ft_strchr**  | [ ] |   |   |   |   |   |
-| **ft_strrchr**  | [ ] |   |   |   |   |   |
-| **ft_strncmp**  | [ ] |   |   |   |   |   |
-| **ft_strnstr**  | [ ] |   |   |    |   |   |
+| **ft_memset** | [x] |   |   |   |   | libc |
+| **ft_bzero** | [x] |   |   |   |   | libc |
+| **ft_memcpy**  | [ ] |   |   |   |   | libc |
+| **ft_memmove**  | [ ] |   |   |   |   | libc |
+| **ft_memchr**  | [ ] |   |   |   |   | libc |
+| **ft_memcmp**  | [ ] |   |   |   |   | libc |
+| **ft_calloc**  | [ ] |   |   |   |   | libc |
+| **ft_strdup**  | [ ] |   |   |    |   | libc |
 
-+ ft_memset
-+ ft_bzero
-+ ft_memcpy
-+ ft_memmove
-+ ft_memcmp
-+ ft_calloc
-+ ft_strdup
 
 ### Write to a file descriptor
 
-+ ft_putchar_fd
-+ ft_putstr_fd
-+ ft_putendl_fd
-+ ft_putnbr_fd
+| **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
+| ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
+| **ft_putchar_fd** | [ ] |   |   |   |   | add |
+| **ft_putstr_fd** | [ ] |   |   |   |   | add |
+| **ft_putendl_fd**  | [ ] |   |   |   |   | add |
+| **ft_putnbr_fd**  | [ ] |   |   |   |   | add |
 
 ## Bonus
+
+### Write to a file descriptor
+
+| **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
+| ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
+| **ft_lstnew** | [ ] |   |   |   |   | bonus |
+| **ft_lstadd_front** | [ ] |   |   |   |   | bonus |
+| **ft_lstsize**  | [ ] |   |   |   |   | bonus |
+| **ft_lstlast**  | [ ] |   |   |   |   | bonus |
+| **ft_lstadd_back**  | [ ] |   |   |   |   | bonus |
+| **ft_lstdelone**  | [ ] |   |   |   |   | bonus |
+| **ft_lstclear**  | [ ] |   |   |   |   | bonus |
+| **ft_lstiter**  | [ ] |   |   |   |   | bonus |
+| **ft_lstmap**  | [ ] |   |   |   |   | bonus |
 
 # Other
 
