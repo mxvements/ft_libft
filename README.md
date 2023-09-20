@@ -12,15 +12,14 @@
     <br><br>
 </div>
 
-# About the project :pushpin:
-
+# About the project
 The first project at 42, libft, involves learning how the standard functions of C programming work by writing them from scratch and creating a personal library. This project is vital as the library will be used in future assignments at 42.
 
 <a href="https://github.com/jotavare/libft/blob/master/subject/en_subject_libft.pdf">
 
 Click here</a> for the subject of this project.
 
-# How to use :bulb:
+# How to use 
 
 # ft_libft :star:
 
