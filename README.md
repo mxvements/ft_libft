@@ -23,6 +23,23 @@ Click here</a> for the subject of this project.
 
 # ft_libft :star:
 
+
+  
+| **Program name** | libft.a |
+| ---------------- | ------- |
+| **Turn in files** | Makefile, libft.h, ft_*.c |
+| **Makefile** | NAME, all, clean, fclean, re |
+| **External functs** | Detailed below (libc, add, bonus) |
+| **Libft authorized** | n/a |
+| **Description** | Write your own library: a collection of functions that will be a useful tool for your cursus. |
+
++ Mandatory part
+  + Part 1: libc functins
+  + Part 2: additional funcionts
+  
++ Bonus part
+
+
 ## Mandatory part
 
 ### Check and manipulate characters
