@@ -22,8 +22,6 @@ Click here</a> for the subject of this project.
 # How to use 
 
 # ft_libft :star:
-
-
   
 | **Program name** | libft.a |
 | ---------------- | ------- |
@@ -106,7 +104,7 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 
 ## Bonus
 
-### Write to a file descriptor
+### Manipulate linked lists
 
 | **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
