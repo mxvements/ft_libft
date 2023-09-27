@@ -32,7 +32,8 @@ MY_SOURCES= ft_islower.c \
 			ft_calloc.c \
 			ft_strdup.c \
 			ft_putchar_fd.c \
-			ft_putstr_fd.c
+			ft_putstr_fd.c \
+			ft_putendl_fd.c
 
 MY_OBJECTS=$(MY_SOURCES:%.c=%.o)	
 
