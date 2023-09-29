@@ -10,15 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* **************************************************************************
+/* ft_memmove.c 
  * lib				string.h
  * prototyppe		void	*memmove(void *dst, const void *src, size_t len)
- *
- * descr			copy len bytes from src to dst
+ * param			dst: 
+ *					src:
+ *					len:
+ * description		copy len bytes from src to dst
  * 					if src and dst overlap, the copy is always done in a 
  * 					non-destructive manner.
- *return			original value of dst
- * ************************************************************************* */
+ * return			original value of dst
+ */
 
 #include "libft.h"
 

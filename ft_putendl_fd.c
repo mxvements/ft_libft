@@ -11,12 +11,13 @@
 /* ************************************************************************** */
 
 /*  ft_putendl_fd.c
+ *  lib                     no lib - aditional functions
  *  prototype               void    ft_putendl_fd(char *s, int fd)
  *  param                   s: the string to output
  *                          fd: the file descriptor on which to write
  *  return value            none
  *  external funct          write
- *  descr                   ouputs the string 's' to the given file descriptor
+ *  description             ouputs the string 's' to the given file descriptor
  *                          followed by a new line
 */
 
