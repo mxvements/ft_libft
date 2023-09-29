@@ -34,10 +34,10 @@ void    ft_putnbr_fd(int n, int fd)
         nl *= -1;
         wrie(fd, "-", 1);
     }
-    if (n >= 10)
+    if (nl >= 10)
     {
-        ft_putnbr_fd(n / 10, fd);
+        ft_putnbr_fd((int)nl / 10, fd);
     }
-    c = n  + '0';
+    c = (nl % 10)  + '0';
     write(fd, &c, 1);
 }
