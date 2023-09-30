@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:23:04 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/24 19:59:09 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/30 20:50:27 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, const char *set);
 void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
-void    ft_putendl_fd(char *s, int fd)
+void    ft_putendl_fd(char *s, int fd);
 
 #endif

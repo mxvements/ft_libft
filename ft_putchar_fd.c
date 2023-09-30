@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:06:53 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/25 19:06:58 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/30 20:31:30 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@
 
  void   ft_putchar_fd(char c, int fd)
  {
-    write(fr, &c, 1);
+    write(fd, &c, 1);
  }

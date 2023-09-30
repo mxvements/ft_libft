@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 14:00:27 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/29 14:00:31 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/09/30 20:52:56 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void    ft_putnbr_fd(int n, int fd)
     if (nl < 0)
     {
         nl *= -1;
-        wrie(fd, "-", 1);
+        write(fd, "-", 1);
     }
     if (nl >= 10)
     {
