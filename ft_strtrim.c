@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:47:59 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/01 18:43:15 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/01 21:08:32 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,22 @@
 
 #include "libft.h"
 
-static size_t	ft_countchar(char const *s1, const char *set)
+static size_t	ft_countchars(char const *s1, const char *set)
 {
 	size_t	count;
-	char	*cpy;
+	size_t	i;
 
 	count = 0;
-	cpy = (char *)s1;
-	while (!cpy)
+	while (!s1)
 	{
-		if (*cpy == *set)
-			count++;
-		cpy++;
+		i = 0;
+		while (set[i] != '\0')
+		{
+			if (*s1 == *set)
+				count++;
+			i++;
+		}
+		s1++;
 	}
 	return (count);
 }
@@ -47,17 +51,23 @@ char	*ft_strtrim(char const *s1, const char *set)
 	char 			*strtrim;
 	size_t			i;
 	size_t			j;
-	size_t const	len = ft_strlen(s1) - ft_countchar(s1, set);
+	size_t			k;
+	size_t const	len = ft_strlen(s1) - ft_countchars(s1, set);
 
 	strtrim = (char *)malloc(sizeof(char) * (len + 1));
 	if (!strtrim)
 		return(0);
 	i = 0;
-	j = 0;
-	while (cpy[i] == *set)
-		i++;
-	while (cpy[i] != *set && j < len)
-		strtrim[j++] = cpy[i++];
+	while (s1[i] != '\0')
+	{
+		j = 0;
+		k = 0;
+		while (s1[i] == set[j])
+			j++;
+		while (s1[i] != set[j] && k < len)
+			strtrim[k++] = s1[i];
+		i++;	
+	}
 	strtrim[j] = '\0';
 	return (strtrim);
 }
