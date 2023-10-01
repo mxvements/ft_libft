@@ -33,6 +33,7 @@ MY_SOURCES= ft_islower.c \
 			ft_strdup.c \
 			ft_substr.c \
 			ft_strjoin.c \
+			ft_strmapi.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \

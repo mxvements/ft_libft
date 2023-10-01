@@ -6,23 +6,23 @@
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:47:59 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/30 20:27:01 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/01 18:43:15 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* ft_strtrim
- * lib
- * prototype			char *ft_strtrim(char const *s1, const char *set)
- * params				s1: the string to be trimmed
+ * LIB					-
+ * PROTOTYPE			char *ft_strtrim(char const *s1, const char *set)
+ * PARAMS				s1: the string to be trimmed
  *						set: the reference set of character to trim
- * return				the trimmed string
+ * RETURN				the trimmed string
  *						NULL if the allocation fails.
- * external functs		malloc
- * description			allocates (with malloc(3)) and returns a copy of s1
+ * EXTERNAL FUNCTS		malloc
+ * DESCRIPTION			allocates (with malloc(3)) and returns a copy of s1
  *						with the characters specified in 'set' removed from the
  *						beginning and the end of the string
- * turn in files		-
-*/
+ * TURN IN FILES		*
+ * 						*/
 
 #include "libft.h"
 

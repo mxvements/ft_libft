@@ -6,18 +6,17 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:58:02 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/14 10:31:10 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/01 16:52:56 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** * 
- * lib:				ctype.h
- * prototype:		int toupper(int c)
- * 
- * description:		Converts lower-case to the corresponding upper-case
- * returns:			Corresponding upper-case letter, otherwise the argument is
+/* 
+ * LIB				ctype.h
+ * PROTOTYPE		int toupper(int c)
+ * DESCRIPTION		converts lower-case to the corresponding upper-case
+ * RETURNS			corresponding upper-case letter, otherwise the argument is
  * 					returned unchanged
- * ************************************************************************** */
+ * 					*/
 
 #include "libft.h"
 
