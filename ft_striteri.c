@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 19:09:00 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/01 19:13:14 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/01 19:21:01 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,10 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+	size_t	i;
 
+	i = -1;
+	while (s[++i] != '\0')
+		f(i, &s[i]);
+	return ;
 }
