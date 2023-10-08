@@ -58,7 +58,7 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 
 | **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
-| **ft_strlen** | [x] |   |   |   |   | libc |
+| **ft_strlen** | [x] | size_t strlen(const char *s) | string.h | compute the length of s, number of characters that preecede NULL character | - | libc |
 | **ft_strlcpy**  | [x] |   |   |   |   | libc |
 | **ft_strlcat**  | [x] |   |   |   |   | libc |
 | **ft_strchr**  | [x] |   |   |   |   | libc |
@@ -66,17 +66,17 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 | **ft_strncmp**  | [x] |   |   |   |   | libc |
 | **ft_strnstr**  | [x] |   |   |    |   | libc |
 | **ft_substr**  | [ ] |   |   |    |   | add |
-| **ft_strjoin**  | [ ] |   |   |    |   | add |
+| **ft_strjoin**  | [x] |   |   |    |   | add |
 | **ft_strtrim**  | [ ] |   |   |    |   | add |
 | **ft_split**  | [ ] |   |   |    |   | add |
-| **ft_strmapi**  | [ ] |   |   |    |   | add |
-| **ft_striteri**  | [ ] |   |   |    |   | add |
+| **ft_strmapi**  | [x] |   |   |    |   | add |
+| **ft_striteri**  | [x] |   |   |    |   | add |
 
 ### Manipulate numbers
 
 | **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
-| **ft_atoi** | [ ] |   |   |   |   | libc |
+| **ft_atoi** | [x] |   |   |   |   | libc |
 | **ft_itoa**  | [ ] |   |   |   |   | add |
 
 ### Manipulate memory
@@ -85,22 +85,22 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
 | **ft_memset** | [x] |   |   |   |   | libc |
 | **ft_bzero** | [x] |   |   |   |   | libc |
-| **ft_memcpy**  | [ ] |   |   |   |   | libc |
-| **ft_memmove**  | [ ] |   |   |   |   | libc |
-| **ft_memchr**  | [ ] |   |   |   |   | libc |
-| **ft_memcmp**  | [ ] |   |   |   |   | libc |
-| **ft_calloc**  | [ ] |   |   |   |   | libc |
-| **ft_strdup**  | [ ] |   |   |    |   | libc |
+| **ft_memcpy**  | [x] |   |   |   |   | libc |
+| **ft_memmove**  | [x] |   |   |   |   | libc |
+| **ft_memchr**  | [x] |   |   |   |   | libc |
+| **ft_memcmp**  | [x] |   |   |   |   | libc |
+| **ft_calloc**  | [x] |   |   |   |   | libc |
+| **ft_strdup**  | [x] |   |   |    |   | libc |
 
 
 ### Write to a file descriptor
 
 | **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
-| **ft_putchar_fd** | [ ] |   |   |   |   | add |
-| **ft_putstr_fd** | [ ] |   |   |   |   | add |
-| **ft_putendl_fd**  | [ ] |   |   |   |   | add |
-| **ft_putnbr_fd**  | [ ] |   |   |   |   | add |
+| **ft_putchar_fd** | [x] |   |   |   |   | add |
+| **ft_putstr_fd** | [x] |   |   |   |   | add |
+| **ft_putendl_fd**  | [x] |   |   |   |   | add |
+| **ft_putnbr_fd**  | [x] |   |   |   |   | add |
 
 ## Bonus
 

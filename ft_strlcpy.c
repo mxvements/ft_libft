@@ -6,36 +6,39 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:46:43 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/23 16:21:14 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/08 19:39:47 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-/* string.h
- *
- * size_t	strlcpy(char *dst, const char *src, int len)
- *
- * size-bounded string copying and concatenation
- * copies up to (len - 1 ) from the src to dst, NUL terminating the 
- * result if size is not 0.
- *
- * return size_t
- * length of src, srcsize
- *
- * if the return value >= size, the output of the string has been truncated
+/* ft_strlcpy.c
+ * LIBRARY				string.h
+ * PROTOTYPE			size_t
+ * 						ft_strlcpy(char *dst, const char *src, int dstsize)
+ * PARAMS				dst: string to copy to
+ * 						src: string to copy from
+ * 						dstsize: size to copy (included NULL)
+ * RETURN VALUE			size_t, total length of the string thet tried to create
+ * DESCRIPTION			size-bounded string copying, copies up to (len -1)
+ * 						from src to dst, NULL terminating the result if 
+ * 						size != 0, room for the NULL should be included in
+ * 						dstsize. If src and dst string overlap, the behaviour
+ * 						is undefined. If the return value >= dstsize, the 
+ * 						output of the string has been truncated.
+ * EXTERNAL FUNCT		ft_strlen(src)
  */
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	const size_t	srcsize = ft_strlen(src);
 	unsigned int	i;
 
 	i = 0;
-	if (size == 0)
+	if (dstsize == 0)
 		return (srcsize);
-	while ((i < (size - 1)) && src[i] != '\0')
+	while ((i < (dstsize - 1)) && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;

@@ -6,13 +6,13 @@
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:47:59 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/01 21:08:32 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/08 21:20:50 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* ft_strtrim
  * LIB					-
- * PROTOTYPE			char *ft_strtrim(char const *s1, const char *set)
+ * PROTOTYPE			char *ft_strtrim(char const *s1, char const *set)
  * PARAMS				s1: the string to be trimmed
  *						set: the reference set of character to trim
  * RETURN				the trimmed string
@@ -21,53 +21,79 @@
  * DESCRIPTION			allocates (with malloc(3)) and returns a copy of s1
  *						with the characters specified in 'set' removed from the
  *						beginning and the end of the string
- * TURN IN FILES		*
+ * TURN IN FILES		*i
+ * se podria hacer los getindex con ft_strchr(set, s1[i])
  * 						*/
 
 #include "libft.h"
 
-static size_t	ft_countchars(char const *s1, const char *set)
+static int	ft_getfirstindex(char const *s1, char const *set)
 {
-	size_t	count;
 	size_t	i;
+	size_t	j;
+	int		flag;
 
-	count = 0;
-	while (!s1)
+	i = -1;
+	while (s1[++i] != '\0')
 	{
-		i = 0;
-		while (set[i] != '\0')
+		j = -1;
+		flag = 0;
+		while (set[++j] != '\0')
 		{
-			if (*s1 == *set)
-				count++;
-			i++;
+			if (s1[i] == set[j])
+				flag = 1;
 		}
-		s1++;
+		if (flag == 0)
+			return (i);
 	}
-	return (count);
+	return (i);
 }
 
-char	*ft_strtrim(char const *s1, const char *set)
+static int	ft_getlastindex(char const *s1, char const *set)
 {
-	char 			*strtrim;
+	size_t const	len = ft_strlen(s1);
 	size_t			i;
 	size_t			j;
-	size_t			k;
-	size_t const	len = ft_strlen(s1) - ft_countchars(s1, set);
+	int				flag;
 
-	strtrim = (char *)malloc(sizeof(char) * (len + 1));
-	if (!strtrim)
-		return(0);
-	i = 0;
-	while (s1[i] != '\0')
+	i = 1;
+	if (i > len)
+		return (len);
+	while ((len - i) >= 0)
 	{
-		j = 0;
-		k = 0;
-		while (s1[i] == set[j])
-			j++;
-		while (s1[i] != set[j] && k < len)
-			strtrim[k++] = s1[i];
-		i++;	
+		j = -1;
+		flag = 0;
+		while (set[++j] != '\0')
+		{
+			if (s1[len - i] == set[j])
+				flag = 1;
+		}
+		if (flag == 0)
+			return (len - i);
+		i++;
 	}
-	strtrim[j] = '\0';
-	return (strtrim);
+	return (len - i);
 }
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int const		firstindex = ft_getfirstindex(s1, set);
+	int const		lastindex = ft_getlastindex(s1, set);
+	size_t			len;
+
+	len = (lastindex - firstindex) + 1;
+	return (ft_substr(s1, firstindex, len));
+}
+/*
+int	main(void)
+{
+	char	*s1 = "a  Hello    gbca  a";
+	char	*set = "abc fjfljaf6";
+
+	
+	printf("str: \"%s\"\n", s1);
+	printf("start index %d\n", ft_getfirstindex(s1, set));
+	printf("last index %d\n", ft_getlastindex(s1, set));
+	printf("trimmed str: \"%s\"\n", ft_strtrim(s1, set));
+	return (0);
+}*/

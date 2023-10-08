@@ -6,17 +6,20 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:52:52 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/15 15:44:57 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/08 19:25:37 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* string.h
- *
- * size_t	strlen(const char *s)
- * Computes the length of the string s.
- * Returns the number of characters that precede the terminating Nul character.
+ * LIBRARY				string.h
+ * PROTOTYPE			size_t strlen(const char *s)
+ * PARAMS				s: string to compute its length
+ * RETURN VALUE 		size_t: number of chars 	
+ * DESCRIPTION			compute the length of s, number of characters that
+ * 						preecede NULL characterr
+ * EXTERNAL FUNCT		-
  */
 
 size_t	ft_strlen(const char *s)
