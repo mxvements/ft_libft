@@ -90,7 +90,7 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 | **ft_memmove**  | [x] |   |   |   |   | libc |
 | **ft_memchr**  | [x] |   |   |   |   | libc |
 | **ft_memcmp**  | [x] |   |   |   |   | libc |
-| **ft_calloc**  | [x] |   |   |   |   | libc |
+| **ft_calloc**  | [x] | void *calloc(size_t count, size_t size) | stdlib.h | memory allocation with enough space for count objects that are size bytes of memory each and returns a pointerto the allocated memory filled with bytes of i value (0) | malloc | libc |
 | **ft_strdup**  | [x] |   |   |    |   | libc |
 
 
