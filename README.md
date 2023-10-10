@@ -67,7 +67,8 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 | **ft_strnstr**  | [x] |   |   |    |   | libc |
 | **ft_substr**  | [ ] |   |   |    |   | add |
 | **ft_strjoin**  | [x] |   |   |    |   | add |
-| **ft_strtrim**  | [ ] |   |   |    |   | add |
+| **ft_strjoin**  | [x] |   |   |    |   | add |
+| **ft_strtrim**  | [x] | char *ft_strtrim(char const *s1, char const *set) | - | allocates (with malloc(3)) and returns a copy of s1 with the characters specified in 'set' removed from the beginning and the end of the string | malloc, ft_strlen(s1), ft_substr(s1, start, len), ft_getfirstindex(s1, set), ft_getlastindex(s1, set), ft_strchr(set, s1[i]), for the getindex functs  | add |
 | **ft_split**  | [ ] |   |   |    |   | add |
 | **ft_strmapi**  | [x] |   |   |    |   | add |
 | **ft_striteri**  | [x] |   |   |    |   | add |

@@ -15,14 +15,18 @@
  * PROTOTYPE			char *ft_strtrim(char const *s1, char const *set)
  * PARAMS				s1: the string to be trimmed
  *						set: the reference set of character to trim
- * RETURN				the trimmed string
+ * RETURN				char *,	the trimmed string
  *						NULL if the allocation fails.
  * EXTERNAL FUNCTS		malloc
+ *						ft_strlen(s1)
+ *						ft_substr(s1, start, len)
+ *						ft_getfirstindex(s1, set)
+ *						ft_getlastindex(s1, set)
+ *						ft_strchr(set, s1[i]), for the getindex functs
  * DESCRIPTION			allocates (with malloc(3)) and returns a copy of s1
  *						with the characters specified in 'set' removed from the
  *						beginning and the end of the string
- * TURN IN FILES		*i
- * se podria hacer los getindex con ft_strchr(set, s1[i])
+ * TURN IN FILES		*
  * 						*/
 
 #include "libft.h"
