@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:47:59 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/08 21:20:50 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/12 20:58:03 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int const		firstindex = ft_getfirstindex(s1, set);
 	int const		lastindex = ft_getlastindex(s1, set);
-	size_t			len;
+	int				len;
 
-	len = (lastindex - firstindex) + 1;
-	return (ft_substr(s1, firstindex, len));
+	if (lastindex >= firstindex)
+		len = (lastindex - firstindex) + 1;
+	else
+		len = 0;
+	return (ft_substr(s1, firstindex, (size_t)len));
 }
 /*
 int	main(void)
