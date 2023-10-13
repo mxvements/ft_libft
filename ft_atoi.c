@@ -10,22 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** *
- * lib			stdlib.h
- *
- * prototype	int atoi(const char *str)
- *
- * descr		convert initial portion of str to int representation
- *
- * notes		stops whenever theres a not accepted char
- * 				first discards as many whitespace char (isspace) until the
- * 				1st non-whitespace is found
- * 				takes an optionl plus or minus sign followed by as many
- * 				base-10 digits as posisible
- *
- * retun		int representation
- * 				if no valid conversion, returns (0)
- *****************************************************************************/
+/* ft_atoi
+ * LIB				stdlib.h
+ * PROTOTYPE		int atoi(const char *str)
+ * PARAMS			str: string to convert to int
+ * RETURN			int representation
+ * 					if no valid conversion, returns (0)
+ * EXTERNAL FUNCTS	ft_isspace(int c)
+ *					ft_isdigit(int c)
+ * DESCRIPTION		convert initial portion of str to int representation
+ * NOTES			stops whenever theres a not accepted char
+ * 					first discards as many whitespace char (isspace) until the
+ * 					1st non-whitespace is found
+ * 					takes an optionl plus or minus sign followed by as many
+ * 					base-10 digits as posisible
+ *					*/
 
 #include "libft.h"
 

@@ -67,7 +67,8 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 | **ft_strnstr**  | [x] |   |   |    |   | libc |
 | **ft_substr**  | [ ] |   |   |    |   | add |
 | **ft_strjoin**  | [x] |   |   |    |   | add |
-| **ft_strtrim**  | [ ] |   |   |    |   | add |
+| **ft_strjoin**  | [x] |   |   |    |   | add |
+| **ft_strtrim**  | [x] | char *ft_strtrim(char const *s1, char const *set) | - | allocates (with malloc(3)) and returns a copy of s1 with the characters specified in 'set' removed from the beginning and the end of the string | malloc, ft_strlen, ft_substr, ft_getfirstindex, ft_getlastindex, ft_strchr | add |
 | **ft_split**  | [ ] |   |   |    |   | add |
 | **ft_strmapi**  | [x] |   |   |    |   | add |
 | **ft_striteri**  | [x] |   |   |    |   | add |
@@ -76,7 +77,7 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 
 | **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
-| **ft_atoi** | [x] |   |   |   |   | libc |
+| **ft_atoi** | [x] | int atoi(const char *str) | stdlib.h | convert initial portion of str to int representation | ft_isspace, ft_isdigit | libc |
 | **ft_itoa**  | [ ] |   |   |   |   | add |
 
 ### Manipulate memory
@@ -89,7 +90,7 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 | **ft_memmove**  | [x] |   |   |   |   | libc |
 | **ft_memchr**  | [x] |   |   |   |   | libc |
 | **ft_memcmp**  | [x] |   |   |   |   | libc |
-| **ft_calloc**  | [x] |   |   |   |   | libc |
+| **ft_calloc**  | [x] | void *calloc(size_t count, size_t size) | stdlib.h | memory allocation with enough space for count objects that are size bytes of memory each and returns a pointerto the allocated memory filled with bytes of i value (0) | malloc | libc |
 | **ft_strdup**  | [x] |   |   |    |   | libc |
 
 
