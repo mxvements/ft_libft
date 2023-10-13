@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:46:36 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/13 21:40:58 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/13 22:12:18 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
  */
 
 #include "libft.h"
+#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -34,7 +35,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	srccpy = (char *)src;
 	if (srccpy < dstcpy && ((size_t)(dstcpy - srccpy) < len))
 	{
-		i = len + 1;
+		i = len;
 		while (--i > 0)
 			dstcpy[i] = srccpy[i];
 		return ((void *)dstcpy);
@@ -47,4 +48,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return ((void *)dstcpy);
 	}
 	return (ft_memcpy(dst, src, len));
+}
+
+int	main(void)
+{
+	char  	src[] = "lorem ipsum dolor sit a";
+	
+	printf("%s\n",memmove((void *)(src + 1), src, 8));
+	return (0);
 }
