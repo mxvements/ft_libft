@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 14:00:27 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/12 16:27:56 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/13 21:39:48 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,29 @@
 */
 
 #include "libft.h"
+#include <limits.h>
 
 void    ft_putnbr_fd(int n, int fd)
 {
     char       c;
     long long   nl;
 
-    if (n < 0)
+    nl = (long long) n;
+    if (nl < 0)
     {
-        n *= -1;
+        nl *= -1;
         write(fd, "-", 1);
     }
-    nl = (long) n;
     if (nl >= 10)
     {
-        ft_putnbr_fd((int)nl / 10, fd);
+        ft_putnbr_fd((nl / 10), fd);
     }
-    c = (nl % 10)  + '0';
+    c = (unsigned int)(nl % 10) + '0';
     write(fd, &c, 1);
 }
+/*
+int	main(void)
+{
+	ft_putnbr_fd(INT_MIN, 2);
+	return (0);
+}*/
