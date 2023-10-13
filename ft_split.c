@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 19:30:18 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/12 20:59:44 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/13 20:14:52 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static size_t	ft_countwords(char const *s, char c)
 	size_t	i;
 
 	i = 0;
-	if (!s)
+	if (!s || s[0] == '\0')
 		return (0);
 	wordcount = 1;
 	while (s[i] != '\0')
@@ -44,22 +44,55 @@ static size_t	ft_countwords(char const *s, char c)
 	return (wordcount);
 }
 
+static char	*ft_strtrimwrapper(char const *s, char c)
+{
+	char	set[2];
+
+	set[0] = c;
+	set[1] = '\0';
+	return (ft_strtrim(s, set));
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char			**wrdlist;
-	char 			*wrd;
-	char const		*strim = ft_strtrim(s, c);
-	size_t const	wordcount = ft_countwords(strim, c);
-	size_t			i;
+	char const		*strim = ft_strtrimwrapper(s, c);
+	int				wordcount;
+	int				i;
+	size_t			charcount;
 
+	wordcount = ft_countwords(strim, c);
 	wrdlist = (char **)malloc(sizeof(char *) * (wordcount + 1));
 	if (!wrdlist)
 		return (0);
-	i = 0;
-	while (i <= wordcount)
+	i = ft_strlen(strim) - 1;
+	charcount = 0;
+	wrdlist[wordcount--] = NULL;
+	while (i >= 0)
 	{
-		//wrdlist[i] = ft_substr(s, each start, each len)
+		charcount++;
+		if (i == 0 || (strim[i] != c && strim[i - 1] == c))
+			wrdlist[wordcount--] = ft_substr(strim, i, charcount);
+		if (strim[i] == c)
+			charcount = 0;
+		i--;
+	}
+	free((void *)strim);
+	return (wrdlist);
+}
+/*
+int	main(void)
+{
+	char	**wrdlist;
+	int		i;
+
+	wrdlist = ft_split("gggggggggg", 'g');
+	i = 0;
+	while (wrdlist[i] != '\0')
+	{
+		printf("%s\n", wrdlist[i]);
 		i++;
 	}
-}
-
+	getchar();
+	return (0);
+}*/

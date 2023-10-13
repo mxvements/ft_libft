@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:47:59 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/12 20:58:03 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/13 20:13:57 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,24 @@
 
 static int	ft_getfirstindex(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	j;
-	int		flag;
+	size_t		i;
+	size_t		j;
+	int			flag;
 
-	i = -1;
-	while (s1[++i] != '\0')
+	i = 0;
+	while (s1[i] != '\0')
 	{
-		j = -1;
+		j = 0;
 		flag = 0;
-		while (set[++j] != '\0')
+		while (set[j] != '\0')
 		{
 			if (s1[i] == set[j])
 				flag = 1;
+			j++;
 		}
 		if (flag == 0)
 			return (i);
+		i++;
 	}
 	return (i);
 }
@@ -56,17 +58,18 @@ static int	ft_getlastindex(char const *s1, char const *set)
 	size_t			j;
 	int				flag;
 
-	i = 1;
-	if (i > len)
+	if (len == 0)
 		return (len);
-	while ((len - i) >= 0)
+	i = 1;
+	while (i <= len)
 	{
-		j = -1;
+		j = 0;
 		flag = 0;
-		while (set[++j] != '\0')
+		while (set[j] != '\0')
 		{
 			if (s1[len - i] == set[j])
 				flag = 1;
+			j++;
 		}
 		if (flag == 0)
 			return (len - i);
