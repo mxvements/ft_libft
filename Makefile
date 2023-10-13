@@ -34,6 +34,7 @@ MY_SOURCES= ft_islower.c \
 			ft_substr.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
+			ft_itoa.c \
 			ft_strmapi.c \
 			ft_striteri.c \
 			ft_putchar_fd.c \
