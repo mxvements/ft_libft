@@ -6,26 +6,37 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:46:36 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/13 22:12:18 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/14 15:09:24 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* ft_memmove.c 
- * lib				string.h
- * prototyppe		void	*memmove(void *dst, const void *src, size_t len)
- * param			dst: 
+ * LIB:				string.h
+ * PROTOTYPPE		void *memmove(void *dst, const void *src, size_t n)
+ * PARAM			dst: 
  *					src:
- *					len:
- * description		copy len bytes from src to dst
+ *					n:
+ * RETURN			original value of dst
+ * DESCRIPTION		copy n bytes from src to dst
  * 					if src and dst overlap, the copy is always done in a 
  * 					non-destructive manner.
- * return			original value of dst
+ *					- overlaping
+ * 						case 1: src overlaps with dst
+ * 								-> copy in reverse, i should be int to check 0
+ *							|	<src...>
+ * 							| 	      <dst...>
+ *						case 2: dst overlaps with src 
+ *								-> copy forwards, i can be size_t, i < n
+ *							|	<dst...>
+ * 							| 	      <src...>
+ *					- non-overlaping: memcpy
+ * TURN IN FILES	-
  */
 
 #include "libft.h"
 #include <string.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	char	*dstcpy;
@@ -33,27 +44,31 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	dstcpy = (char *)dst;
 	srccpy = (char *)src;
-	if (srccpy < dstcpy && ((size_t)(dstcpy - srccpy) < len))
+	if (srccpy < dstcpy && ((size_t)(dstcpy - srccpy) < n))
 	{
-		i = len;
-		while (--i > 0)
+		i = n;
+		while ((int)--i >= 0)
 			dstcpy[i] = srccpy[i];
 		return ((void *)dstcpy);
 	}
-	if (srccpy > dstcpy && ((size_t)(srccpy - dstcpy) < len))
+	if (srccpy > dstcpy && ((size_t)(srccpy - dstcpy) < n))
 	{
-		i = 0 - 1;
-		while (++i < len)
+		i = 0;
+		while (i < n)
+		{
 			dstcpy[i] = srccpy[i];
+			i++;
+		}
 		return ((void *)dstcpy);
 	}
-	return (ft_memcpy(dst, src, len));
+	return (ft_memcpy(dst, src, n));
 }
-
+/*
 int	main(void)
 {
 	char  	src[] = "lorem ipsum dolor sit a";
-	
-	printf("%s\n",memmove((void *)(src + 1), src, 8));
+
+	printf("%s\n",(char *)(ft_memmove((void *)(src + 1), src, (size_t)8)));
 	return (0);
 }
+*/

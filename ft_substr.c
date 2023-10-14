@@ -32,8 +32,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t			i;
 	size_t const	ssize = ft_strlen(s);
 
-	if (len > ssize)
-		len = ssize;
+	if (!s)
+		return (0);
+	if (ssize < start)
+		len = 0;
+	if (len > (ssize - start))
+		len = ssize - start;
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (0);
@@ -46,3 +50,32 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
+
+/*
+int	main(void)
+{
+	char	s1[]="tripouille";
+	char	s2[]="1";
+	char	s3[]="0123456789";
+	char	*s;
+
+	s = ft_substr(s1, 100, 1); //el problema de este es el start
+	printf("%s -> %s\n", s1, s);
+	free (s);
+	//check(!strcmp(s, ""));
+	//mcheck(s, 1); free(s); showLeaks();
+
+	s = ft_substr(s2, 42, 42000000); //el problema de este es el len
+	printf("%s -> %s\n", s2, s);
+	free (s);
+	//check(!strcmp(s, ""));
+	//mcheck(s, 1); free(s); free(str); showLeaks();
+
+	s = ft_substr(s3, 9, 10);
+	printf("%s -> %s\n", s3, s);
+	free (s);
+	//check(!strcmp(s, "9"));
+	//mcheck(s, 2); free(s); free(str); showLeaks();
+
+	return (0);
+}*/
