@@ -43,12 +43,20 @@ MY_SOURCES= ft_islower.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
+MY_BONUS_SOURCES=	ft_lstnew.c \
+					ft_lstadd_front.c
+
 MY_OBJECTS=$(MY_SOURCES:%.c=%.o)	
+
+MY_BONUS_OBJECTS=$(MY_BONUS_SOURCES:%.c=%.o)
 
 all: $(NAME)
 
 $(NAME): $(MY_OBJECTS)
-	ar crs $@ $^
+	ar -crs $@ $^
+
+bonus: $(NAME) $(MY_BONUS_OBJECTS)
+	ar -crs $^
 
 test: main.o
 	$(CC) main.o -o $(TEST_NAME) -L. -lft
@@ -57,7 +65,7 @@ test: main.o
 	$(CC) $(CFLAGS)	-c $<
 
 clean:
-	rm -rf *.o $(MY_OBJECTS)
+	rm -rf *.o $(MY_OBJECTS) $(MY_BONUS_OBJECTS)
 
 tclean: clean
 	rm -rf $(TEST_NAME)

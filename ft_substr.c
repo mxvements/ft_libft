@@ -64,6 +64,7 @@ int	main(void)
 	free (s);
 	//check(!strcmp(s, ""));
 	//mcheck(s, 1); free(s); showLeaks();
+	
 
 	s = ft_substr(s2, 42, 42000000); //el problema de este es el len
 	printf("%s -> %s\n", s2, s);
