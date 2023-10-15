@@ -17,7 +17,7 @@
  * PARAMS				s:	the string to iterate
  * 						f:	the function to apply to each character
  * RETURN				none
- * EXTERNAL FUNCT		none
+ * EXTERNAL FUNCT		nonela
  * DESCRIPTION			applies 'f' on each character of the string passed as
  * 						argument, passing its index as first argument. 
  * 						each character is passed by address to 'f' to be mod
