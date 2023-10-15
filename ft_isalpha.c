@@ -12,6 +12,44 @@
 
 #include "libft.h"
 
+/* ctype.hh
+ *
+ * int	islower(int c)
+ * TEST fot ascii 97 to 122 (decimal), both included
+ * RETURN
+ * 0 if false
+ * non-zero (1) if true
+ */
+
+static int	ft_islower(int c)
+{
+	int	option;
+
+	option = 0;
+	if (c >= 97 && c <= 122)
+		option = 1;
+	return (option);
+}
+
+/*
+ * ctype.h
+ * int	isupper(int c)
+ * Test for ascii 65 to 90, both included (decimal)
+ * Return
+ * 	0 if false
+ * 	non-zerro (1) if true
+ */
+
+static int	ft_isupper(int c)
+{
+	int	option;
+
+	option = 0;
+	if (c >= 65 && c <= 90)
+		option = 1;
+	return (option);
+}
+
 /*
  * ctype.h
  *
