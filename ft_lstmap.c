@@ -42,7 +42,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	cpy = lst;
 	newlst = NULL;
-	while(cpy)
+	while (cpy)
 	{
 		node = ft_lstnew(f(cpy->content));
 		if (!node)

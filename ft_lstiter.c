@@ -28,7 +28,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void*))
 {
 	t_list	*cpy;
 
-	if(!lst || !f)
+	if (!lst || !f)
 		return ;
 	cpy = lst;
 	while (cpy->next != NULL)
