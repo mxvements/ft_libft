@@ -6,22 +6,24 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 19:51:40 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 14:44:28 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/16 15:59:56 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- * int	isalnum(int c);
- * Tests for any character or which isalpha or isdigit is true.
- * Return
- * 		zero if the characterr tests false
- * 		non-zero if the character tests true
- */
+#include "libft.h"
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
+/* ft_isalnum
+ * LIB				ctype.h
+ * PROTOTYPE		int isalnum(int c)
+ * PARAMS			c: char (in aascii) to test
+ * RETURN VALUES	int, 0:false, 1:true, non-zero if true
+ * EXTERNAL FUNCTS	ft_isalpha
+ * 					ft_isdigit
+ * DESCRIPTION		tests for any char for which isalpha or isdigit is true
+ */
 
 int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
+

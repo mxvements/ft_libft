@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 14:52:52 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/16 15:57:43 by luciama2         ###   ########.fr       */
+/*   Created: 2023/09/14 15:13:24 by luciama2          #+#    #+#             */
+/*   Updated: 2023/10/16 16:00:13 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* ft_strlen
- * LIBRARY				string.h
- * PROTOTYPE			size_t strlen(const char *s)
- * PARAMS				s: string to compute its length
- * RETURN VALUES 		size_t: number of chars 	
- * EXTERNAL FUNCTS		-
- * DESCRIPTION			compute the length of s, number of characters that
- * 						preecede NULL characterr
+/* ft_bzero
+ * LIB				strings.h
+ * PROTOTYPE		void (void *s, size_t n)
+ * PARAMS			s: address start setting the memory
+ * 					n: amount of memory to initialize to 0
+ * RETURN VALUES	none
+ * EXTERNAL FUNCTS	ft_memset
+ * DESCRIPTION		erases the data int the 'n' bytes of the memory starting
+ * 					at the location pointed by 's', by writing '0' in the area
  */
-
-size_t	ft_strlen(const char *s)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	ft_memset(s, 0, n);
 }
 

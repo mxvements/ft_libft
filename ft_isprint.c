@@ -6,19 +6,20 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:45:19 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 14:52:42 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/16 15:58:25 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ctype.h
- *
- * int	isprint(int c)
- * Tests for any printing character, ascii 32..126 both included
- * Returns 
- * 0 if false
- * non-zero (1) if true
- */
+#include "libft.h"
 
+/* ft_isprint
+ * LIB				ctype.h
+ * PROTOTYPE		int isprint(int c)
+ * PARAMS			c: char in ascii representation to test
+ * RETURN VALUES	int, 0:false, 1: true: non-zero if true
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		tests for any printing character, ascii 32..126 included
+ */
 int	ft_isprint(int c)
 {
 	int	option;
@@ -28,3 +29,4 @@ int	ft_isprint(int c)
 		option = 1;
 	return (option);
 }
+

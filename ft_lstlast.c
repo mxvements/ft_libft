@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 14:52:52 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/16 15:57:43 by luciama2         ###   ########.fr       */
+/*   Created: 2023/10/15 15:55:33 by luciama2          #+#    #+#             */
+/*   Updated: 2023/10/16 15:58:11 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/* ft_strlen
- * LIBRARY				string.h
- * PROTOTYPE			size_t strlen(const char *s)
- * PARAMS				s: string to compute its length
- * RETURN VALUES 		size_t: number of chars 	
+/* ft_lstlast			bonus
+ * LIB					-
+ * PROTOTYPE			t_list ft_llstlast(t_list *lst)
+ * PARAMETERS			lst: the beginning of the list
+ * RETURN VALUE			t_list, last node of the list
  * EXTERNAL FUNCTS		-
- * DESCRIPTION			compute the length of s, number of characters that
- * 						preecede NULL characterr
+ * DESCRIPTION			return the last node of the list
  */
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+t_list	*ft_lstlast(t_list *lst)
+{
+	t_list	*last;
+
+	last = lst;
+	if (!last)
+		return (NULL);
+	while (last->next != NULL)
+		last = last->next;
+	return (last);
 }
 

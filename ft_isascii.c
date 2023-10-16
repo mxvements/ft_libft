@@ -6,15 +6,19 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:37:47 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 16:34:52 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/16 15:59:06 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ctype.h
- * int	isascii(int c)
- *
- * test for an ascii character
- * ascii decimal 0..127 included
+#include "libft.h"
+
+/* ft_isascii
+ * LIB				ctype.h
+ * PROTOTYPE		int isascii(int c)
+ * PARAMS			c: char (ascii representation) to test
+ * RETURN VALUES	int, 0:false, 1:true, non-zero if true
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		test for an ascii character from 0..127 both included
  */
 
 int	ft_isascii(int c)
@@ -26,3 +30,4 @@ int	ft_isascii(int c)
 		option = 1;
 	return (option);
 }
+

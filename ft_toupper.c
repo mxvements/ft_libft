@@ -6,18 +6,28 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:58:02 by luciama2          #+#    #+#             */
-/*   Updated: 2023/09/13 16:31:14 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/16 15:57:02 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* ctype.h
- * 
- * int toupper(int c)
- * converts lower-case to the corresponding upper-case
- * returns the corresponding uppercase letter, otherwise the argument is
- * returned unchanged
+static int	ft_islower(int c)
+{
+	if (c >= 97 && c <= 122)
+		return (1);
+	return (0);
+}
+
+/* ft_tolower
+ * LIB				ctype.h
+ * PROTOTYPE		int toupper(int c)
+ * PARAMS			c: char to convert, in ascii representation
+ * RETURN VALUES	int, converted char in ascii representation
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		lower-case to upper-case conversion
+ * 					if the value is a lower-case char, returns the upper-case
+ * 					char, otherwise the argument is returned unchanged
  */
 
 int	ft_toupper(int c)
@@ -29,3 +39,4 @@ int	ft_toupper(int c)
 		a -= 32;
 	return (a);
 }
+
