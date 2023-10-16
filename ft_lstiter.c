@@ -16,7 +16,7 @@
  * PARAMETERS		lst: address of a pointer to a node
  * 					f: address of the function used to itereate on the list
  * RETURN VALUE		void
- * EXTERNAL FUNCTS	none
+ * EXTERNAL FUNCTS	-
  * DESCRIPTION		iterates the list 'lst' and applies the function 'f' on the
  * 					content of each node.
  */

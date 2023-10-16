@@ -17,7 +17,7 @@
  * PROTOTYPE		size_t ft_countdigits(int c)
  * PARAMS			c: number to count its digits
  * RETURN VALUES	size_t, number of digits
- * EXTERNAL FUNCTS	none
+ * EXTERNAL FUNCTS	-
  * DESCRIPTION		count the number of digits of a number 'c'
  */
 

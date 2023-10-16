@@ -12,7 +12,7 @@
 
 /* ft_putchar_fd
  * LIBRARY			-
- * PROTOTYPE		void    ft_putchar_fd(hcar c, int fd)
+ * PROTOTYPE		void ft_putchar_fd(hcar c, int fd)
  * PARAMS			c: char output
  *					fd: file descr on which to write
  * RETURN VALUES    -

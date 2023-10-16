@@ -10,23 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** *
- * lib			string.h
- *
- * prototype	void *memchr(const void *s, int c, size_t n)
- *
- * descr		locate the first occurrence of c (converted to unsigned char)
- * 				in str s
- *
- * return		pointer to the byte located or NULL if no such byte exists
- * 				within n bytes
- * ************************************************************************* */
-
 #include "libft.h"
 
 /* ft_memchr
  * LIB				string.h
- * PROTOTYPE		void	*ft_memchr(const void *s, int c, size_t n)
+ * PROTOTYPE		void *ft_memchr(const void *s, int c, size_t n)
  * PARAMS			s: string (mem area) to searach for c
  * 					c: char to search
  * 					n: amount of bytes to search

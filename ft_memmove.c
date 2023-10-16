@@ -17,6 +17,7 @@
  *					src: string to copy
  *					n: amount of bytes
  * RETURN VALUES	original value of dst
+ * EXTERNAL FUNCTS	ft_memcpy
  * DESCRIPTION		copy 'n' bytes from src to dst
  * 					if 'src' and 'dst' overlap, the copy is always done in a 
  * 					non-destructive manner (memory safe).

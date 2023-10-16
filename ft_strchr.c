@@ -19,7 +19,7 @@
  * 					c: char to search in the memory area
  * RETURN VALUES	char *, ptr to the located char
  * 					NULL if char ddoes not appear in 's'
- * EXTERNAL FUNCTS	none
+ * EXTERNAL FUNCTS	-
  * DESCRIPTION		locates the char (ascii representation) 'c' in 's'
  * 					the terminating null is considered as part of the string
  */

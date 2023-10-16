@@ -15,7 +15,7 @@
  * PROTOTYPE			int	ft_lstsize(t_lst *lst)
  * PARAMETERS			lst: the beginning of the list
  * RETURN VALUUE		int: length of the list
- * EXTERNAL FUNCTS		none
+ * EXTERNAL FUNCTS		-
  * DESCRIPTION			counts the number of nodes in a list
  */
 

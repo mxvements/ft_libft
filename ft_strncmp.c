@@ -20,9 +20,9 @@
  * 					n:
  * RETURN VALUES	int, s1-s2 converted to unsigned char
  * 					return NULL if n = 0
- * EXTERNAL FUNCTS	none
+ * EXTERNAL FUNCTS	-
  * DESCRIPTION		compare strings, not more than n characters
- * 					character that appear after a '\0' are not compared
+ * 					compare strings, not more than n characters
  * 					the comparison is done using unsigned characters, so than 
  * 					'\200' is > '\0'
  */

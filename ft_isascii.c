@@ -17,7 +17,7 @@
  * PROTOTYPE		int isascii(int c)
  * PARAMS			c: char (ascii representation) to test
  * RETURN VALUES	int, 0:false, 1:true, non-zero if true
- * EXTERNAL FUNCTS	none
+ * EXTERNAL FUNCTS	-
  * DESCRIPTION		test for an ascii character from 0..127 both included
  */
 

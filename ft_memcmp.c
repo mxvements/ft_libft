@@ -20,7 +20,7 @@
  * 					n: number of bytes to compare
  * RETURN VALUES	int, s1 - s2
  * 					if s1 == s2 || (s1 == 0 && s2 == 0), returns (0)
- * EXTERNAL FUNCTS	none
+ * EXTERNAL FUNCTS	-
  * DESCRIPTION		compare byte string 's1' against 's2', both assumed 'n'
  * 					bytes long
  */

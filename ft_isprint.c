@@ -17,7 +17,7 @@
  * PROTOTYPE		int isprint(int c)
  * PARAMS			c: char in ascii representation to test
  * RETURN VALUES	int, 0:false, 1: true: non-zero if true
- * EXTERNAL FUNCTS	none
+ * EXTERNAL FUNCTS	-
  * DESCRIPTION		tests for any printing character, ascii 32..126 included
  */
 int	ft_isprint(int c)

@@ -16,7 +16,7 @@
  * PARAMETERS			lst: address of a pointer to the 1st link of a list
  * 						new: address of a ptr to the node to be added to list
  * RETURN VALUE			void
- * EXTERNAL FUNCTS		none
+ * EXTERNAL FUNCTS		-
  * DESCRIPTION			ads the node 'new' at the beginning of the list
  */
 

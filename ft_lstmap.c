@@ -21,6 +21,9 @@
  * RETURN VALUE		t_list, the new list
  * 					NULL if the allocation fails
  * EXTERNAL FUNCTS	malloc, free
+ * 					ft_lstnew
+ * 					ft_lstclear
+ * 					ft_lstadd_back
  * DESCRIPTION		iterates the list 'lst' and applies the funcion 'f' on the
  * 					content of each node.
  * 					creates a new list resulting of the successive applications

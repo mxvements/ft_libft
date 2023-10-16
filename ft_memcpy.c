@@ -19,7 +19,7 @@
  * 					src: pointer to strin to copy
  * 					n: amout of bytes to copy
  * RETURN VALUES	void *, pointer to 'dst'
- * EXTERNAL FUNCTS	none
+ * EXTERNAL FUNCTS	-
  * DESCRIPTION		copy 'n' bytes from 'src' to 'dst'
  * 					if 'dst' and 'src' overlap, behaviour is undefined.
  */

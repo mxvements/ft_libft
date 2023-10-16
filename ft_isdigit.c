@@ -17,7 +17,7 @@
  * PROTOTYPE		int isdigit(int c)
  * PARAMS			c: char in ascii representation to test
  * RETURN VALUES	int, 0:false, 1: true: non-zero if true
- * EXTERNAL FUNCTS	none
+ * EXTERNAL FUNCTS	-
  * DESCRIPTION		tests for decimal digit  character (ascii 48..57 included)
  */
 
