@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 20:30:16 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/16 15:58:42 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:05:15 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ int	ft_isdigit(int c)
 		option = 1;
 	return (option);
 }
-

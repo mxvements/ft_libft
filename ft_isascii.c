@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:37:47 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/16 15:59:06 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:05:05 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ int	ft_isascii(int c)
 		option = 1;
 	return (option);
 }
-

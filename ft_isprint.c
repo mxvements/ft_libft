@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:45:19 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/16 15:58:25 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:05:24 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ int	ft_isprint(int c)
 		option = 1;
 	return (option);
 }
-

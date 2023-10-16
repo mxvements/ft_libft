@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 15:55:33 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/16 15:58:11 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:05:35 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,3 @@ t_list	*ft_lstlast(t_list *lst)
 		last = last->next;
 	return (last);
 }
-
