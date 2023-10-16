@@ -35,3 +35,8 @@ t_list	*ft_lstnew(void *content)
 	newnode->next = NULL;
 	return (newnode);
 }
+
+int	main(void)
+{
+	
+}

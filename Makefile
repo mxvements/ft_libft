@@ -1,4 +1,4 @@
-CC=cc
+CC=gcc
 
 CFLAGS=-Wall -Wextra -Werror
 
@@ -63,8 +63,8 @@ $(NAME): $(MY_OBJECTS)
 bonus: $(NAME) $(MY_BONUS_OBJECTS)
 	ar -crs $^
 
-test: main.o
-	$(CC) main.o -o $(TEST_NAME) -L. -lft
+test: test_libft.o
+	$(CC) test_libft.o -o $(TEST_NAME) -L. -lft
 
 %.o: %.c
 	$(CC) $(CFLAGS)	-c $<

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_libft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -24,7 +24,7 @@ char	*ft_tester_int(int rslt1, int rslt2)
 	return (rslt1 == rslt2 ? "OK" : "ERROR");
 }
 
-char	*ft_tester_size_t(size_t rslt1, size_t rslt2)
+char	*ft_tester_sizet(size_t rslt1, size_t rslt2)
 {
 	return (rslt1 == rslt2 ? "OK" : "ERROR");
 }
@@ -211,22 +211,22 @@ void	ft_strlen_test(void)
 
 	rslt1 = ft_strlen(STR_EMPTY);
 	rslt2 = strlen(STR_EMPTY);
-	tester = ft_tester_size_t(rslt1, rslt2);
+	tester = ft_tester_sizet(rslt1, rslt2);
 	printf("/01/:	%s ->	%s\n", STR_EMPTY, tester);
 
 	rslt1 = ft_strlen(STR_SPACE1);
 	rslt2 = strlen(STR_SPACE1);
-	tester = ft_tester_size_t(rslt1, rslt2);
+	tester = ft_tester_sizet(rslt1, rslt2);
 	printf("/02/:	%s ->	%s\n", STR_SPACE1, tester);
 
 	rslt1 = ft_strlen(STR_SPACE2);
 	rslt2 = strlen(STR_SPACE2);
-	tester = ft_tester_size_t(rslt1, rslt2);
+	tester = ft_tester_sizet(rslt1, rslt2);
 	printf("/03/:	%s ->	%s\n", STR_SPACE2, tester);
 
 	rslt1 = ft_strlen(STR1);
 	rslt2 = strlen(STR1);
-	tester = ft_tester_size_t(rslt1, rslt2);
+	tester = ft_tester_sizet(rslt1, rslt2);
 	printf("/03/:	%s ->	%s\n", STR1, tester);
 }
 
@@ -300,6 +300,36 @@ void	ft_memmove_test(void)
 	printf("/01/:(overlaping)	%s\n", tester);
 }
 
+void ft_strlcpy_test(void)
+{
+	char	*tester;
+	char	rslt1[256];
+	char	rslt2[256];
+	size_t	len = 4;
+
+	printf("\033[0;35m");
+	printf("\nft_strlcpy - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_sizet(ft_strlcpy(rslt1, STR_EMPTY, len), strlcpy(rslt2, STR_EMPTY, len));
+	printf("/01/:	%s ->	%s\n", STR_EMPTY, tester);
+}
+
+void	ft_strlcat_test(void)
+{
+	char	*tester;
+	char	rslt1[256];
+	char	rslt2[256];
+	size_t	len = 4;
+
+	printf("\033[0;35m");
+	printf("\nft_strlcpy - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_sizet(ft_strlcat(rslt1, STR_EMPTY, len), strlcat(rslt2, STR_EMPTY, len));
+	printf("/01/:	%s ->	%s\n", STR_EMPTY, tester);
+}
+
 int	main(void)
 {	
 	ft_isalnum_test();
@@ -312,10 +342,10 @@ int	main(void)
 	ft_bzero_test();
 	ft_memcpy_test();
 	ft_memmove_test();
-
-	/*
 	ft_strlcpy_test();
 	ft_strlcat_test();
+
+	/*
 	ft_toupper_test();
 	ft_tolower_test();
 	ft_strchr_test();

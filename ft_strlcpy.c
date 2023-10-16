@@ -54,6 +54,6 @@ int    main(void)
 
     printf("%s \\ %lu\n", dst, ft_strlcpy(dst, src, size));
     printf("%s \\ %lu", dst, strlcpy(dst, src, size));
-
+	
     return (0);
 }*/
