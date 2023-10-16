@@ -6,9 +6,7 @@ NAME=libft.a
 
 TEST_NAME=libft.out
 
-MY_SOURCES= ft_islower.c \
-			ft_isupper.c \
-			ft_isalpha.c \
+MY_SOURCES= ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isascii.c \
 			ft_isalnum.c \
