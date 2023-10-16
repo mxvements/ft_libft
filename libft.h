@@ -13,6 +13,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <ctype.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <errno.h>
