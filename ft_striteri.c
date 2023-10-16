@@ -10,21 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_striteri
  * LIB					-
  * PROTOTYPE			void
  * 						ft_striteri(char *s, void (*f)(unsigned int, char*));
  * PARAMS				s:	the string to iterate
  * 						f:	the function to apply to each character
- * RETURN				none
- * EXTERNAL FUNCT		nonela
+ * RETURN VALUES		void
+ * EXTERNAL FUNCT		-
  * DESCRIPTION			applies 'f' on each character of the string passed as
  * 						argument, passing its index as first argument. 
  * 						each character is passed by address to 'f' to be mod
- * TURN IN FILES		-
  */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

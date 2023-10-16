@@ -11,20 +11,21 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-/* string.h
- *
- * char	*strnstr(const char *haystack, const char *needle, size_t len);
- *
- * locates the first occurrence of the null-terminate string needle in the
- * string haystack, where not more than len characters are searched.
- * Characters that appear after 
- * 
- * return
- * if needle is \0, haystack is returned
- * if needle does not occur in haytacks, null is returned
- * otherwise a pointer on the 1st char of the 1st occurrence is returned
+/* ft_strnstr
+ * LIB				string.h
+ * PROTOTYPE		char	*strnstr(const char *haystack, const char *needle,
+ * 									size_t len)
+ * PARAMS			haystack: 'big' str to search in
+ * 					needle: 'small' str to seach in 'big' str
+ * 					len: amount of chars to check in haystack
+ * RETURN VALUES	char *, ptr to the first occurrence
+ * 					if needle = null, haystack is returned
+ * 					if haystack is not in needle, returns null
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		locates the first occurrence of the null-terminate string
+ * 					'needle' in the string 'haystack', where not more than
+ * 					'len' characters are searched.
  */
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

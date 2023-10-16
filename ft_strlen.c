@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-/* string.h
+/* ft_strlen
  * LIBRARY				string.h
  * PROTOTYPE			size_t strlen(const char *s)
  * PARAMS				s: string to compute its length
- * RETURN VALUE 		size_t: number of chars 	
+ * RETURN VALUES 		size_t: number of chars 	
+ * EXTERNAL FUNCTS		-
  * DESCRIPTION			compute the length of s, number of characters that
  * 						preecede NULL characterr
- * EXTERNAL FUNCT		-
  */
 
 size_t	ft_strlen(const char *s)

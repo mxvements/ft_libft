@@ -11,23 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 /* ft_strlcpy.c
  * LIBRARY				string.h
- * PROTOTYPE			size_t
- * 						ft_strlcpy(char *dst, const char *src, int dstsize)
+ * PROTOTYPE			size_t ft_strlcpy(char *dst, 
+ * 											const char *src, int dstsize)
  * PARAMS				dst: string to copy to
  * 						src: string to copy from
  * 						dstsize: size to copy (included NULL)
- * RETURN VALUE			size_t, total length of the string thet tried to create
+ * RETURN VALUES		size_t, total length of the string thet tried to create
+ * EXTERNAL FUNCTS		ft_strlen(src)
  * DESCRIPTION			size-bounded string copying, copies up to (len -1)
  * 						from src to dst, NULL terminating the result if 
  * 						size != 0, room for the NULL should be included in
  * 						dstsize. If src and dst string overlap, the behaviour
  * 						is undefined. If the return value >= dstsize, the 
  * 						output of the string has been truncated.
- * EXTERNAL FUNCT		ft_strlen(src)
  */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

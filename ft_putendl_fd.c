@@ -12,10 +12,10 @@
 
 /*  ft_putendl_fd.c
  *  LIBRARY					-
- *  PROTOTYPE				void    ft_putendl_fd(char *s, int fd)
- *  PARAM					s: the string to output
+ *  PROTOTYPE				void ft_putendl_fd(char *s, int fd)
+ *  PARAMS					s: the string to output
  *  						fd: the file descriptor on which to write
- *  RETURN					none
+ *  RETURN					void
  *  EXTERNAL FUNCT			write
  *  DESCRIPTION				ouputs the string 's' to the given file descriptor
  *                          followed by a new line

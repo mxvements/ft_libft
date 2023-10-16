@@ -10,21 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ft_split
- * LIB					-
- * PROTOTYPE			char **ft_split(char const *s, char c)
- * PARAMS				s: the string to be split
- * 						c: the delimiter character
- * RETURN				char **: array of new strings resulting from the split
- * 						NULL if the allocation fails
- * EXTERNAL FUNCTS		malloc
- * DESCRIPTION			allocates (with malloc(3)) and returns an array of
- * 						strings obtained by splitting 's' using the character
- * 						'c' as a delimiter. The array must end with a NULL
- * 						pointer.
- */
-
 #include "libft.h"
+
+/* ft_countwords
+ * LIB					-
+ * PROTOTYPE			size_t ft_countwords(char const *s, char c)
+ * PARAMS				s: str to count words
+ * 						c: char to check as separator
+ * RETURN VALUES		size_t, amount of words in str
+ * 						if s == NULL of s = "", returns 0
+ * EXTERNAL FUNCTS		-
+ * DESCRIPTION			counts the amount of words in 'str' using 'c' char as
+ * 						word separator
+ */
 
 static size_t	ft_countwords(char const *s, char c)
 {
@@ -44,6 +42,17 @@ static size_t	ft_countwords(char const *s, char c)
 	return (wordcount);
 }
 
+/* ft_strtrimwrapper
+ * LIB					-
+ * PROTOTYPE			char *ft_strtrimwrapper(char const *s, char c)
+ * PARAMS				s: string to trim
+ * 						c: char to trim from 's'
+ * RETURN VALUES		char *,
+ * EXTERNAL FUNCTS		ft_strtrim
+ * DESCRIPTION			wrapper function to ft_strtrim in order to build
+ * 						an string from a char
+ */
+
 static char	*ft_strtrimwrapper(char const *s, char c)
 {
 	char	set[2];
@@ -52,6 +61,23 @@ static char	*ft_strtrimwrapper(char const *s, char c)
 	set[1] = '\0';
 	return (ft_strtrim(s, set));
 }
+
+/* ft_split
+ * LIB					-
+ * PROTOTYPE			char **ft_split(char const *s, char c)
+ * PARAMS				s: the string to be split
+ * 						c: the delimiter character
+ * RETURN VALUES		char **: array of new strings resulting from the split
+ * 						NULL if the allocation fails
+ * EXTERNAL FUNCTS		malloc
+ * 						ft_strtrimwrapper	
+ * 						ft_substr
+ * 						ft_countwords
+ * DESCRIPTION			allocates (with malloc(3)) and returns an array of
+ * 						strings obtained by splitting 's' using the character
+ * 						'c' as a delimiter. The array must end with a NULL
+ * 						pointer.
+ */
 
 char	**ft_split(char const *s, char c)
 {

@@ -13,7 +13,6 @@
 /* ft_lstadd_front		bonus
  * LIB					-
  * PROTOTYPE			void ft_lstadd_front(t_list **lst, t_list *new)
- * TURN IN FILES		-
  * PARAMETERS			lst: address of a pointer to the 1st link of a list
  * 						new: address of a ptr to the node to be added to list
  * RETURN VALUE			void

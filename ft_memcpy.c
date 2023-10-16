@@ -12,12 +12,17 @@
 
 #include "libft.h"
 
-/* string.h
- * void	*memcpy(void *dst, void *src, size_t n);
- *
- * copy n bytes from src to dst
- * If dst and src overlap, behaviour is undefined. 
- * */
+/* ft_memcpy
+ * LIB				string.h
+ * PROTOTYPE		void *memcpy(void *dst, void *src, size_t n)
+ * PARAMS			dst: pointer to memory area to copy 'src'
+ * 					src: pointer to strin to copy
+ * 					n: amout of bytes to copy
+ * RETURN VALUES	void *, pointer to 'dst'
+ * EXTERNAL FUNCTS	none
+ * DESCRIPTION		copy 'n' bytes from 'src' to 'dst'
+ * 					if 'dst' and 'src' overlap, behaviour is undefined.
+ */
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

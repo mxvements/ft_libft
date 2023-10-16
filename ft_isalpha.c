@@ -12,53 +12,47 @@
 
 #include "libft.h"
 
-/* ctype.hh
- *
- * int	islower(int c)
- * TEST fot ascii 97 to 122 (decimal), both included
- * RETURN
- * 0 if false
- * non-zero (1) if true
+/* ft_islower
+ * LIB					ctype.h
+ * PROTOTYPE			int islower(int c)
+ * PARAMS				c: ascii representation of char
+ * RETURN VALUES		int, 0: false, 1:true, non-zero if true
+ * EXTERNAL FUNCTS		-
+ * DESCRIPTION			checks for ascii 97 to 122 (decimal), both included
  */
 
 static int	ft_islower(int c)
 {
-	int	option;
-
-	option = 0;
 	if (c >= 97 && c <= 122)
-		option = 1;
-	return (option);
+		return (1);
+	return (0);
 }
 
-/*
- * ctype.h
- * int	isupper(int c)
- * Test for ascii 65 to 90, both included (decimal)
- * Return
- * 	0 if false
- * 	non-zerro (1) if true
+/* ft_isupper
+ * LIB				ctype.h
+ * PROTOTYPE		int isupper(int c)
+ * PARAMS			c: ascii representation of char to check
+ * RETURN VALUES	int, 0:false, 1: true, non-zero if true
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		tests for ascii 65 to 90 (decimal), both included
  */
 
 static int	ft_isupper(int c)
 {
-	int	option;
-
-	option = 0;
 	if (c >= 65 && c <= 90)
-		option = 1;
-	return (option);
+		return (1);
+	return (0);
 }
 
-/*
- * ctype.h
- *
- * int	isalpha(int c)
- *
- * Test for any character for whis isupper or islower is true
- * Return
- * 	0 if false
- * 	non-zero (1) if true
+/* ft_isalpha
+ * LIB					ctype.h
+ * PROTOTYPE			int isalpha(int c)
+ * PARAMS				c: char to check in ascii representation
+ * RETURN VALUES		int, 0:false, 1:true, non-zero if true
+ * EXTERNAL FUNCTIONS	ft_islower
+ * 						ft_isupper
+ * DESCRIPTION			test for any character for which ispper & islower
+ * 						are true.
  */
 
 int	ft_isalpha(int c)

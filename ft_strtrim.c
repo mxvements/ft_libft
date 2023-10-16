@@ -10,26 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ft_strtrim
- * LIB					-
- * PROTOTYPE			char *ft_strtrim(char const *s1, char const *set)
- * PARAMS				s1: the string to be trimmed
- *						set: the reference set of character to trim
- * RETURN				char *,	the trimmed string
- *						NULL if the allocation fails.
- * EXTERNAL FUNCTS		malloc
- *						ft_strlen(s1)
- *						ft_substr(s1, start, len)
- *						ft_getfirstindex(s1, set)
- *						ft_getlastindex(s1, set)
- *						ft_strchr(set, s1[i]), for the getindex functs
- * DESCRIPTION			allocates (with malloc(3)) and returns a copy of s1
- *						with the characters specified in 'set' removed from the
- *						beginning and the end of the string
- * TURN IN FILES		*
- * 						*/
-
 #include "libft.h"
+
+/* ft_getfirstindex
+ * LIB				-
+ * PROTOTYPE		int	ft_getfirstindex(char const *s1, char const *set)
+ * PARAMS			s1: string to parse
+ * 					set: set of chars to skip from the beginning
+ * RETURN VALUES	int, index of the first char in 's1' that is not in 'set'
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		get the index of the char that is not included in the
+ * 					set of chars to skip
+ */
 
 static int	ft_getfirstindex(char const *s1, char const *set)
 {
@@ -54,6 +46,16 @@ static int	ft_getfirstindex(char const *s1, char const *set)
 	}
 	return (i);
 }
+
+/* ft_getlastindex
+ * LIB				-
+ * PROTOTYPE		int ft_getlastindex(char const *s1, char const *set)
+ * PARAMS			s1: string to parse
+ * 					set: set of chars to skip from the ending
+ * RETURN VALUES	int, index of the last char that is not in the set
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		get the index of the last char that is not in the set
+ */
 
 static int	ft_getlastindex(char const *s1, char const *set)
 {
@@ -81,6 +83,24 @@ static int	ft_getlastindex(char const *s1, char const *set)
 	}
 	return (len - i);
 }
+
+/* ft_strtrim
+ * LIB					-
+ * PROTOTYPE			char *ft_strtrim(char const *s1, char const *set)
+ * PARAMS				s1: the string to be trimmed
+ *						set: the reference set of character to trim
+ * RETURN				char *,	the trimmed string
+ *						NULL if the allocation fails.
+ * EXTERNAL FUNCTS		malloc
+ *						ft_strlen(s1)
+ *						ft_substr(s1, start, len)
+ *						ft_getfirstindex(s1, set)
+ *						ft_getlastindex(s1, set)
+ *						ft_strchr(set, s1[i]), for the getindex functs
+ * DESCRIPTION			allocates (with malloc(3)) and returns a copy of s1
+ *						with the characters specified in 'set' removed from the
+ *						beginning and the end of the string
+ */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

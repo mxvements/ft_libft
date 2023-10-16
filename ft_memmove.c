@@ -13,13 +13,13 @@
 /* ft_memmove.c 
  * LIB:				string.h
  * PROTOTYPPE		void *memmove(void *dst, const void *src, size_t n)
- * PARAM			dst: 
- *					src:
- *					n:
- * RETURN			original value of dst
- * DESCRIPTION		copy n bytes from src to dst
- * 					if src and dst overlap, the copy is always done in a 
- * 					non-destructive manner.
+ * PARAMS			dst: memory area to copy 'src'
+ *					src: string to copy
+ *					n: amount of bytes
+ * RETURN VALUES	original value of dst
+ * DESCRIPTION		copy 'n' bytes from src to dst
+ * 					if 'src' and 'dst' overlap, the copy is always done in a 
+ * 					non-destructive manner (memory safe).
  *					- overlaping
  * 						case 1: src overlaps with dst
  * 								-> copy in reverse, i should be int to check 0
@@ -30,7 +30,6 @@
  *							|	<dst...>
  * 							| 	      <src...>
  *					- non-overlaping: memcpy
- * TURN IN FILES	-
  */
 
 #include "libft.h"

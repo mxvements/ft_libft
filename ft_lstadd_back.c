@@ -13,10 +13,9 @@
 /* ft_lstadd_back		bonus
  * LIB					-
  * PROTOTYPE			void ft-lstadd_back(t_list **lst, t_list *new)
- * TURN IN FILES		-
  * PARAMETERS			lst: address to a ptr to the 1st link of a list
  * 						new: address to a ptr to the node to be added
- * RETURN VALUE			none
+ * RETURN VALUE			void
  * EXTERNAL FUNCTS		none
  * DESCRIPTION			adds the node 'new' at the end of the list
  */

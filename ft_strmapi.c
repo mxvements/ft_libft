@@ -10,24 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_strmapi
  * LIB					-
- * PROTOTYPE			char
- * 						*ft_strmapi(char const *s, char (*f)(unsigned int,
- * 						char));
+ * PROTOTYPE			char *ft_strmapi(char const *s,
+ * 											* char (*f)(unsigned int,char));
  * PARAMS				s: the string on which to iterated
  * 						f: the function to apply to each character
- * RETURN				the string created by multiple applications of 'f'
+ * RETURN VALUES		char *, the str created by multiple applications of 'f'
  * 						NULL if the allocation fails
  * EXTERNAL FUNCT		malloc(3)
  * DESCRIPTION			applies 'f' to each character of 's', and passing its
  * 						index as first argument to create a new string 
  * 						(w/ malloc) resulting from successive applications 
  * 						of 'f'
- * TURN IN FILE			-
- * 						*/
-
-#include "libft.h"
+ */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

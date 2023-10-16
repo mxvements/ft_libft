@@ -12,12 +12,13 @@
 
 #include "libft.h"
 
-/* ctype.h
- * int	isdigit(int c)
- * test for decimal digit character (asccii 48 to 57)
- * return
- * 0 if false
- * non-zero (1) if true
+/* ft_isdigit
+ * LIB				ctype.h
+ * PROTOTYPE		int isdigit(int c)
+ * PARAMS			c: char in ascii representation to test
+ * RETURN VALUES	int, 0:false, 1: true: non-zero if true
+ * EXTERNAL FUNCTS	none
+ * DESCRIPTION		tests for decimal digit  character (ascii 48..57 included)
  */
 
 int	ft_isdigit(int c)

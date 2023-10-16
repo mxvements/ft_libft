@@ -13,10 +13,9 @@
 /* ft_lstlast			bonus
  * LIB					-
  * PROTOTYPE			t_list ft_llstlast(t_list *lst)
- * TURN IN FILES		-
  * PARAMETERS			lst: the beginning of the list
  * RETURN VALUE			t_list, last node of the list
- * EXTERNAL FUNCTS		none
+ * EXTERNAL FUNCTS		-
  * DESCRIPTION			return the last node of the list
  */
 

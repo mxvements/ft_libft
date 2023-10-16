@@ -12,12 +12,12 @@
 
 /*  ft_putstr_fd
  *  LIB					-
- *  PROTOTYPE			void    ft_putstr_fd(char *s, int fd)
- *  PARAM				s: the string to output
+ *  PROTOTYPE			void ft_putstr_fd(char *s, int fd)
+ *  PARAMS				s: the string to output
  *  					fd: file descriptor on which to write
- *  RETURN				none
+ *  RETURN VALUES		void
  *  EXTERNAL FUNCT		<unistd.h> write
- *  DESCR				outputs the string 's' to the given file descriptor
+ *  DESCRIPTION			outputs the string 's' to the given file descriptor
  *  */
 
 #include "libft.h"

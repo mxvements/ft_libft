@@ -11,22 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-/* string.h
- *
- * size_t strlcat(char *dst, const char *src, size_t size)
- * size-bounded string copying and concatenation
- *
- * appends string src to the end of dst, 
- * it will append at most size - strlen(dst) -1
- * it will then nul terminate, unles size is 0 or the original dst string was
- * longer than size
- *
- * returns the total length of the string it tries to create
- * (size + srcsize)
+/* ft_strlcat
+ * LIB				string.h
+ * PROTOTYPE		size_t ft_strlcat(char *dst, const char *src, size_t size)
+ * PARAMS			dst:
+ * 					src:
+ * 					size:
+ * RETURN VALUES	size_t, total length of the string it tries to create
+ * 					(size + srcsize)
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		size-bounded string copying and concatenation, appends
+ * 					string src to the end of dst, it will append at most 
+ * 					size - strlen(dst) -1
+ * 					it will then nul terminate, unles size is 0 or the 
+ * 					original dst string was longer than size
  */
-
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	const size_t	dstlen = ft_strlen(dst);

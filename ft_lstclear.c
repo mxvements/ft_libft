@@ -13,7 +13,6 @@
 /* ft_lstclear		bonus
  * LIB				-
  * PROTOTYPE		void ft_lstclear(t_list **lst, void (*del)(void *))
- * TURN IN FILES	-
  * PARAMETERS		lst: address of a ptr to a node
  * 					del: address of a funct to delete the content of the node
  * RETURN VALUE		void

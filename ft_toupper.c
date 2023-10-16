@@ -10,15 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* 
+#include "libft.h"
+
+/* ft_tolower
  * LIB				ctype.h
  * PROTOTYPE		int toupper(int c)
- * DESCRIPTION		converts lower-case to the corresponding upper-case
- * RETURNS			corresponding upper-case letter, otherwise the argument is
- * 					returned unchanged
- * 					*/
-
-#include "libft.h"
+ * PARAMS			c: char to convert, in ascii representation
+ * RETURN VALUES	int, converted char in ascii representation
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		lower-case to upper-case conversion
+ * 					if the value is a lower-case char, returns the upper-case
+ * 					char, otherwise the argument is returned unchanged
+ */
 
 int	ft_toupper(int c)
 {

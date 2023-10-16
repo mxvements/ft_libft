@@ -12,9 +12,16 @@
 
 #include "libft.h"
 
-/* string.h
- * void	*memset(void *b, int c, size_t len)
- * writes len bytes of value c (converted to unsigned char to the str b.
+/* ft_memset
+ * LIB				string.h
+ * PROTOTYPE		void *memset(void *b, int c, size_t len)
+ * PARAMS			b: memory area to fill
+ * 					c: char (unsigned char) to fill the memory area
+ * 					len: amount of memory to fill
+ * RETURN VALUES	void *, ptr to 's'
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		writes 'len' bytes of value 'c '(converted to unsigned
+ * 					char to the str 'b'.
  */
 
 void	*ft_memset(void *b, int c, size_t len)

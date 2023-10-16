@@ -11,20 +11,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-/* string.h
- *
- * char *strchr(const char *s, int c)
- * locate character in string
- * the first occurrence of c (converted to char) in the string pointed by s
- * the terminating null char is considered to be part of the string
- *
- * return
- * pointer to the located character or null if the character does not appear
- * in the string.
+/* ft_strchr
+ * LIB				string.h
+ * PROTOTYPE		char *ft_strchr(const char *s, int c)
+ * PARAMS			s: str to search in
+ * 					c: char to search in the memory area
+ * RETURN VALUES	char *, ptr to the located char
+ * 					NULL if char ddoes not appear in 's'
+ * EXTERNAL FUNCTS	none
+ * DESCRIPTION		locates the char (ascii representation) 'c' in 's'
+ * 					the terminating null is considered as part of the string
  */
-
 char	*ft_strchr(const char *s, int c)
 {
 	char	*cpy;

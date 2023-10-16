@@ -12,13 +12,16 @@
 
 #include "libft.h"
 
-/* string.h
- *
- * char *strdup(const char *s1)
- *
- * save a copy  of a string, allocating enough memory for a copy of the string
- * s1, doing the copy and returning the pointer to it. allocates at most n char
- * from the string s1 always terminating the copied string.
+/* ft_strdup
+ * LIB				string.h
+ * PROTOTYPE		char *ft_strdup(const char *s1)
+ * PARAMS			s1: str to cpy
+ * RETURN VALUES	char *, ptr to the copy of 's1'
+ * EXTERNAL FUNCTS	malloc
+ * DESCRIPTION		saves a cpy of the str 's1', allocating anough memory, 
+ * 					doing the copy and returning the ptr to it
+ * 					allocates at most 'n' char from 's1' always terminating
+ * 					the copied str.
  */
 
 char	*ft_strdup(const char *s1)

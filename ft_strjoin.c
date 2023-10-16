@@ -6,24 +6,23 @@
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:16:57 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/01 16:29:07 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/10/16 10:19:29 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ft_strjoin
- * lib				-
- * prototype		char *ft_strjoin(char const *s1, char const *s2)
- * params			s1: the prefix string
- *					s2: the suffix string
- * return			the new string
- *					NULL if the allocation fails.
- * external functs	malloc
- * description		allocates (with malloc(3)) and returns a new sring, which
-					is the result of the concatenation of s1 and s2
- * turn in files	-
-*/
-
 #include "libft.h"
+
+/* ft_strjoin
+ * LIB				-
+ * PROTOTYPE		char *ft_strjoin(char const *s1, char const *s2)
+ * PARAMS			s1: the prefix string
+ *					s2: the suffix string
+ * RETURN VALUES	char *, the new string
+ *					NULL if the allocation fails.
+ * EXTERNAL FUNCTS	malloc
+ * DESCRIPTION		allocates (with malloc(3)) and returns a new sring, which
+ * 					is the result of the concatenation of s1 and s2
+*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

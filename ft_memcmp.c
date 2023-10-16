@@ -10,18 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** *
- * lib			string.h
- *
- * prototype	int memcmp(const void *s1, const void *s2, size_t n)
- *
- * descr		compare byte string s1 against s2, both assumed n bytes long
- *
- * return		if s1 == s2 || (s1 == 0 && s2 == 0), returns (0)
- * 				else, s1 - s2
- * ************************************************************************* */
-
 #include "libft.h"
+
+/* ft_memcmp
+ * LIB				string.h
+ * PROTOTYPE		int ft_memcmp(const void *s1, const void *s2, size_t n)
+ * PARAMS			s1: 1st str to compare
+ * 					s2: 2nd str to compare
+ * 					n: number of bytes to compare
+ * RETURN VALUES	int, s1 - s2
+ * 					if s1 == s2 || (s1 == 0 && s2 == 0), returns (0)
+ * EXTERNAL FUNCTS	none
+ * DESCRIPTION		compare byte string 's1' against 's2', both assumed 'n'
+ * 					bytes long
+ */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

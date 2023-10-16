@@ -13,7 +13,6 @@
 /* ft_lstsize.c			bonus
  * LIB					-
  * PROTOTYPE			int	ft_lstsize(t_lst *lst)
- * TURN IN FILES		-
  * PARAMETERS			lst: the beginning of the list
  * RETURN VALUUE		int: length of the list
  * EXTERNAL FUNCTS		none

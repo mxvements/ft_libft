@@ -10,16 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- * int	isalnum(int c);
- * Tests for any character or which isalpha or isdigit is true.
- * Return
- * 		zero if the characterr tests false
- * 		non-zero if the character tests true
- */
+#include "libft.h"
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
+/* ft_isalnum
+ * LIB				ctype.h
+ * PROTOTYPE		int isalnum(int c)
+ * PARAMS			c: char (in aascii) to test
+ * RETURN VALUES	int, 0:false, 1:true, non-zero if true
+ * EXTERNAL FUNCTS	ft_isalpha
+ * 					ft_isdigit
+ * DESCRIPTION		tests for any char for which isalpha or isdigit is true
+ */
 
 int	ft_isalnum(int c)
 {

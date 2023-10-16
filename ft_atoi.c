@@ -10,24 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ft_atoi
- * LIB				stdlib.h
- * PROTOTYPE		int atoi(const char *str)
- * PARAMS			str: string to convert to int
- * RETURN			int representation
- * 					if no valid conversion, returns (0)
- * EXTERNAL FUNCTS	ft_isspace(int c)
- *					ft_isdigit(int c)
- * DESCRIPTION		convert initial portion of str to int representation
- * NOTES			stops whenever theres a not accepted char
- * 					first discards as many whitespace char (isspace) until the
- * 					1st non-whitespace is found
- * 					takes an optionl plus or minus sign followed by as many
- * 					base-10 digits as posisible
- *					*/
-
 #include "libft.h"
 
+/* ft_isspace
+ * LIB					ctype.h
+ * PROTOTYPE			int ft_isspace(int c)
+ * PARAMS				c: ascii representation of the char to check
+ * RETURN VALUES		int, 0: false, 1:true
+ * EXTERNAL FUNCTS		-
+ * DESCRIPTION			checks whether a char is a is a space type of char
+*/
 static int	ft_isspace(int c)
 {
 	int	option;
@@ -40,6 +32,21 @@ static int	ft_isspace(int c)
 	}
 	return (option);
 }
+/* ft_atoi
+ * LIB				stdlib.h
+ * PROTOTYPE		int atoi(const char *str)
+ * PARAMS			str: string to convert to int
+ * RETURN VALUE		int representation
+ * 					if no valid conversion, returns (0)
+ * EXTERNAL FUNCTS	ft_isspace(int c)
+ *					ft_isdigit(int c)
+ * DESCRIPTION		convert initial portion of str to int representation
+ * NOTES			stops whenever theres a not accepted char
+ * 					first discards as many whitespace char (isspace) until the
+ * 					1st non-whitespace is found
+ * 					takes an optionl plus or minus sign followed by as many
+ * 					base-10 digits as posisible
+ */
 
 int	ft_atoi(const char *str)
 {

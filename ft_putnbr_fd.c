@@ -12,10 +12,10 @@
 
 /* ft_putnbr_fd
  * LIB                  -
- * PROTOTYPE            void    ft_putnbr_fd(int n, int fd);
+ * PROTOTYPE            void ft_putnbr_fd(int n, int fd);
  * PARAMETERS           n: the integer to output
  *                      fd: the file descriptor on which to write
- * RETURN               none
+ * RETURN VALUES		void
  * EXT FUNCTS           write
  * DESCRIPTION          outputs the integer 'n' to the given file descriptor 
 */

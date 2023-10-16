@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-/* string.h
- *
- * char *strrchr(const char *s, int c)
- * locate character in string, the last occurrence of c
- *
- * '\0' is considered to be part of the string
- * returns a pointer to the located character, or NULL if the character does
- * not appear
+/* ft_strrchr
+ * LIB				string.h
+ * PROTOTYPE		char *strrchr(const char *s, int c)
+ * PARAMS			s: str to search in
+ * 					c: char to search for
+ * RETURN VALUES	char *, ptr to the located char
+ * 					null if the char does not appear
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		locate character in string, the last occurrence of c
  */
-
 char	*ft_strrchr(const char *s, int c)
 {
 	char			*cpy;

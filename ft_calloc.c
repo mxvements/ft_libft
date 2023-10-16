@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_calloc
  * LIB				stdlib.h
  * PROTOTYPE		void *calloc(size_t count, size_t size)
  * PARAMS			count: amout of objects
  * 					size: size of the objects
- * RETURN			*void: pointer to allocated memory
+ * RETURN VALUES	*void: pointer to allocated memory
  * 					if error, return null and set errno to ENOMEM
  * 					errno 12 ENOMEM: Cannot allocate memory
  * EXTERNAL FUNCTS	malloc
@@ -23,10 +25,7 @@
  * 					that are size bytes of memory each and returns a 
  * 					pointerto the allocated memory filled with bytes of i
  * 					value (0)
- * NOTES			
- * 					*/
-
-#include "libft.h"
+ */
 
 void	*ft_calloc(size_t count, size_t size)
 {

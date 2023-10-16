@@ -13,7 +13,6 @@
 /* ft_lstnew			bonus
  * LIB					-
  * PROTOTYPE			t_list *ft_lstnew(void *content)
- * TURN IN FILES		-
  * PARAMS				content: data to create the node with
  * RETURN				t_list, new node
  * EXTERNAL FUNCT		malloc

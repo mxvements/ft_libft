@@ -12,13 +12,15 @@
 
 #include "libft.h"
 
-/* ctype.h
- *
- * int	tolower(int c)
- * upper-case to lower-case conversion
- *
- * if the value is an upper-case char, returns the lower-case char
- * otherwise returns the argument is returned unchanged
+/* ft_tolower
+ * LIB				ctype.h
+ * PROTOTYPE		int tolower(int c)
+ * PARAMS			c: char to convert, in ascii representation
+ * RETURN VALUES	int, converted char in ascii representation
+ * EXTERNAL FUNCTS	-
+ * DESCRIPTION		upper-case to lower-case conversion
+ * 					if the value is an upper-case char, returns the lower-case
+ * 					char, otherwise the argument is returned unchanged
  */
 
 int	ft_tolower(int c)

@@ -15,9 +15,9 @@
  * PROTOTYPE		void    ft_putchar_fd(hcar c, int fd)
  * PARAMS			c: char output
  *					fd: file descr on which to write
+ * RETURN VALUES    -
  * EXTERNAL FUNCT   write from <unistd.h>
- * RETURN           none
- * DESCR            outputs the char 'c' to the given file descriptor
+ * DESCRIPTION      outputs the char 'c' to the given file descriptor
  * */
 
 #include "libft.h"

@@ -10,19 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ft_itoca
- * LIB					-
- * PROTOTYPE			char *ft_itoa(int n)
- * PARAMS				n: the int to convert
- * RETURN				char *: string representing the integer
- * 						NULL if allocaation fails
- * EXTERNAL FUNCTS		malloc
- * DESCRIPTION			allocates (with malloc(3)) and returns a string
- * 						representing the int received as an argument.
- * 						Negative numbers must be handled.. 
- */
-
 #include "libft.h"
+
+/* ft_countdigits
+ * LIB				-
+ * PROTOTYPE		size_t ft_countdigits(int c)
+ * PARAMS			c: number to count its digits
+ * RETURN VALUES	size_t, number of digits
+ * EXTERNAL FUNCTS	none
+ * DESCRIPTION		count the number of digits of a number 'c'
+ */
 
 static size_t	ft_countdigits(int n)
 {
@@ -45,6 +42,19 @@ static size_t	ft_countdigits(int n)
 	}
 	return (count);
 }
+
+/* ft_itoa
+ * LIB					-	
+ * PROTOTYPE			char *ft_itoa(int n)
+ * PARAMS				n: the int to convert
+ * RETURN VALUES		char *: string representing the integer
+ * 						NULL if allocaation fails
+ * EXTERNAL FUNCTS		malloc
+ * 						ft_countdigits
+ * DESCRIPTION			allocates (with malloc(3)) and returns a string
+ * 						representing the int received as an argument.
+ * 						Negative numbers must be handled.
+ */
 
 char	*ft_itoa(int n)
 {

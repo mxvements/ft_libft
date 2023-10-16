@@ -52,7 +52,7 @@ Click here</a> for the subject of this project.
 | **ft_toupper**  | [x] | int ft_toupper(int c) | ctype.h | Converts lower-case to the corresponding upper-case. Return: the corresponding upper-case char, otherwise the argument is returned unchanged (was already uppercase or not a char) | ft_islower* | libc |
 | **ft_tolower**  | [x] | int ft_tolower(int c) | ctype.h | Converts upper-case to the corresponding lower-case. Return: the corresponding lower-case char, otherwise the argument is returned unchanged (was already lower-case or not a char)  | ft_isupper* | libc |
 
-ft_isupper, ft_islower -> added after completion of the project, included as static where needed.
+ft_isupper, ft_islower, ft_isspace -> added after completion of the project, included as static where needed.
 
 ### Manipulate strings
 
@@ -69,7 +69,7 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 | **ft_strjoin**  | [x] |   |   |    |   | add |
 | **ft_strjoin**  | [x] |   |   |    |   | add |
 | **ft_strtrim**  | [x] | char *ft_strtrim(char const *s1, char const *set) | - | allocates (with malloc(3)) and returns a copy of s1 with the characters specified in 'set' removed from the beginning and the end of the string | malloc, ft_strlen, ft_substr, ft_getfirstindex, ft_getlastindex, ft_strchr | add |
-| **ft_split**  | [ ] |   |   |    |   | add |
+| **ft_split**  | [x] |   |   |    |   | add |
 | **ft_strmapi**  | [x] |   |   |    |   | add |
 | **ft_striteri**  | [x] |   |   |    |   | add |
 
@@ -78,7 +78,7 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 | **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
 | **ft_atoi** | [x] | int atoi(const char *str) | stdlib.h | convert initial portion of str to int representation | ft_isspace, ft_isdigit | libc |
-| **ft_itoa**  | [ ] |   |   |   |   | add |
+| **ft_itoa**  | [x] |   |   |   |   | add |
 
 ### Manipulate memory
 
@@ -109,15 +109,15 @@ ft_isupper, ft_islower -> added after completion of the project, included as sta
 
 | **Name** | Status | Prototype | Library | Short description | Dependencies | Section |
 | ---------| ------ | --------- | ------- | ----------------- | ------------ | ------- |
-| **ft_lstnew** | [ ] |   |   |   |   | bonus |
-| **ft_lstadd_front** | [ ] |   |   |   |   | bonus |
-| **ft_lstsize**  | [ ] |   |   |   |   | bonus |
-| **ft_lstlast**  | [ ] |   |   |   |   | bonus |
-| **ft_lstadd_back**  | [ ] |   |   |   |   | bonus |
-| **ft_lstdelone**  | [ ] |   |   |   |   | bonus |
-| **ft_lstclear**  | [ ] |   |   |   |   | bonus |
-| **ft_lstiter**  | [ ] |   |   |   |   | bonus |
-| **ft_lstmap**  | [ ] |   |   |   |   | bonus |
+| **ft_lstnew** | [x] |   |   |   |   | bonus |
+| **ft_lstadd_front** | [x] |   |   |   |   | bonus |
+| **ft_lstsize**  | [x] |   |   |   |   | bonus |
+| **ft_lstlast**  | [x] |   |   |   |   | bonus |
+| **ft_lstadd_back**  | [x] |   |   |   |   | bonus |
+| **ft_lstdelone**  | [x] |   |   |   |   | bonus |
+| **ft_lstclear**  | [x] |   |   |   |   | bonus |
+| **ft_lstiter**  | [x] |   |   |   |   | bonus |
+| **ft_lstmap**  | [x] |   |   |   |   | bonus |
 
 # Other
 

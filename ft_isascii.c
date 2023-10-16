@@ -10,11 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ctype.h
- * int	isascii(int c)
- *
- * test for an ascii character
- * ascii decimal 0..127 included
+#include "libft.h"
+
+/* ft_isascii
+ * LIB				ctype.h
+ * PROTOTYPE		int isascii(int c)
+ * PARAMS			c: char (ascii representation) to test
+ * RETURN VALUES	int, 0:false, 1:true, non-zero if true
+ * EXTERNAL FUNCTS	none
+ * DESCRIPTION		test for an ascii character from 0..127 both included
  */
 
 int	ft_isascii(int c)

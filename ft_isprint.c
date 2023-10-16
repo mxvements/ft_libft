@@ -10,15 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ctype.h
- *
- * int	isprint(int c)
- * Tests for any printing character, ascii 32..126 both included
- * Returns 
- * 0 if false
- * non-zero (1) if true
- */
+#include "libft.h"
 
+/* ft_isprint
+ * LIB				ctype.h
+ * PROTOTYPE		int isprint(int c)
+ * PARAMS			c: char in ascii representation to test
+ * RETURN VALUES	int, 0:false, 1: true: non-zero if true
+ * EXTERNAL FUNCTS	none
+ * DESCRIPTION		tests for any printing character, ascii 32..126 included
+ */
 int	ft_isprint(int c)
 {
 	int	option;

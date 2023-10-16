@@ -14,7 +14,6 @@
  * LIB				-
  * PROTOTYPE		t_list *ft_lstmap(t_list *lst, 
  * 									  void *(*f)(void *), void (*del)(void *))
- * TURN IN FILES	-
  * PARAMETERS		lst: address of a ptr to a node
  * 					f: address of a funct to iterate on the list
  * 					del: address of a funct to delete the content of a node, 

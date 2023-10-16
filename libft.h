@@ -16,6 +16,9 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <errno.h>
+# include <limits.h>
+# include <string.h>
+# include <strings.h>
 
 typedef struct s_list
 {
@@ -23,8 +26,6 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
-int		ft_islower(int c);
-int		ft_isupper(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

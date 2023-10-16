@@ -13,7 +13,6 @@
 /* ft_lstdelone			bonus
  * LIB
  * PROTOTYPE			voif ft_lstdelone(t_list *lst, void (*del)(void*))
- * TURN IN FILES		-
  * PARAMETERS			lst: the node to free
  * 						del: address of the function used to delete the node
  * RETURN VALUE			none

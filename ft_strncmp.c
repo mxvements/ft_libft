@@ -12,18 +12,20 @@
 
 #include "libft.h"
 
-/* string.h
- *
- * int	strncmp(const char *s1, const char *s2, size_t n)
- *
- * compare strings, not more than n characters
- * character that appear after a '\0' are not compared
- *
- * return
- * in t >= or < 0 acording as the string s1 is >= or < than s2
- * the comparison is done using unsigned characters, so than '\200' is > '\0'
+/* ft_strncmp
+ * LIB				string.h
+ * PROTOTYPE		int ft_strncmp(const char *s1, const char *s2, size_t n)
+ * PARAMS			s1:
+ * 					s2:
+ * 					n:
+ * RETURN VALUES	int, s1-s2 converted to unsigned char
+ * 					return NULL if n = 0
+ * EXTERNAL FUNCTS	none
+ * DESCRIPTION		compare strings, not more than n characters
+ * 					character that appear after a '\0' are not compared
+ * 					the comparison is done using unsigned characters, so than 
+ * 					'\200' is > '\0'
  */
-
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
