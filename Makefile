@@ -61,7 +61,7 @@ $(NAME): $(MY_OBJECTS)
 	ar -crs $@ $^
 
 bonus: $(NAME) $(MY_BONUS_OBJECTS)
-	ar -crs $^
+	ar -crs $@ $^
 
 test: test_libft.o
 	$(CC) test_libft.o -o $(TEST_NAME) -L. -lft

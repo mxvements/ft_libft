@@ -31,13 +31,13 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	free(lst);
 	return ;
 }
-
+/*
 void	ft_nodefree(void *content)
 {
-    free(content);
+	free(content);
 	return ;
 }
-/*
+
 int	main(void)
 {
 	char	*newnode1 = "hola";
