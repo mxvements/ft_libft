@@ -59,7 +59,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (newlst);
 }
-
+/*
 void	*ft_toupper_wrapper(void *s)
 {
 	size_t	i;
@@ -76,10 +76,25 @@ void	*ft_toupper_wrapper(void *s)
 	}
 	return (s);
 }
-/*
+
 void	ft_nodefree(void *content)
 {
 	free(content);
+	return ;
+}
+
+void	ft_lstdelone_wrapper(t_list *node, t_list *head)
+{
+	t_list	*ptr;
+
+	ptr = head;
+	while ((ptr->next) != node)
+		ptr = ptr->next;
+	if (ptr->next == node)
+	{
+		ptr->next = node->next;
+		ft_lstdelone(node, &ft_nodefree);
+	}
 	return ;
 }
 
@@ -87,7 +102,7 @@ int	main(void)
 {
 	char	*newnode1 = "hola";
 	char	*newnode2 = "adios";
-	char	*newnode3 = "";
+	char	*newnode3 = "42";
 	char	*newnode4 = "mad";
 	t_list	*testlist = ft_lstnew(ft_strdup(newnode1));
 	t_list	*node2 = ft_lstnew(ft_strdup(newnode2));
@@ -99,8 +114,7 @@ int	main(void)
 	ft_lstadd_back(&testlist, node3);
 	ft_lstadd_back(&testlist, node4);
 
-	//need to change de previous pointer to the node
-	ft_lstdelone(node3, &ft_nodefree);
+	ft_lstdelone_wrapper(node3, testlist);
 
 	tr_testlist = ft_lstmap(testlist, &ft_toupper_wrapper, &ft_nodefree);
 
