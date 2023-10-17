@@ -313,6 +313,12 @@ void	ft_strlcpy_test(void)
 
 	tester = ft_tester_sizet(ft_strlcpy(rslt1, STR_EMPTY, len), strlcpy(rslt2, STR_EMPTY, len));
 	printf("/01/:	%s ->	%s\n", STR_EMPTY, tester);
+	
+	tester = ft_tester_sizet(ft_strlcpy(rslt1, STR_SPACE1, len), strlcpy(rslt2, STR_SPACE1, len));
+	printf("/01/:	%s ->	%s\n", STR_SPACE1, tester);
+	
+	tester = ft_tester_sizet(ft_strlcpy(rslt1, STR1, len), strlcpy(rslt2, STR1, len));
+	printf("/01/:	%s ->	%s\n", STR1, tester);
 }
 
 void	ft_strlcat_test(void)
@@ -328,6 +334,74 @@ void	ft_strlcat_test(void)
 
 	tester = ft_tester_sizet(ft_strlcat(rslt1, STR_EMPTY, len), strlcat(rslt2, STR_EMPTY, len));
 	printf("/01/:	%s ->	%s\n", STR_EMPTY, tester);
+
+	tester = ft_tester_sizet(ft_strlcat(rslt1, STR_SPACE1, len), strlcat(rslt2, STR_SPACE1, len));
+	printf("/01/:	%s ->	%s\n", STR_SPACE1, tester);
+	
+	tester = ft_tester_sizet(ft_strlcat(rslt1, STR1, len), strlcat(rslt2, STR1, len));
+	printf("/01/:	%s ->	%s\n", STR1, tester);
+}
+
+void 	ft_toupper_test()
+{
+	char	*tester;
+	int		rslt1;
+	int		rslt2;
+
+	printf("\033[0;35m");
+	printf("\nft_toupper - test\n");
+	printf("\033[0m");
+
+	rslt1 = ft_toupper(CHAR_MAX);
+	rslt2 = toupper(CHAR_MAX);
+	tester = ft_tester_int(rslt1, rslt2);
+	printf("/01/:	%i ->	%s\n", CHAR_MAX, tester);
+
+	rslt1 = ft_toupper(CHAR_MIN);
+	rslt2 = toupper(CHAR_MIN);
+	tester = ft_tester_int(rslt1, rslt2);
+	printf("/02/:	%i ->	%s\n", CHAR_MIN, tester);
+
+	rslt1 = ft_toupper(INT_MIN);
+	rslt2 = toupper(INT_MIN);
+	tester = ft_tester_int(rslt1, rslt2);
+	printf("/03/:	%i ->	%s\n", INT_MIN, tester);
+
+	rslt1 = ft_toupper(0);
+	rslt2 = toupper(0);
+	tester = ft_tester_int(rslt1, rslt2);
+	printf("/03/:	%i ->	%s\n", 0, tester);
+}
+
+void	ft_tolower_test()
+{
+	char	*tester;
+	int		rslt1;
+	int		rslt2;
+
+	printf("\033[0;35m");
+	printf("\nft_tolower - test\n");
+	printf("\033[0m");
+
+	rslt1 = ft_tolower(CHAR_MAX);
+	rslt2 = tolower(CHAR_MAX);
+	tester = ft_tester_int(rslt1, rslt2);
+	printf("/01/:	%i ->	%s\n", CHAR_MAX, tester);
+
+	rslt1 = ft_tolower(CHAR_MIN);
+	rslt2 = tolower(CHAR_MIN);
+	tester = ft_tester_int(rslt1, rslt2);
+	printf("/02/:	%i ->	%s\n", CHAR_MIN, tester);
+
+	rslt1 = ft_tolower(INT_MIN);
+	rslt2 = tolower(INT_MIN);
+	tester = ft_tester_int(rslt1, rslt2);
+	printf("/03/:	%i ->	%s\n", INT_MIN, tester);
+
+	rslt1 = ft_tolower(0);
+	rslt2 = tolower(0);
+	tester = ft_tester_int(rslt1, rslt2);
+	printf("/03/:	%i ->	%s\n", 0, tester);
 }
 
 int	main(void)
@@ -344,10 +418,10 @@ int	main(void)
 	ft_memmove_test();
 	ft_strlcpy_test();
 	ft_strlcat_test();
-
-	/*
 	ft_toupper_test();
 	ft_tolower_test();
+
+	/*
 	ft_strchr_test();
 	ft_strrchr_test();
 	ft_strncmp_test();
