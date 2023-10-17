@@ -23,6 +23,7 @@
  * DESCRIPTION		locates the char (ascii representation) 'c' in 's'
  * 					the terminating null is considered as part of the string
  */
+
 char	*ft_strchr(const char *s, int c)
 {
 	char	*cpy;

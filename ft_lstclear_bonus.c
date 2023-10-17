@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -47,3 +47,34 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	*lst = NULL;
 	return ;
 }
+/*
+void	ft_nodefree(void *content)
+{
+	free(content);
+	return ;
+}
+
+int	main(void)
+{
+	char	*newnode1 = "hola";
+	char	*newnode2 = "adios";
+	char	*newnode3 = "42";
+	t_list	*node2 = ft_lstnew(ft_strdup(newnode2));
+	t_list	*node3 = ft_lstnew(ft_strdup(newnode3));
+	t_list	*testlist = ft_lstnew(ft_strdup(newnode1));
+
+	ft_lstadd_back(&testlist, node2);
+	ft_lstadd_back(&testlist, node3);
+
+	ft_lstclear(&node2, &ft_nodefree);
+
+	while (testlist->next != NULL)
+	{
+		printf("node content: %s\n", (char *)testlist->content);
+		testlist = testlist->next;
+	}
+	if (testlist->next == NULL)
+		printf("node content: %s\n", (char *)testlist->content);
+
+	return (0);
+}*/

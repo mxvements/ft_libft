@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -39,3 +39,45 @@ void	ft_lstiter(t_list *lst, void (*f)(void*))
 		f(cpy->content);
 	return ;
 }
+/*
+void	ft_toupper_wrapper(void *s)
+{
+	size_t	i;
+	char	*str;
+
+	i = 0;
+	str = (char *)s;
+	if (!s || str[i] == '\0')
+		return ;
+	while(str[i] != '\0')
+	{
+		str[i] = ft_toupper(str[i]);
+		i++;
+	}
+	return ;
+}
+
+int	main(void)
+{
+	char	*newnode1 = "hola";
+	char	*newnode2 = "adios";
+	char	*newnode3 = "42";
+	t_list	*testlist = ft_lstnew(ft_strdup(newnode1));
+	t_list	*node2 = ft_lstnew(ft_strdup(newnode2));
+	t_list	*node3 = ft_lstnew(ft_strdup(newnode3));
+
+	ft_lstadd_back(&testlist, node2);
+	ft_lstadd_back(&testlist, node3);
+
+	ft_lstiter(testlist, &ft_toupper_wrapper);
+
+	while (testlist->next != NULL)
+	{
+		printf("node content: %s\n", (char *)testlist->content);
+		testlist = testlist->next;
+	}
+	if (testlist->next == NULL)
+		printf("node content: %s\n", (char *)testlist->content);
+
+	return (0);
+}*/

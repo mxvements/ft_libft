@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -43,10 +43,10 @@ int	main(void)
 	char	*newnode1 = "hola";
 	char	*newnode2 = "adios";
 	char	*newnode3 = "42";
-	t_list	*testlist = ft_lstnew(newnode1);
+	t_list	*testlist = ft_lstnew(ft_strdup(newnode1));
 
-	ft_lstadd_back(&testlist, ft_lstnew(newnode2));
-	ft_lstadd_back(&testlist, ft_lstnew(newnode3));
+	ft_lstadd_back(&testlist, ft_lstnew(ft_strdup(newnode2)));
+	ft_lstadd_back(&testlist, ft_lstnew(ft_strdup(newnode3)));
 
 	ft_lstdelone(testlist, &ft_nodefree);
 

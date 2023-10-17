@@ -17,7 +17,7 @@ char	*STR_SPACE1 = "   ";
 char	*STR_SPACE2 = "\t\n\v\f\r ";
 char	*STR1 = "lorem\tipsum\tdolor\nsit\namet\n";
 char	*STR2 = "1";
-char	*STR3 = "Hello !";
+char	*STR3 = "lorem ictus!";
 
 char	*ft_tester_int(int rslt1, int rslt2)
 {
@@ -38,6 +38,23 @@ char	*ft_tester_void_ptr(void *rslt1, void *rslt2, size_t n)
 	while (i < n)
 	{
 		if (((char*)rslt1)[i] != ((char *)rslt2)[i])
+			testrslt = "ERROR";
+		i++;
+	}
+	return (testrslt);
+}
+
+char	*ft_tester_str_ptr(char *rslt1, char *rslt2)
+{
+	size_t	i;
+	char	*testrslt = "OK";
+
+	i = 0;
+	if (rslt1 == rslt2)
+		return (testrslt);
+	while (rslt1[i] != '\0')
+	{
+		if (rslt1[i] != rslt2[i])
 			testrslt = "ERROR";
 		i++;
 	}
@@ -342,7 +359,7 @@ void	ft_strlcat_test(void)
 	printf("/01/:	%s ->	%s\n", STR1, tester);
 }
 
-void 	ft_toupper_test()
+void 	ft_toupper_test(void)
 {
 	char	*tester;
 	int		rslt1;
@@ -373,7 +390,7 @@ void 	ft_toupper_test()
 	printf("/03/:	%i ->	%s\n", 0, tester);
 }
 
-void	ft_tolower_test()
+void	ft_tolower_test(void)
 {
 	char	*tester;
 	int		rslt1;
@@ -404,6 +421,72 @@ void	ft_tolower_test()
 	printf("/03/:	%i ->	%s\n", 0, tester);
 }
 
+void	ft_strchr_test(void)
+{
+	char	*tester;
+
+	printf("\033[0;35m");
+	printf("\nft_strchr - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_str_ptr(ft_strchr(STR1,'c'), strchr(STR1,'c'));
+	printf("/01/:	%s, %c	->	%s\n", STR1,'c', tester);
+
+	tester = ft_tester_str_ptr(ft_strchr(STR1,'i'), strchr(STR1,'i'));
+	printf("/02/:	%s, %c	->	%s\n", STR1, 'i', tester);
+
+	tester = ft_tester_str_ptr(ft_strchr(STR_EMPTY,'\0'), strchr(STR_EMPTY,'\0'));
+	printf("/03/:	%s,%c	->	%s\n", STR_EMPTY, '\0', tester);
+}
+
+void	ft_strrchr_test(void)
+{
+	char	*tester;
+
+	printf("\033[0;35m");
+	printf("\nft_strrchr - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_str_ptr(ft_strrchr(STR1,'c'), strrchr(STR1,'c'));
+	printf("/01/:	%s, %c	->	%s\n", STR1,'c', tester);
+
+	tester = ft_tester_str_ptr(ft_strrchr(STR1,'i'), strrchr(STR1,'i'));
+	printf("/02/:	%s, %c	->	%s\n", STR1, 'i', tester);
+
+	tester = ft_tester_str_ptr(ft_strrchr(STR_EMPTY,'\0'), strrchr(STR_EMPTY,'\0'));
+	printf("/03/:	%s,%c	->	%s\n", STR_EMPTY, '\0', tester);
+}
+
+void	ft_strncmp_test(void)
+{
+	char	*tester;
+
+	printf("\033[0;35m");
+	printf("\nft_strncmp - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_int(ft_strncmp(STR1, STR3, (size_t)5), strncmp(STR1, STR3, (size_t)5));
+	printf("/01/:	%s\n", tester);
+
+	tester = ft_tester_int(ft_strncmp(STR1, STR3, (size_t)8), strncmp(STR1, STR3, (size_t)8));
+	printf("/02/:	%s\n", tester);
+
+	tester = ft_tester_int(ft_strncmp(STR_EMPTY, STR3, (size_t)8), strncmp(STR_EMPTY, STR3, (size_t)8));
+	printf("/03/:	%s\n", tester);
+}
+
+void	ft_memchr_test(void)
+{
+	char	*tester;
+
+	printf("\033[0;35m");
+	printf("\nft_memchr - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_void_ptr(ft_memchr(STR1, 'o', (size_t)5), memchr(STR1, 'o', (size_t)5), (size_t)5);
+	printf("/01/:	%s\n", tester);
+}
+
 int	main(void)
 {	
 	ft_isalnum_test();
@@ -420,12 +503,12 @@ int	main(void)
 	ft_strlcat_test();
 	ft_toupper_test();
 	ft_tolower_test();
-
-	/*
 	ft_strchr_test();
 	ft_strrchr_test();
 	ft_strncmp_test();
 	ft_memchr_test();
+
+	/*
 	ft_memcmp_test();
 	ft_strnstr_test();
 	ft_atoi_test();

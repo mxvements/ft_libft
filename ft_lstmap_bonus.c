@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -39,6 +39,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newlst;
 	t_list	*node;
 	t_list	*cpy;
+	void	*nodecontent;
 
 	if (!lst || !f || !del)
 		return (NULL);
@@ -46,11 +47,70 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	newlst = NULL;
 	while (cpy)
 	{
-		node = ft_lstnew(f(cpy->content));
+		nodecontent = f(cpy->content);
+		node = ft_lstnew(nodecontent);
 		if (!node)
+		{
 			ft_lstclear(&newlst, del);
+			del(nodecontent);
+		}
 		ft_lstadd_back(&newlst, node);
 		cpy = cpy->next;
 	}
 	return (newlst);
 }
+
+void	*ft_toupper_wrapper(void *s)
+{
+	size_t	i;
+	char	*str;
+
+	i = 0;
+	str = (char *)s;
+	if (!s || str[i] == '\0')
+		return (s);
+	while(str[i] != '\0')
+	{
+		str[i] = ft_toupper(str[i]);
+		i++;
+	}
+	return (s);
+}
+/*
+void	ft_nodefree(void *content)
+{
+	free(content);
+	return ;
+}
+
+int	main(void)
+{
+	char	*newnode1 = "hola";
+	char	*newnode2 = "adios";
+	char	*newnode3 = "";
+	char	*newnode4 = "mad";
+	t_list	*testlist = ft_lstnew(ft_strdup(newnode1));
+	t_list	*node2 = ft_lstnew(ft_strdup(newnode2));
+	t_list	*node3 = ft_lstnew(ft_strdup(newnode3));
+	t_list	*node4 = ft_lstnew(ft_strdup(newnode4));
+	t_list	*tr_testlist;
+
+	ft_lstadd_back(&testlist, node2);
+	ft_lstadd_back(&testlist, node3);
+	ft_lstadd_back(&testlist, node4);
+
+	//need to change de previous pointer to the node
+	ft_lstdelone(node3, &ft_nodefree);
+
+	tr_testlist = ft_lstmap(testlist, &ft_toupper_wrapper, &ft_nodefree);
+
+	while (tr_testlist->next != NULL)
+	{
+		printf("node content: %s\n", (char *)tr_testlist->content);
+		tr_testlist = tr_testlist->next;
+	}
+	if (tr_testlist->next == NULL)
+		printf("node content: %s\n", (char *)tr_testlist->content);
+
+	return (0);
+}*/
