@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_lstclear		bonus
  * LIB				-
  * PROTOTYPE		void ft_lstclear(t_list **lst, void (*del)(void *))
@@ -21,8 +23,6 @@
  * 					that node, using the function 'del' and free(3)
  * 					Finally, the ptr to the list must set to NULL
  */
-
-#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

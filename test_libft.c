@@ -300,7 +300,7 @@ void	ft_memmove_test(void)
 	printf("/01/:(overlaping)	%s\n", tester);
 }
 
-void ft_strlcpy_test(void)
+void	ft_strlcpy_test(void)
 {
 	char	*tester;
 	char	rslt1[256];

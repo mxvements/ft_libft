@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_lstnew			bonus
  * LIB					-
  * PROTOTYPE			t_list *ft_lstnew(void *content)
@@ -21,8 +23,6 @@
  * 						value of the param 'content'
  * 						the variable 'next' is initilized to NULL
  */
-
-#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
@@ -36,7 +36,21 @@ t_list	*ft_lstnew(void *content)
 	return (newnode);
 }
 
+/*
 int	main(void)
 {
-	
-}
+	char	*newnode = "hola";
+	t_list	*testlist;
+
+	testlist = ft_lstnew(newnode);
+	//print node's content and next's node
+	while (testlist->next != NULL)
+	{
+		printf("node content: %s\n", (char *)testlist->content);
+		testlist = testlist->next;
+	}
+	if (testlist->next == NULL)
+		printf("node content: %s\n", (char *)testlist->content);
+
+	return (0);
+}*/

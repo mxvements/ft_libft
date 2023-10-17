@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_lstmap.c		bonus
  * LIB				-
  * PROTOTYPE		t_list *ft_lstmap(t_list *lst, 
@@ -31,8 +33,6 @@
  * 					the 'del' function is used to delete the content of a node
  * 					if needed
 */
-
-#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_lstlast			bonus
  * LIB					-
  * PROTOTYPE			t_list ft_llstlast(t_list *lst)
@@ -18,8 +20,6 @@
  * EXTERNAL FUNCTS		-
  * DESCRIPTION			return the last node of the list
  */
-
-#include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
@@ -32,3 +32,18 @@ t_list	*ft_lstlast(t_list *lst)
 		last = last->next;
 	return (last);
 }
+/*
+int	main(void)
+{
+	char	*newnode1 = "hola";
+	char	*newnode2 = "adios";
+	char	*newnode3 = "42";
+	t_list	*testlist;
+
+	testlist = ft_lstnew(newnode1);
+	ft_lstadd_front(&testlist, ft_lstnew(newnode2));
+	ft_lstadd_front(&testlist, ft_lstnew(newnode3));
+	
+	printf("testlist last's content: %s\n", (char *)ft_lstlast(testlist)->content);
+	return(0);
+}*/

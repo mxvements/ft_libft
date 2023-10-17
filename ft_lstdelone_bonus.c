@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_lstdelone			bonus
  * LIB
  * PROTOTYPE			void ft_lstdelone(t_list *lst, void (*del)(void*))
@@ -23,11 +25,38 @@
  * 						the memory 'next' must not be freed.
  */
 
-#include "libft.h"
-
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);
 	free(lst);
 	return ;
 }
+
+void	ft_nodefree(void *content)
+{
+    free(content);
+	return ;
+}
+/*
+int	main(void)
+{
+	char	*newnode1 = "hola";
+	char	*newnode2 = "adios";
+	char	*newnode3 = "42";
+	t_list	*testlist = ft_lstnew(newnode1);
+
+	ft_lstadd_back(&testlist, ft_lstnew(newnode2));
+	ft_lstadd_back(&testlist, ft_lstnew(newnode3));
+
+	ft_lstdelone(testlist, &ft_nodefree);
+
+	while (testlist->next != NULL)
+	{
+		printf("node content: %s\n", (char *)testlist->content);
+		testlist = testlist->next;
+	}
+	if (testlist->next == NULL)
+		printf("node content: %s\n", (char *)testlist->content);
+
+	return (0);
+}*/

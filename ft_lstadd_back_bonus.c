@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_lstadd_back		bonus
  * LIB					-
  * PROTOTYPE			void ft-lstadd_back(t_list **lst, t_list *new)
@@ -19,8 +21,6 @@
  * EXTERNAL FUNCTS		-
  * DESCRIPTION			adds the node 'new' at the end of the list
  */
-
-#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -37,3 +37,23 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	return ;
 }
+/*
+int	main(void)
+{
+	char	*newnode1 = "hola";
+	char	*newnode2 = "adios";
+	char	*newnode3 = "42";
+	t_list	*testlist;
+
+	testlist = ft_lstnew(newnode1);
+	ft_lstadd_back(&testlist, ft_lstnew(newnode2));
+	ft_lstadd_back(&testlist, ft_lstnew(newnode3));
+	while (testlist->next != NULL)
+	{
+		printf("node content: %s\n", (char *)testlist->content);
+		testlist = testlist->next;
+	}
+	if (testlist->next == NULL)
+		printf("node content: %s\n", (char *)testlist->content);
+	return(0);
+}*/

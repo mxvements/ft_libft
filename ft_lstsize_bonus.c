@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /* ft_lstsize.c			bonus
  * LIB					-
  * PROTOTYPE			int	ft_lstsize(t_lst *lst)
@@ -18,8 +20,6 @@
  * EXTERNAL FUNCTS		-
  * DESCRIPTION			counts the number of nodes in a list
  */
-
-#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {
@@ -39,3 +39,18 @@ int	ft_lstsize(t_list *lst)
 		count++;
 	return (count);
 }
+/*
+int	main(void)
+{
+	char	*newnode1 = "hola";
+	char	*newnode2 = "adios";
+	char	*newnode3 = "42";
+	t_list	*testlist;
+
+	testlist = ft_lstnew(newnode1);
+	ft_lstadd_front(&testlist, ft_lstnew(newnode2));
+	ft_lstadd_front(&testlist, ft_lstnew(newnode3));
+	
+	printf("testlist size: %i\n", ft_lstsize(testlist));
+	return(0);
+}*/
