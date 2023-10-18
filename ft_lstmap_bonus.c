@@ -59,7 +59,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (newlst);
 }
-
+/*
 void	*ft_toupper_wrapper(void *s)
 {
 	size_t	i;
@@ -69,14 +69,14 @@ void	*ft_toupper_wrapper(void *s)
 	str = (char *)s;
 	if (!s || str[i] == '\0')
 		return (s);
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		str[i] = ft_toupper(str[i]);
 		i++;
 	}
 	return (s);
 }
-/*
+
 void	ft_nodefree(void *content)
 {
 	free(content);
