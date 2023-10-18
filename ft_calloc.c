@@ -21,9 +21,9 @@
  * 					if error, return null and set errno to ENOMEM
  * 					errno 12 ENOMEM: Cannot allocate memory
  * EXTERNAL FUNCTS	malloc
- * DESCRIPTION		memory allocation with enough space for count objects
- * 					that are size bytes of memory each and returns a 
- * 					pointerto the allocated memory filled with bytes of i
+ * DESCRIPTION		memory allocation with enough space for 'count' objects
+ * 					that are 'size' bytes of memory each and returns a 
+ * 					pointer to the allocated memory filled with bytes of i
  * 					value (0)
  */
 
