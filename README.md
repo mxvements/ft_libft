@@ -1,7 +1,7 @@
 <div align="center">
-    <img src="https://img.shields.io/badge/status-ongoing-success?color=00ABAD&style=flat-square" />
+    <img src="https://img.shields.io/badge/status-finished-success?color=00ABAD&style=flat-square" />
     <img src="https://img.shields.io/badge/started-11%20%2F%2009%20%2F%202023-success?color=00ABAD&style=flat-square" />
-    <img src="https://img.shields.io/badge/score---%20%2F%20100-success?color=00ABAD&style=flat-square" />
+    <img src="https://img.shields.io/badge/score-125%20%2F%20100-success?color=00ABAD&style=flat-square" />
     <img src="https://img.shields.io/github/languages/top/mxvements/ft_libft?color=00ABAD&style=flat-square" />
     <img src="https://img.shields.io/github/last-commit/mxvements/ft_libft?color=00ABAD&style=flat-square" />
     <br>
