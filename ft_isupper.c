@@ -21,7 +21,7 @@
  * DESCRIPTION		tests for ascii 65 to 90 (decimal), both included
  */
 
-static int	ft_isupper(int c)
+int	ft_isupper(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (1);

@@ -21,7 +21,7 @@
  * DESCRIPTION			checks for ascii 97 to 122 (decimal), both included
  */
 
-static int	ft_islower(int c)
+int	ft_islower(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (1);

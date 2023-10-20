@@ -20,7 +20,7 @@
  * EXTERNAL FUNCTS		-
  * DESCRIPTION			checks whether a char is a is a space type of char
 */
-static int	ft_isspace(int c)
+int	ft_isspace(int c)
 {
 	int	option;
 
