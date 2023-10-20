@@ -12,22 +12,6 @@
 
 #include "libft.h"
 
-/* ft_islower
- * LIB					ctype.h
- * PROTOTYPE			int islower(int c)
- * PARAMS				c: ascii representation of char
- * RETURN VALUES		int, 0: false, 1:true, non-zero if true
- * EXTERNAL FUNCTS		-
- * DESCRIPTION			checks for ascii 97 to 122 (decimal), both included
- */
-
-static int	ft_islower(int c)
-{
-	if (c >= 97 && c <= 122)
-		return (1);
-	return (0);
-}
-
 /* ft_isupper
  * LIB				ctype.h
  * PROTOTYPE		int isupper(int c)
