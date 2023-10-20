@@ -26,25 +26,25 @@
 
 static size_t	ft_countwords(char const *s, char c)
 {
-	size_t	wordcount;
+	size_t	wrdcount;
 	size_t	i;
 
 	i = 0;
 	if (!s || s[0] == '\0')
 		return (0);
-	wordcount = 1;
+	wrdcount = 1;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c && s[i + 1] != c)
-			wordcount++;
+			wrdcount++;
 		i++;
 	}
-	return (wordcount);
+	return (wrdcount);
 }
 
-/* ft_strtrimwrapper
+/* ft_strtrim_wrapper
  * LIB					-
- * PROTOTYPE			char *ft_strtrimwrapper(char const *s, char c)
+ * PROTOTYPE			char *ft_strtrim_wrapper(char const *s, char c)
  * PARAMS				s: string to trim
  * 						c: char to trim from 's'
  * RETURN VALUES		char *,
@@ -53,13 +53,78 @@ static size_t	ft_countwords(char const *s, char c)
  * 						an string from a char
  */
 
-static char	*ft_strtrimwrapper(char const *s, char c)
+static char	*ft_strtrim_wrapper(char const *s, char c)
 {
 	char	set[2];
 
 	set[0] = c;
 	set[1] = '\0';
 	return (ft_strtrim(s, set));
+}
+
+/* ft_free_dblptr
+ * LIB					-
+ * PROTOTYPE			void ft_free_dblptr(char **dblptr, int start, int count)
+ * PARAMS				dblptr: double pointer to free & its elements
+ * 						start:  start point to free
+ * 						count: double  list length, including last NULL
+ * RETURN VALUES		void
+ * EXTERNAL FUNCTS		free
+ * DESCRIPTION			when dblptr[start] == NULL, frees up memory up to its
+ * 						the dblptr[count]
+ */
+
+void	ft_free_dblptr(char **dblptr, int start, int count)
+{
+	while (start <= count)
+		free(dblptr[start++]);
+	free(dblptr);
+}
+
+/* ft_split_unwrapper
+ * LIB					-
+ * PROTOTYPE			char	**ft_split_unwrapper(char **lst, int count,
+ * 													char const *s, char c)
+ * PARAMS				lst: lst to populate w/ substrings
+ * 						count: len of lst, amount of substrings
+ * 						s: string to  split
+ * 						c: separator char
+ * RETURN VALUES		char **: list of lists with its elements (substrings)
+ * EXTERNAL FUNCTS		ft_substr 		-> to populate lst
+ * 						ft_free_dblptr 	-> malloc protection
+ * DESCRIPTION			function to split 's' with 'c' as separator and return
+ * 						a list of str with each substring. knowing the amount of
+ * 						substring to allocate already
+ * 						substrings' alocation is malloc-protecct
+ */
+
+char	**ft_split_unwrapper(char **lst, int count, char const *s, char c)
+{
+	int		i;
+	size_t	j;
+	int		k;
+
+	i = ft_strlen(s);
+	j = 0;
+	k = count;
+	lst[k--] = NULL;
+	while (--i >= 0)
+	{
+		j++;
+		if (i == 0 || (s[i] != c && s[i - 1] == c))
+		{
+			lst[k] = ft_substr(s, i, j);
+			if (!lst[k])
+			{
+				ft_free_dblptr(lst, k, count);
+				return (0);
+			}
+			k--;
+		}
+		if (s[i] == c)
+			j = 0;
+	}
+	return (lst);
 }
 
 /* ft_split
@@ -70,7 +135,7 @@ static char	*ft_strtrimwrapper(char const *s, char c)
  * RETURN VALUES		char **: array of new strings resulting from the split
  * 						NULL if the allocation fails
  * EXTERNAL FUNCTS		malloc
- * 						ft_strtrimwrapper	
+ * 						ft_strtrim_wrapper	
  * 						ft_substr
  * 						ft_countwords
  * DESCRIPTION			allocates (with malloc(3)) and returns an array of
@@ -82,26 +147,23 @@ static char	*ft_strtrimwrapper(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char			**wrdlist;
-	char const		*strim = ft_strtrimwrapper(s, c);
-	int				wordcount;
-	int				i;
-	size_t			charcount;
+	char const		*strim = ft_strtrim_wrapper(s, c);
+	int				wrdcount;
 
-	wordcount = ft_countwords(strim, c);
-	wrdlist = (char **)malloc(sizeof(char *) * (wordcount + 1));
-	if (!wrdlist)
+	if (!strim)
 		return (0);
-	i = ft_strlen(strim) - 1;
-	charcount = 0;
-	wrdlist[wordcount--] = NULL;
-	while (i >= 0)
+	wrdcount = ft_countwords(strim, c);
+	wrdlist = (char **)malloc(sizeof(char *) * (wrdcount + 1));
+	if (!wrdlist)
 	{
-		charcount++;
-		if (i == 0 || (strim[i] != c && strim[i - 1] == c))
-			wrdlist[wordcount--] = ft_substr(strim, i, charcount);
-		if (strim[i] == c)
-			charcount = 0;
-		i--;
+		free((void *)strim);
+		return (0);
+	}
+	wrdlist = ft_split_unwrapper(wrdlist, wrdcount, strim, c);
+	if (!wrdlist)
+	{
+		free((void *)strim);
+		return (0);
 	}
 	free((void *)strim);
 	return (wrdlist);
@@ -112,7 +174,7 @@ int	main(void)
 	char	**wrdlist;
 	int		i;
 
-	wrdlist = ft_split("gggggggggg", 'g');
+	wrdlist = ft_split("hello!", 32);
 	i = 0;
 	while (wrdlist[i] != '\0')
 	{

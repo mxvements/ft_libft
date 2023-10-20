@@ -19,7 +19,7 @@
  * 					set: set of chars to skip from the beginning
  * RETURN VALUES	int, index of the first char in 's1' that is not in 'set'
  * EXTERNAL FUNCTS	-
- * DESCRIPTION		get the index of the char that is not included in the
+ * DESCRIPTION		get the index of the 1st char that is not included in the
  * 					set of chars to skip
  */
 
@@ -108,10 +108,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int const		lastindex = ft_getlastindex(s1, set);
 	int				len;
 
-	if (lastindex >= firstindex)
+	if (lastindex > firstindex)
 		len = (lastindex - firstindex) + 1;
-	else
+	if (lastindex < firstindex)
 		len = 0;
+	if (lastindex == firstindex)
+		len = 1;
 	return (ft_substr(s1, firstindex, (size_t)len));
 }
 /*

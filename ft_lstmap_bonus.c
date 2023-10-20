@@ -69,7 +69,7 @@ void	*ft_toupper_wrapper(void *s)
 	str = (char *)s;
 	if (!s || str[i] == '\0')
 		return (s);
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		str[i] = ft_toupper(str[i]);
 		i++;

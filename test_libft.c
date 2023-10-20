@@ -15,7 +15,7 @@
 char	*STR_EMPTY = "";
 char	*STR_SPACE1 = "   ";
 char	*STR_SPACE2 = "\t\n\v\f\r ";
-char	*STR1 = "lorem\tipsum\tdolor\nsit\namet\n";
+char	*STR1 = "lorem\vipsum\rdolor\nsit\namet\n";
 char	*STR2 = "1";
 char	*STR3 = "lorem ictus!";
 
@@ -29,13 +29,28 @@ char	*ft_tester_sizet(size_t rslt1, size_t rslt2)
 	return (rslt1 == rslt2 ? "OK" : "ERROR");
 }
 
-char	*ft_tester_void_ptr(void *rslt1, void *rslt2, size_t n)
+char	*ft_tester_void_ptr_sizet(void *rslt1, void *rslt2, size_t n)
 {
 	size_t	i;
 	char	*testrslt = "OK";
 
 	i = 0;
 	while (i < n)
+	{
+		if (((char*)rslt1)[i] != ((char *)rslt2)[i])
+			testrslt = "ERROR";
+		i++;
+	}
+	return (testrslt);
+}
+
+char	*ft_tester_void_ptr(void *rslt1, void *rslt2)
+{
+	size_t	i;
+	char	*testrslt = "OK";
+
+	i = 0;
+	while (rslt1 != '\0')
 	{
 		if (((char*)rslt1)[i] != ((char *)rslt2)[i])
 			testrslt = "ERROR";
@@ -259,7 +274,7 @@ void	ft_memset_test(void)
 	printf("\033[0m");
 
 	len = 10;
-	tester = ft_tester_void_ptr(ft_memset(rslt1, 'c', len), memset(rslt2, 'c', len), len);
+	tester = ft_tester_void_ptr_sizet(ft_memset(rslt1, 'c', len), memset(rslt2, 'c', len), len);
 	printf("/01/:	%s\n", tester);
 }
 
@@ -277,7 +292,7 @@ void	ft_bzero_test(void)
 	len = 10;
 	ft_bzero(rslt1, len);
 	bzero(rslt2, len);
-	tester = ft_tester_void_ptr(rslt1, rslt2, len);
+	tester = ft_tester_void_ptr_sizet(rslt1, rslt2, len);
 	printf("/01/:	%s\n", tester);
 }
 
@@ -295,7 +310,7 @@ void	ft_memcpy_test(void)
 
 	ft_memcpy(rslt1, src, len);
 	memcpy(rslt2, src, len);
-	tester = ft_tester_void_ptr(rslt1, rslt2, len);
+	tester = ft_tester_void_ptr_sizet(rslt1, rslt2, len);
 	printf("/01/:(no overlaping)	%s\n", tester);
 }
 
@@ -313,7 +328,7 @@ void	ft_memmove_test(void)
 
 	ft_memmove(rslt1, src, len);
 	memmove(rslt2, src, len);
-	tester = ft_tester_void_ptr(rslt1, rslt2, len);
+	tester = ft_tester_void_ptr_sizet(rslt1, rslt2, len);
 	printf("/01/:(overlaping)	%s\n", tester);
 }
 
@@ -483,8 +498,102 @@ void	ft_memchr_test(void)
 	printf("\nft_memchr - test\n");
 	printf("\033[0m");
 
-	tester = ft_tester_void_ptr(ft_memchr(STR1, 'o', (size_t)5), memchr(STR1, 'o', (size_t)5), (size_t)5);
+	tester = ft_tester_void_ptr_sizet(ft_memchr(STR1, 'o', (size_t)5), memchr(STR1, 'o', (size_t)5), (size_t)5);
 	printf("/01/:	%s\n", tester);
+}
+
+void	ft_memcmp_test(void)
+{
+	char	*tester;
+
+	printf("\033[0;35m");
+	printf("\nft_memcmp - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_int(ft_memcmp(STR1, STR3, 5), memcmp(STR1, STR3, 5));
+	printf("/01/:\v%s\n", tester);
+
+	tester = ft_tester_int(ft_memcmp(STR1, STR2, 5), memcmp(STR1, STR2, 5));
+	printf("/02/:	%s\n", tester);
+
+	tester = ft_tester_int(ft_memcmp(STR1, STR_EMPTY, 5), memcmp(STR1, STR_EMPTY, 5));
+	printf("/03/:	%s\n", tester);
+}
+
+void	ft_strnstr_test(void)
+{
+	char	*tester;
+
+	printf("\033[0;35m");
+	printf("\nft_strnstr - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_str_ptr(ft_strnstr(STR3, STR1, (size_t)-5), strnstr(STR3, STR1, (size_t)-5));
+	printf("/01/:\v%s\n", tester);
+
+	tester = ft_tester_str_ptr(ft_strnstr(STR3, STR1, 10), strnstr(STR3, STR1, 10));
+	printf("/02/:\v%s\n", tester);
+
+	tester = ft_tester_str_ptr(ft_strnstr(STR1, STR_EMPTY, 5), strnstr(STR1, STR_EMPTY, 5));
+	printf("/03/:\v%s\n", tester);
+}
+
+void	ft_atoi_test(void)
+{
+	char	*tester;
+	printf("\033[0;35m");
+	printf("\nft_atoi - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_int(ft_atoi("     +123456\v78"), atoi("     +123456\v78   "));
+	printf("/01/:\v%s\n", tester);
+
+	tester = ft_tester_int(ft_atoi(STR_EMPTY), atoi(STR_EMPTY));
+	printf("/02/:\v%s\n", tester);
+
+	tester = ft_tester_int(ft_atoi(STR1), atoi(STR1));
+	printf("/03/:\v%s\n", tester);
+
+	tester = ft_tester_int(ft_atoi("   +-123"), atoi("   +-123"));
+	printf("/04/:\v%s\n", tester);
+}
+
+void	ft_calloc_test(void)
+{
+	char	*tester;
+	size_t	size;
+	printf("\033[0;35m");
+	printf("\nft_calloc - test\n");
+	printf("\033[0m");
+
+	size =  10;
+	tester = ft_tester_void_ptr_sizet(ft_calloc('c', size), calloc('c', size), size);
+	printf("/01/:\v%s\n", tester);
+
+	size =  10;
+	tester = ft_tester_void_ptr_sizet(ft_calloc('\v', size), calloc('\v', size), size);
+	printf("/02/:\v%s\n", tester);
+
+	size =  10;
+	tester = ft_tester_void_ptr_sizet(ft_calloc('1', size), calloc('1', size), size);
+	printf("/03/:\v%s\n", tester);
+}
+
+void	ft_strdup_test(void)
+{
+	char	*tester;
+	printf("\033[0;35m");
+	printf("\nft_strdup - test\n");
+	printf("\033[0m");
+
+	tester = ft_tester_str_ptr(ft_strdup(STR_EMPTY), strdup(STR_EMPTY));
+	printf("/01/:\v\'%s\'\v%s\n", STR_EMPTY, tester);
+
+	tester = ft_tester_str_ptr(ft_strdup(STR_SPACE2), strdup(STR_SPACE2));
+	printf("/02/:\v\'%s\'\v%s\n", STR_EMPTY,  tester);
+
+	tester = ft_tester_str_ptr(ft_strdup(STR1), strdup(STR1));
+	printf("/02/:\v\'%s\'\v%s\n", STR1, tester);
 }
 
 int	main(void)
@@ -507,13 +616,11 @@ int	main(void)
 	ft_strrchr_test();
 	ft_strncmp_test();
 	ft_memchr_test();
-
-	/*
 	ft_memcmp_test();
 	ft_strnstr_test();
 	ft_atoi_test();
 	ft_calloc_test();
 	ft_strdup_test();
-	*/
+
 	return (0);
 }
