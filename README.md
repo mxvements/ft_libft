@@ -5,20 +5,14 @@
     <img src="https://img.shields.io/github/languages/top/mxvements/ft_libft?color=00ABAD&style=flat-square" />
     <img src="https://img.shields.io/github/last-commit/mxvements/ft_libft?color=00ABAD&style=flat-square" />
     <br>
-    <a href='https://www.linkedin.com/in/luciami' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-100000?style=flat-square&logo=Linkedin&logoColor=white&labelColor=black&color=black'/></a>
-    <a href='https://profile.intra.42.fr/users/luciama2' target="_blank"><img alt='42' src='https://img.shields.io/badge/Madrid-100000?style=flat-square&logo=42&logoColor=white&labelColor=000000&color=000000'/></a>
+    <a href='https://www.linkedin.com/in/luciami' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-100000?style=flat-square&logo=Linkedin&logoColor=white&labelColor=1323233&color=323233'/></a>
+    <a href='https://profile.intra.42.fr/users/luciama2' target="_blank"><img alt='42' src='https://img.shields.io/badge/Madrid-100000?style=flat-square&logo=42&logoColor=white&labelColor=323233&color=323233'/></a>
     <br>
-    <a href="#about-the-project-pushpin">About the project</a> / <a href="#how-to-use-bulb">How to use</a> / <a href="#ft_libft-star">ft_libft</a> / <a href="#other">Other</a>
-    <br><br>
 </div>
 
 # ft_libft
 
 The first project at 42, libft, involves learning how the standard functions of C programming work by writing them from scratch and creating a personal library. This project is vital as the library will be used in future assignments at 42.
-
-<a href="https://github.com/jotavare/libft/blob/master/subject/en_subject_libft.pdf">
-
-Click here</a> for the subject of this project.
 
 | **Program name** | libft.a |
 | ---------------- | ------- |
@@ -29,11 +23,59 @@ Click here</a> for the subject of this project.
 | **Description** | Write your own library: a collection of functions that will be a useful tool for your cursus. |
 
 + Mandatory part
-  + Part 1: libc functins
-  + Part 2: additional funcionts
-  
-+ Bonus part
+  + Part 1: **libc functions**
+    + [x] `ft_isalpha`				
+    + [x] `ft_isdigit`
+    + [x] `ft_isalnum`
+    + [x] `ft_isascii`
+    + [x] `ft_toupper`
+    + [x] `ft_tolower`
+    + [x] `ft_strlen`
+    + [x] `ft_strlcpy`
+    + [x] `ft_strlcat`
+    + [x] `ft_strchr`
+    + [x] `ft_strrchr`
+    + [x] `ft_strncmp`
+    + [x] `ft_strnstr`
+    + [x] `ft_calloc`
+    + [x] `ft_memset`
+    + [x] `ft_bzero`
+    + [x] `ft_memcpy`
+    + [x] `ft_memmove`
+    + [x] `ft_memchr`
+    + [x] `ft_memcmp`
+    + [x] `ft_strdup`
+    + [x] `ft_atoi`
+
+  + Part 2: **additional funcionts**
+    + [x] `ft_substr`
+    + [x] `ft_strjoin`
+    + [x] `ft_strtrim`
+    + [x] `ft_split`
+    + [x] `ft_strmapi`
+    + [x] `ft_itoa`
+    + [x] `ft_putchar_fd`
+    + [x] `ft_putstr_fd`
+    + [x] `ft_putendl_fd`
+    + [x] `ft_putnbr_fd`
++ **Bonus part**
+    + [x] `ft_lstnew`
+    + [x] `ft_lstadd_front`
+    + [x] `ft_lstsize`
+    + [x] `ft_lstlast`
+    + [x] `ft_lstadd_back`
+    + [x] `ft_lstdelone`
+    + [x] `ft_lstclear`
+    + [x] `ft_lstiter`
+    + [x] `ft_lstmap`
 + Other functions added to grow the library
+    + [x] `ft_isupper`
+    + [x] `ft_islower`
+    + [x] `ft_isspace`
+    + [ ] `ft_countwords` - used static in split
+    + [ ] `ft_putnbr_base` - for ft_printf
+    + [ ] `ft_itoa_base` - for ft_printf
+    + [ ] `ft_atoi_base`
 
 ## How to use
 
@@ -41,34 +83,26 @@ Click here</a> for the subject of this project.
 
 1 - Clone de repository
 
-`
+```
 git clone git@github.com:mxvements/ft_libft.git
-`
+```
 
 2 - Enter the project folder and run `make`, makefile rules
 
 	`make` - compile libft mandatory files
-
-`make bonus` - compile libft bonus files
-
-`make all` - compile all (mandatory + bonus) files
-
-`make clean` - delete all *.o files
-
-`make fclean` - delete all *.o & *.a (executable) files
-
-`make re` - use fclean + all, recompile libft
-
-`make test` - added rule, compile test_libft.c file (main w/ tester functs on libc)
-
-`make tclean` - added rule, delete all *.o & clean *.out file from test
+	`make bonus` - compile libft bonus files
+	`make all` - compile all (mandatory + bonus) files
+	`make clean` - delete all *.o files
+	`make fclean` - delete all *.o & *.a (executable) files
+	`make re` - use fclean + all, recompile libft
+	`make test` - added rule, compile test_libft.c file (main w/ tester functs on libc)
+	`make tclean` - added rule, delete all *.o & clean *.out file from test
 
 3 - To include it in your code, include the header
 
-`
-# include 'libft.h"
-`
-
+```
+#include 'libft.h"
+```
 ## Mandatory part
 
 ### Check and manipulate characters
@@ -82,8 +116,6 @@ git clone git@github.com:mxvements/ft_libft.git
 | **ft_isprint**  | [x] | ctype.h | int ft_isprint(int c) | Tets for any printing character (ascii dec 32..136). Return: (0) if false, (nonzero) if true |   | libc |
 | **ft_toupper**  | [x] | ctype.h | int ft_toupper(int c) | Converts lower-case to the corresponding upper-case. Return: the corresponding upper-case char, otherwise the argument is returned unchanged (was already uppercase or not a char) | ft_islower* | libc |
 | **ft_tolower**  | [x] | ctype.h | int ft_tolower(int c) | Converts upper-case to the corresponding lower-case. Return: the corresponding lower-case char, otherwise the argument is returned unchanged (was already lower-case or not a char)  | ft_isupper* | libc |
-
-ft_isupper, ft_islower, ft_isspace -> added after completion of the project, included as static where needed.
 
 ### Manipulate strings
 
@@ -151,6 +183,24 @@ ft_isupper, ft_islower, ft_isspace -> added after completion of the project, inc
 
 # Other
 
-## Contact
+## Norminete
+At 42 School, it is expected that almost every project is written in accordance with the Norm, which is the coding standard of the school.
 
-## License
+<a href="https://github.com/42School/norminette">
+<a>Norminette's repository</a>
+
+```
+- No for, do...while, switch, case, goto, ternary operators and variable-length arrays are allowed
+- Each function must be a maximum of 25 lines, not counting the function's curly brackets
+- Each line must be at most 80 columns wide, comments included
+- A function can take 4 named parameters maximum
+- No assigns and declarations in the same line (unless static or const)
+- You can't declare more than 5 variables per function
+- ...
+```
+
+# Contact
+```
+luciama2@student.42madrid.com
+```
+# License
