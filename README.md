@@ -12,17 +12,14 @@
     <br><br>
 </div>
 
-# About the project
+# ft_libft
+
 The first project at 42, libft, involves learning how the standard functions of C programming work by writing them from scratch and creating a personal library. This project is vital as the library will be used in future assignments at 42.
 
 <a href="https://github.com/jotavare/libft/blob/master/subject/en_subject_libft.pdf">
 
 Click here</a> for the subject of this project.
 
-# How to use 
-
-# ft_libft :star:
-  
 | **Program name** | libft.a |
 | ---------------- | ------- |
 | **Turn in files** | Makefile, libft.h, ft_*.c |
@@ -36,7 +33,41 @@ Click here</a> for the subject of this project.
   + Part 2: additional funcionts
   
 + Bonus part
++ Other functions added to grow the library
 
+## How to use
+
+### Compilation
+
+1 - Clone de repository
+
+`
+git clone git@github.com:mxvements/ft_libft.git
+`
+
+2 - Enter the project folder and run `make`, makefile rules
+
+	`make` - compile libft mandatory files
+
+`make bonus` - compile libft bonus files
+
+`make all` - compile all (mandatory + bonus) files
+
+`make clean` - delete all *.o files
+
+`make fclean` - delete all *.o & *.a (executable) files
+
+`make re` - use fclean + all, recompile libft
+
+`make test` - added rule, compile test_libft.c file (main w/ tester functs on libc)
+
+`make tclean` - added rule, delete all *.o & clean *.out file from test
+
+3 - To include it in your code, include the header
+
+`
+# include 'libft.h"
+`
 
 ## Mandatory part
 
@@ -93,7 +124,6 @@ ft_isupper, ft_islower, ft_isspace -> added after completion of the project, inc
 | **ft_calloc**  | [x] | stdlib.h | void *calloc(size_t count, size_t size) | memory allocation with enough space for count objects that are size bytes of memory each and returns a pointerto the allocated memory filled with bytes of i value (0) | malloc | libc |
 | **ft_strdup**  | [x] | string.h | char *ft_strdup(const char *s1) | saves a cpy of the str 's1', allocating anough memory, doing the copy and returning the ptr to it. allocates at most 'n' char from 's1' always terminating the copied str. | malloc | libc |
 
-
 ### Write to a file descriptor
 
 | **Name** | Status | Library | Prototype | Short description | Dependencies | Section |
@@ -124,5 +154,3 @@ ft_isupper, ft_islower, ft_isspace -> added after completion of the project, inc
 ## Contact
 
 ## License
-
-## Aknowledgments
