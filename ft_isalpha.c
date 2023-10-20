@@ -12,22 +12,6 @@
 
 #include "libft.h"
 
-/* ft_isupper
- * LIB				ctype.h
- * PROTOTYPE		int isupper(int c)
- * PARAMS			c: ascii representation of char to check
- * RETURN VALUES	int, 0:false, 1: true, non-zero if true
- * EXTERNAL FUNCTS	-
- * DESCRIPTION		tests for ascii 65 to 90 (decimal), both included
- */
-
-static int	ft_isupper(int c)
-{
-	if (c >= 65 && c <= 90)
-		return (1);
-	return (0);
-}
-
 /* ft_isalpha
  * LIB					ctype.h
  * PROTOTYPE			int isalpha(int c)
