@@ -23,31 +23,20 @@ The first project at 42, libft, involves learning how the standard functions of 
 | **Description** | Write your own library: a collection of functions that will be a useful tool for your cursus. |
 
 + Mandatory part
-  + Part 1: **libc functions**
-    + [x] `ft_isalpha`				
-    + [x] `ft_isdigit`
-    + [x] `ft_isalnum`
-    + [x] `ft_isascii`
-    + [x] `ft_toupper`
-    + [x] `ft_tolower`
-    + [x] `ft_strlen`
-    + [x] `ft_strlcpy`
-    + [x] `ft_strlcat`
-    + [x] `ft_strchr`
-    + [x] `ft_strrchr`
-    + [x] `ft_strncmp`
-    + [x] `ft_strnstr`
-    + [x] `ft_calloc`
-    + [x] `ft_memset`
-    + [x] `ft_bzero`
-    + [x] `ft_memcpy`
-    + [x] `ft_memmove`
-    + [x] `ft_memchr`
-    + [x] `ft_memcmp`
-    + [x] `ft_strdup`
-    + [x] `ft_atoi`
+  + Part 1: **libc functions**, recreate functions on `ctyphe.h`,  `string.h` & `strings.h`
 
-  + Part 2: **additional funcionts**
+	|                |                |                |
+	|----------------|----------------|----------------|
+	|`ft_isalpha`    |`ft_strlcat`    |`ft_memcpy`     |
+	|`ft_isdigit`    |`ft_strchr`     |`ft_memmove`    |
+	|`ft_isalnum`    |`ft_strrchr`    |`ft_memchr`     |
+	|`ft_isascii`    |`ft_strncmp`    |`ft_memcmp`     |
+	|`ft_toupper`    |`ft_strnstr`    |`ft_strdup`     |
+	|`ft_tolower`    |`ft_calloc`     |`ft_atoi`       |
+	|`ft_strlen`     |`ft_memset`     |
+	|`ft_strlcpy`    |`ft_bzero`      |
+
+  + Part 2: **additional functions**
     + [x] `ft_substr`
     + [x] `ft_strjoin`
     + [x] `ft_strtrim`
@@ -58,7 +47,7 @@ The first project at 42, libft, involves learning how the standard functions of 
     + [x] `ft_putstr_fd`
     + [x] `ft_putendl_fd`
     + [x] `ft_putnbr_fd`
-+ **Bonus part**
++ **Bonus part**, linked lists
     + [x] `ft_lstnew`
     + [x] `ft_lstadd_front`
     + [x] `ft_lstsize`
@@ -68,7 +57,7 @@ The first project at 42, libft, involves learning how the standard functions of 
     + [x] `ft_lstclear`
     + [x] `ft_lstiter`
     + [x] `ft_lstmap`
-+ Other functions added to grow the library
++ Other functions added to grow the library (included after finishing the project on the intra)
     + [x] `ft_isupper`
     + [x] `ft_islower`
     + [x] `ft_isspace`
