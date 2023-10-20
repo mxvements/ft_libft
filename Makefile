@@ -11,6 +11,9 @@ MY_SOURCES= ft_isalpha.c \
 			ft_isascii.c \
 			ft_isalnum.c \
 			ft_isprint.c \
+			ft_islower.c \
+			ft_isupper.c \
+			ft_isspace.c \
 			ft_strlen.c \
 			ft_memset.c \
 			ft_bzero.c \
