@@ -75,12 +75,12 @@ test: test_libft.o
 clean:
 	rm -rf *.o $(MY_OBJECTS) $(MY_BONUS_OBJECTS)
 
-tclean: clean
-	rm -rf $(TEST_NAME)
-
 fclean: clean
 	rm -rf $(NAME)
 
+tclean: fclean
+	rm -rf $(TEST_NAME)
+	
 norminette:
 	norminette $(MY_SOURCES)
 
