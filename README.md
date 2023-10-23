@@ -24,30 +24,28 @@ The first project at 42, libft, involves learning how the standard functions of 
 
 + Mandatory part
   + Part 1: **libc functions**, recreate functions on `ctyphe.h`,  `string.h` & `strings.h`
-
-	+ [x] `ft_isalpha`
+    + [x] `ft_isalpha`
     + [x] `ft_isdigit`
-	+ [x] `ft_isalnum`
-	+ [x] `ft_isascii`
-	+ [x] `ft_toupper`
-	+ [x] `ft_tolower`
-	+ [x] `ft_strlen`
-	+ [x] `ft_strlcpy`
-	+ [x] `ft_strlcat`
-	+ [x] `ft_strchr`
-	+ [x] `ft_strrchr`
-	+ [x] `ft_strncmp`
-	+ [x] `ft_strnstr`
-	+ [x] `ft_calloc`
-	+ [x] `ft_memset`
-	+ [x] `ft_bzero`
-	+ [x] `ft_memcpy`
-	+ [x] `ft_memmove`
-	+ [x] `ft_memchr`
-	+ [x] `ft_memcmp`
-	+ [x] `ft_strdup`
-	+ [x] `ft_atoi`
-
+    + [x] `ft_isalnum`
+    + [x] `ft_isascii`
+    + [x] `ft_toupper`
+    + [x] `ft_tolower`
+    + [x] `ft_strlen`
+    + [x] `ft_strlcpy`
+    + [x] `ft_strlcat`
+    + [x] `ft_strchr`
+    + [x] `ft_strrchr`
+    + [x] `ft_strncmp`
+    + [x] `ft_strnstr`
+    + [x] `ft_calloc`
+    + [x] `ft_memset`
+    + [x] `ft_bzero`
+    + [x] `ft_memcpy`
+    + [x] `ft_memmove`
+    + [x] `ft_memchr`
+    + [x] `ft_memcmp`
+    + [x] `ft_strdup`
+    + [x] `ft_atoi`
   + Part 2: **additional functions**
     + [x] `ft_substr`
     + [x] `ft_strjoin`
@@ -60,23 +58,23 @@ The first project at 42, libft, involves learning how the standard functions of 
     + [x] `ft_putendl_fd`
     + [x] `ft_putnbr_fd`
 + **Bonus part**, linked lists
-    + [x] `ft_lstnew`
-    + [x] `ft_lstadd_front`
-    + [x] `ft_lstsize`
-    + [x] `ft_lstlast`
-    + [x] `ft_lstadd_back`
-    + [x] `ft_lstdelone`
-    + [x] `ft_lstclear`
-    + [x] `ft_lstiter`
-    + [x] `ft_lstmap`
+  + [x] `ft_lstnew`
+  + [x] `ft_lstadd_front`
+  + [x] `ft_lstsize`
+  + [x] `ft_lstlast`
+  + [x] `ft_lstadd_back`
+  + [x] `ft_lstdelone`
+  + [x] `ft_lstclear`
+  + [x] `ft_lstiter`
+  + [x] `ft_lstmap`
 + Other functions added to the library (included after validating the project on the intra)
-    + [x] `ft_isupper`
-    + [x] `ft_islower`
-    + [x] `ft_isspace`
-    + [ ] `ft_countwords` - used static in split
-    + [ ] `ft_putnbr_base` - for ft_printf
-    + [ ] `ft_itoa_base` - for ft_printf
-    + [ ] `ft_atoi_base`
+  + [x] `ft_isupper`
+  + [x] `ft_islower`
+  + [x] `ft_isspace`
+  + [ ] `ft_countwords` - used static in split
+  + [ ] `ft_putnbr_base` - for ft_printf
+  + [ ] `ft_itoa_base` - for ft_printf
+  + [ ] `ft_atoi_base`
 
 ## How to use
 
