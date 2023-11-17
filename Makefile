@@ -11,6 +11,9 @@ MY_SOURCES= ft_isalpha.c \
 			ft_isascii.c \
 			ft_isalnum.c \
 			ft_isprint.c \
+			ft_islower.c \
+			ft_isupper.c \
+			ft_isspace.c \
 			ft_strlen.c \
 			ft_memset.c \
 			ft_bzero.c \
@@ -72,12 +75,12 @@ test: test_libft.o
 clean:
 	rm -rf *.o $(MY_OBJECTS) $(MY_BONUS_OBJECTS)
 
-tclean: clean
-	rm -rf $(TEST_NAME)
-
 fclean: clean
 	rm -rf $(NAME)
 
+tclean: fclean
+	rm -rf $(TEST_NAME)
+	
 norminette:
 	norminette $(MY_SOURCES)
 

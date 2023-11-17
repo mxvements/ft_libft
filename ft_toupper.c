@@ -12,13 +12,6 @@
 
 #include "libft.h"
 
-static int	ft_islower(int c)
-{
-	if (c >= 97 && c <= 122)
-		return (1);
-	return (0);
-}
-
 /* ft_tolower
  * LIB				ctype.h
  * PROTOTYPE		int toupper(int c)
