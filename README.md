@@ -198,8 +198,5 @@ At 42 School, it is expected that almost every project is written in accordance 
 - ...
 ```
 
-# Contact
-```
-luciama2@student.42madrid.com
-```
 # License
+[MIT License](https://github.com/mxvements/ft_license/blob/main/LICENSE.txt)
