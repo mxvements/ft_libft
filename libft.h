@@ -91,5 +91,6 @@ int		ft_dllsize(t_dll *lst);
 t_dll	*ft_dlllast(t_dll *lst);
 void	ft_dlladd_back(t_dll **lst, t_dll *new);
 void	ft_dlldelone(t_dll *lst, void (*del)(void *));
+void	ft_dllclear(t_dll **lst, void (*del)(void *));
 
 #endif
