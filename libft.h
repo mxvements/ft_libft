@@ -93,5 +93,6 @@ void	ft_dlladd_back(t_dll **lst, t_dll *new);
 void	ft_dlldelone(t_dll *lst, void (*del)(void *));
 void	ft_dllclear(t_dll **lst, void (*del)(void *));
 void	ft_dlliter(t_dll *lst, void (*f)(void *));
+t_dll	*ft_dllmap(t_dll *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
