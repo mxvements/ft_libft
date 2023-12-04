@@ -33,7 +33,7 @@ t_dll	*ft_dllmap(t_dll *lst, void *(*f)(void *), void (*del)(void *))
 			del(content);
 		}
 		ft_lstadd_back(&newdll, node);
-		cpy =  cpy->next
+		cpy =  cpy->next;
 	}
 	return (newdll);
 }
