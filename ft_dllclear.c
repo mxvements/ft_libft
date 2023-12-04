@@ -20,18 +20,13 @@ void	ft_dllclear(t_dll **lst, void (*del)(void *))
 	if (!lst || *lst == NULL)
 		return ;
 	cpy = *lst;
-	while (cpy->next != NULL)
+	while (cpy)
 	{
 		tmp = cpy;
 		cpy = tmp->next;
 		cpy->prev = NULL;
 		del(tmp->content);
 		free(tmp);
-	}
-	if (cpy->next == NULL)
-	{
-		del(cpy->content);
-		free(cpy);
 	}
 	*lst = NULL; //need to check this
 	return ;

@@ -21,12 +21,10 @@ int		ft_dllsize(t_dll *lst)
 	count = 0;
 	if (!tmp)
 		return (0);
-	while (tmp->next != NULL)
+	while (tmp)
 	{
 		count++;
 		tmp = tmp->next;
 	}
-	if (tmp->next == NULL)
-		count++;
 	return (count);
 }

@@ -19,14 +19,10 @@ void	ft_dlliter(t_dll *lst, void (*f)(void *))
 	if (!lst | !f)
 		return ;
 	cpy = lst;
-	while (cpy->next != NULL)
+	while (cpy)
 	{
 		f(cpy->content);
 		cpy = cpy->next;
-	}
-	if (cpy->next == NULL)
-	{
-		f(cpy->content);
 	}
 	return ;
 }
