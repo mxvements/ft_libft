@@ -85,7 +85,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void*));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /* DLL */
-t_dll	*ft_lstnew(void *content);
+t_dll	*ft_dllnew(void *content);
 void	ft_dlladd_front(t_dll **lst, t_dll *new);
 int		ft_dllsize(t_dll *lst);
 t_dll	*ft_dlllast(t_dll *lst);
