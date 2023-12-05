@@ -1,6 +1,6 @@
 CC=gcc
 
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -g3
 
 NAME=libft.a
 
@@ -11,9 +11,6 @@ MY_SOURCES= ft_isalpha.c \
 			ft_isascii.c \
 			ft_isalnum.c \
 			ft_isprint.c \
-			ft_islower.c \
-			ft_isupper.c \
-			ft_isspace.c \
 			ft_strlen.c \
 			ft_memset.c \
 			ft_bzero.c \
@@ -54,9 +51,24 @@ MY_BONUS_SOURCES=	ft_lstnew_bonus.c \
 					ft_lstiter_bonus.c \
 					ft_lstmap_bonus.c
 
+MY_EXTRA_SOURCES=	ft_islower_extra.c \
+					ft_isspace_extra.c \
+					ft_isupper_extra.c \
+					ft_dllnew_extra.c \
+					ft_dlladd_front_extra.c \
+					ft_dllsize_extra.c \
+					ft_dlllast_extra.c \
+					ft_dlladd_back_extra.c \
+					ft_dlldelone_extra.c \
+					ft_dllclear_extra.c \
+					ft_dlliter_extra.c \
+					ft_dllmap_extra.c
+
 MY_OBJECTS=$(MY_SOURCES:%.c=%.o)	
 
 MY_BONUS_OBJECTS=$(MY_BONUS_SOURCES:%.c=%.o)
+
+MY_EXTRA_OBJECTS=$(MY_EXTRA_SOURCES:%.c=%.o)
 
 all: $(NAME)
 
@@ -66,6 +78,9 @@ $(NAME): $(MY_OBJECTS)
 bonus: $(NAME) $(MY_BONUS_OBJECTS)
 	ar -crs $^
 
+extra: $(NAME) $(MY_BONUS_OBJECTS) $(MY_EXTRA_OBJECTS)
+	ar -crs $^
+
 test: test_libft.o
 	$(CC) test_libft.o -o $(TEST_NAME) -L. -lft
 
@@ -73,7 +88,7 @@ test: test_libft.o
 	$(CC) $(CFLAGS)	-c $<
 
 clean:
-	rm -rf *.o $(MY_OBJECTS) $(MY_BONUS_OBJECTS)
+	rm -rf *.o $(MY_OBJECTS) $(MY_BONUS_OBJECTS) $(MY_EXTRA_OBJECTS)
 
 fclean: clean
 	rm -rf $(NAME)

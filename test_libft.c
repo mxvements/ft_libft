@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_libft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
+/*   By: lmmielgo <lmmielgo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:05:46 by luciama2          #+#    #+#             */
-/*   Updated: 2023/10/26 18:08:39 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/12/05 14:53:28 by lmmielgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -596,8 +596,48 @@ void	ft_strdup_test(void)
 	printf("/02/:\v\'%s\'\v%s\n", STR1, tester);
 }
 
+void	ft_dll_test(void)
+{
+	/*	t_dll	*ft_dllnew(void *content); --OK--
+		void	ft_dlladd_front(t_dll **lst, t_dll *new); --OK--
+		int		ft_dllsize(t_dll *lst);
+		t_dll	*ft_dlllast(t_dll *lst);
+		void	ft_dlladd_back(t_dll **lst, t_dll *new); --OK--
+		void	ft_dlldelone(t_dll *lst, void (*del)(void *));
+		void	ft_dllclear(t_dll **lst, void (*del)(void *));
+		void	ft_dlliter(t_dll *lst, void (*f)(void *));
+		t_dll	*ft_dllmap(t_dll *lst, void *(*f)(void *), void (*del)(void *));
+	 */
+
+	t_dll 	dllnode1;
+	t_dll 	dllnode2;
+	t_dll 	dllnode3;
+	t_dll	*head;
+	int		nbr1 = 1;
+	int		nbr2 = 1;
+	int		nbr3 = 1;
+	
+	
+	dllnode1 = ft_dllnew((void *)nbr1);
+	dllnode2 = ft_dllnew((void *)nbr2);
+	dllnode3 = ft_dllnew((void *)nbr3);
+	head = &dllnode1;
+	ft_dlladd_back(head, dllnode2);
+	ft_dlladd_front(head, dllnode3);
+
+	//Print DLL
+	t_dll	tmp;
+	tmp = *head;
+	while(tmp)
+	{
+		printf("%s\n", tmp.content);
+		tmp = dllnode1.next;	
+	}
+	
+}
+
 int	main(void)
-{	
+{	/*
 	ft_isalnum_test();
 	ft_isalpha_test();
 	ft_isascii_test();
@@ -621,6 +661,9 @@ int	main(void)
 	ft_atoi_test();
 	ft_calloc_test();
 	ft_strdup_test();
+	*/
+
+	ft_dll_test();
 
 	return (0);
 }

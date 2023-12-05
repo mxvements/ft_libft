@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dllmap.c                                        :+:      :+:    :+:   */
+/*   ft_dllmap_extra.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
+/*   By: lmmielgo <lmmielgo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:06:21 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/04 18:06:22 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/12/05 15:11:39 by lmmielgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_dll	*ft_dllmap(t_dll *lst, void *(*f)(void *), void (*del)(void *))
 	void	*content;
 
 	if (!lst || !f || !del)
-		rerurn (NULL);
+		return (NULL);
 	cpy = lst;
 	newdll = NULL;
 	while (cpy)
@@ -32,8 +32,8 @@ t_dll	*ft_dllmap(t_dll *lst, void *(*f)(void *), void (*del)(void *))
 			ft_dllclear(&newdll, del);
 			del(content);
 		}
-		ft_lstadd_back(&newdll, node);
-		cpy =  cpy->next;
+		ft_dlladd_back(&newdll, node);
+		cpy = cpy->next;
 	}
 	return (newdll);
 }
