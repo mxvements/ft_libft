@@ -6,12 +6,14 @@
 /*   By: lmmielgo <lmmielgo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:05:46 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/05 14:53:28 by lmmielgo         ###   ########.fr       */
+/*   Updated: 2023/12/05 15:39:46 by lmmielgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
+/*
 char	*STR_EMPTY = "";
 char	*STR_SPACE1 = "   ";
 char	*STR_SPACE2 = "\t\n\v\f\r ";
@@ -50,7 +52,7 @@ char	*ft_tester_void_ptr(void *rslt1, void *rslt2)
 	char	*testrslt = "OK";
 
 	i = 0;
-	while (rslt1 != '\0')
+	while (((char*)rslt1)[i] != '\0')
 	{
 		if (((char*)rslt1)[i] != ((char *)rslt2)[i])
 			testrslt = "ERROR";
@@ -596,12 +598,15 @@ void	ft_strdup_test(void)
 	printf("/02/:\v\'%s\'\v%s\n", STR1, tester);
 }
 
+*/
+
+
 void	ft_dll_test(void)
 {
 	/*	t_dll	*ft_dllnew(void *content); --OK--
 		void	ft_dlladd_front(t_dll **lst, t_dll *new); --OK--
-		int		ft_dllsize(t_dll *lst);
-		t_dll	*ft_dlllast(t_dll *lst);
+		int		ft_dllsize(t_dll *lst); --OK--
+		t_dll	*ft_dlllast(t_dll *lst); --OK--
 		void	ft_dlladd_back(t_dll **lst, t_dll *new); --OK--
 		void	ft_dlldelone(t_dll *lst, void (*del)(void *));
 		void	ft_dllclear(t_dll **lst, void (*del)(void *));
@@ -609,31 +614,36 @@ void	ft_dll_test(void)
 		t_dll	*ft_dllmap(t_dll *lst, void *(*f)(void *), void (*del)(void *));
 	 */
 
-	t_dll 	dllnode1;
-	t_dll 	dllnode2;
-	t_dll 	dllnode3;
-	t_dll	*head;
+	t_dll 	*dllnode1;
+	t_dll 	*dllnode2;
+	t_dll 	*dllnode3;
+	t_dll	**head;
 	int		nbr1 = 1;
-	int		nbr2 = 1;
-	int		nbr3 = 1;
+	int		nbr2 = 2;
+	int		nbr3 = 3;
 	
 	
-	dllnode1 = ft_dllnew((void *)nbr1);
-	dllnode2 = ft_dllnew((void *)nbr2);
-	dllnode3 = ft_dllnew((void *)nbr3);
+	dllnode1 = ft_dllnew((void *)&nbr1);
+	dllnode2 = ft_dllnew((void *)&nbr2);
+	dllnode3 = ft_dllnew((void *)&nbr3);
 	head = &dllnode1;
 	ft_dlladd_back(head, dllnode2);
 	ft_dlladd_front(head, dllnode3);
 
 	//Print DLL
-	t_dll	tmp;
+	t_dll	*tmp;
 	tmp = *head;
-	while(tmp)
+	int *tmpnbr;
+	while(tmp != NULL)
 	{
-		printf("%s\n", tmp.content);
-		tmp = dllnode1.next;	
+		tmpnbr = (int *)(tmp->content);
+		printf("%d\n", *tmpnbr);
+		tmp = tmp->next;
 	}
-	
+	//Print DLL's size
+	int size;
+	size = ft_dllsize(*head);
+	printf("size: %d\n", size);
 }
 
 int	main(void)
