@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlladd_front.c                                  :+:      :+:    :+:   */
+/*   ft_dlladd_front_extra.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
+/*   By: lmmielgo <lmmielgo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 17:22:57 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/04 17:22:59 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/12/06 16:55:56 by lmmielgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,16 @@
 
 void	ft_dlladd_front(t_dll **lst, t_dll *new)
 {
+	t_dll *oldhead;
+
 	if (!lst || !new)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	
+	oldhead = *lst;
+	//*lst = new; //esto me da problemas con los nodos,
+	new->next = oldhead;
+	oldhead->prev = new;
+	
 	return ;
 }
+ 

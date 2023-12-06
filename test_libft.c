@@ -6,7 +6,7 @@
 /*   By: lmmielgo <lmmielgo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:05:46 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/05 15:39:46 by lmmielgo         ###   ########.fr       */
+/*   Updated: 2023/12/06 16:56:12 by lmmielgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -600,6 +600,25 @@ void	ft_strdup_test(void)
 
 */
 
+void	ft_nodefree(void *content)
+{
+	free(content);
+	content = NULL;
+	return ;
+}
+
+void	ft_dllprint(t_dll **head)
+{
+	t_dll	*tmp = *head;
+	int		*tmpnbr;
+	while(tmp != NULL)
+	{
+		tmpnbr = (int *)(tmp->content);
+		printf("mem: %p\n", tmp);
+		printf("conent: %d\n", *tmpnbr);
+		tmp = tmp->next;
+	}
+}
 
 void	ft_dll_test(void)
 {
@@ -623,27 +642,38 @@ void	ft_dll_test(void)
 	int		nbr3 = 3;
 	
 	
-	dllnode1 = ft_dllnew((void *)&nbr1);
-	dllnode2 = ft_dllnew((void *)&nbr2);
-	dllnode3 = ft_dllnew((void *)&nbr3);
+	dllnode1 = ft_dllnew((void *)ft_strdup((char *)&nbr1));
+	printf("node1: %p\n", dllnode1);
+	dllnode2 = ft_dllnew((void *)ft_strdup((char *)&nbr2));
+	printf("node2: %p\n", dllnode2);
+	dllnode3 = ft_dllnew((void *)ft_strdup((char *)&nbr3));
+	printf("node3: %p\n", dllnode3);
 	head = &dllnode1;
 	ft_dlladd_back(head, dllnode2);
-	ft_dlladd_front(head, dllnode3);
+	ft_dlladd_front(head, dllnode3); //updates head
+	head = &dllnode3;
 
 	//Print DLL
-	t_dll	*tmp;
-	tmp = *head;
-	int *tmpnbr;
-	while(tmp != NULL)
-	{
-		tmpnbr = (int *)(tmp->content);
-		printf("%d\n", *tmpnbr);
-		tmp = tmp->next;
-	}
+	ft_dllprint(head);
+	
 	//Print DLL's size
 	int size;
 	size = ft_dllsize(*head);
 	printf("size: %d\n", size);
+	
+	//
+	printf("node3 next: %p\n", dllnode3->next);
+	printf("node3 next's c: %d\n", *(int *)(dllnode3->next->content));
+	printf("node3 prev: %p\n", dllnode3->prev);
+	
+	printf("node1 next: %p\n", dllnode1->next);
+	printf("node1 next's c: %d\n", *(int *)(dllnode1->next->content));
+	printf("node1 prev: %p\n", dllnode1->prev);
+	//DEL ONE (delete first)
+	
+	ft_dlldelone(dllnode1, &ft_nodefree);
+	ft_dllprint(head);
+	
 }
 
 int	main(void)

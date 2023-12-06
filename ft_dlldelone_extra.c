@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlldelone.c                                     :+:      :+:    :+:   */
+/*   ft_dlldelone_extra.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
+/*   By: lmmielgo <lmmielgo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 17:39:30 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/04 17:39:31 by luciama2         ###   ########.fr       */
+/*   Updated: 2023/12/06 15:12:52 by lmmielgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,17 @@
 
 void	ft_dlldelone(t_dll *lst, void (*del)(void *))
 {
+	t_dll *prev;
+	t_dll *next;
 	del(lst->content);
-	lst->prev->next = lst->next;
-	lst->next = NULL;
-	lst->prev = NULL;
+	if (lst->prev != NULL)
+	{
+		prev = lst->prev;
+		next = lst->next;
+		prev->next = next;
+		if (next != NULL)
+			next->prev = prev;		
+	}
 	free(lst);
 	return ;
 }
