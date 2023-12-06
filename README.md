@@ -75,6 +75,7 @@ The first project at 42, libft, involves learning how the standard functions of 
   + [ ] `ft_putnbr_base` - for ft_printf
   + [ ] `ft_itoa_base` - for ft_printf
   + [ ] `ft_atoi_base`
+  + [x] `ft_intdup` - copying int in heap
     + DLL functions for 'push_swap'
       + [x] ft_dlladd_back.c
       + [x] ft_dlladd_fron.c

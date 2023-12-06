@@ -6,7 +6,7 @@
 /*   By: lmmielgo <lmmielgo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:05:46 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/06 16:56:12 by lmmielgo         ###   ########.fr       */
+/*   Updated: 2023/12/06 17:02:44 by lmmielgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -650,7 +650,7 @@ void	ft_dll_test(void)
 	printf("node3: %p\n", dllnode3);
 	head = &dllnode1;
 	ft_dlladd_back(head, dllnode2);
-	ft_dlladd_front(head, dllnode3); //updates head
+	ft_dlladd_front(head, dllnode3); //does not update head
 	head = &dllnode3;
 
 	//Print DLL

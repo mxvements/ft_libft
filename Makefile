@@ -54,6 +54,7 @@ MY_BONUS_SOURCES=	ft_lstnew_bonus.c \
 MY_EXTRA_SOURCES=	ft_islower_extra.c \
 					ft_isspace_extra.c \
 					ft_isupper_extra.c \
+					ft_intdup_extra.c \
 					ft_dllnew_extra.c \
 					ft_dlladd_front_extra.c \
 					ft_dllsize_extra.c \
