@@ -6,7 +6,7 @@
 /*   By: lmmielgo <lmmielgo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 17:23:06 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/06 14:48:01 by lmmielgo         ###   ########.fr       */
+/*   Updated: 2023/12/07 23:53:25 by lmmielgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ft_dlladd_back(t_dll **lst, t_dll *new)
 	{
 		tmp = ft_dlllast(*lst);
 		tmp->next = new;
+		new->prev = tmp;
 	}
 	return ;
 }
