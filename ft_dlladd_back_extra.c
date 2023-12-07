@@ -16,7 +16,7 @@ void	ft_dlladd_back(t_dll **lst, t_dll *new)
 {
 	t_dll	*tmp;
 
-	if (!lst)
+	if (!lst || !new)
 		return ;
 	if (*lst == NULL)
 		*lst = new;
