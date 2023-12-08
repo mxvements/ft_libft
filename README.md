@@ -77,6 +77,7 @@ The first project at 42, libft, involves learning how the standard functions of 
   + [ ] `ft_atoi_base`
   + [x] `ft_intdup` - copying int in heap
   + [x] `ft_atoif` - includes a flag to know when there is int overflow
+  + [x] `ft_issign` - checks '-' and '+', useful for push_swap 
   + DLL functions for 'push_swap'
     + [x] ft_dlladd_back.c
     + [x] ft_dlladd_fron.c

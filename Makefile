@@ -64,7 +64,8 @@ MY_EXTRA_SOURCES=	ft_islower_extra.c \
 					ft_dllclear_extra.c \
 					ft_dlliter_extra.c \
 					ft_dllmap_extra.c \
-					ft_atoif_extra.c
+					ft_atoif_extra.c \
+					ft_issign_extra.c
 
 MY_OBJECTS=$(MY_SOURCES:%.c=%.o)	
 
