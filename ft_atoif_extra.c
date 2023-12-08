@@ -16,6 +16,7 @@
  * LIB				stdlib.h
  * PROTOTYPE		int atoi(const char *str)
  * PARAMS			str: string to convert to int
+ * 					flag: int ptr to the flag that indicates int overflow
  * RETURN VALUE		int representation
  * 					if no valid conversion, returns (0)
  * EXTERNAL FUNCTS	ft_isspace(int c)
@@ -26,6 +27,7 @@
  * 					1st non-whitespace is found
  * 					takes an optionl plus or minus sign followed by as many
  * 					base-10 digits as posisible
+ * 					updates a flag to (-1) if there is int overflow
  */
 
 int	ft_atoif(const char *str, int *flag)
