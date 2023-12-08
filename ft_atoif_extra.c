@@ -41,7 +41,6 @@ int	ft_atoif(const char *str, int *flag)
 	i = 0;
 	x = 0;
 	sign = 1;
-	*flag = 0;
 	while (ft_isspace(cpy[i]) == 1)
 		i++;
 	if (cpy[i] == '+' || cpy[i] == '-')
@@ -50,11 +49,12 @@ int	ft_atoif(const char *str, int *flag)
 			sign *= -1;
 		i++;
 	}
-	while (ft_isdigit(cpy[i++]) == 1)
+	while (ft_isdigit(cpy[i]) == 1)
 	{
-		if (x >= INT_MAX && x <= INT_MIN)
-			*flag = -1;
 		x = (x * 10) + (cpy[i] - '0');
+		i++;
 	}
+	if (x >= INT_MAX && x <= INT_MIN)
+		*flag = -1;
 	return (x * sign);
 }
