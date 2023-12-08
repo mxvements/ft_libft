@@ -86,7 +86,7 @@ The first project at 42, libft, involves learning how the standard functions of 
       + [x] ft_dllmap.c
       + [x] ft_dllnew.c
       + [x] ft_dllsize.c
-  + 
+  + [x] `ft_atoif` - includes a flag to know when there is int overflow
 
 ## How to use
 
