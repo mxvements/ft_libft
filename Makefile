@@ -102,4 +102,3 @@ norminette:
 	norminette $(MY_SOURCES)
 
 re:	fclean all
-

@@ -16,9 +16,9 @@ t_dll	*ft_dlllast(t_dll *lst)
 {
 	t_dll	*tmp;
 
-	tmp = lst;
-	if (!tmp)
+	if (!lst)
 		return (NULL);
+	tmp = lst;
 	while (tmp->next != NULL)
 		tmp = tmp->next;
 	return (tmp);
