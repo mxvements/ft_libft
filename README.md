@@ -76,17 +76,17 @@ The first project at 42, libft, involves learning how the standard functions of 
   + [ ] `ft_itoa_base` - for ft_printf
   + [ ] `ft_atoi_base`
   + [x] `ft_intdup` - copying int in heap
-    + DLL functions for 'push_swap'
-      + [x] ft_dlladd_back.c
-      + [x] ft_dlladd_fron.c
-      + [x] ft_dllclear.c
-      + [x] ft_dlldelone.c
-      + [x] ft_dlliter.c
-      + [x] ft_dlllast.c
-      + [x] ft_dllmap.c
-      + [x] ft_dllnew.c
-      + [x] ft_dllsize.c
   + [x] `ft_atoif` - includes a flag to know when there is int overflow
+  + DLL functions for 'push_swap'
+    + [x] ft_dlladd_back.c
+    + [x] ft_dlladd_fron.c
+    + [x] ft_dllclear.c
+    + [x] ft_dlldelone.c
+    + [x] ft_dlliter.c
+    + [x] ft_dlllast.c
+    + [x] ft_dllmap.c
+    + [x] ft_dllnew.c
+    + [x] ft_dllsize.c
 
 ## How to use
 
