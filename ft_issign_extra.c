@@ -23,10 +23,10 @@
 
 int	ft_issign(int c)
 {
-	int option;
+	int	option;
 
 	option = 0;
-	if (c == '-' || c  == '+')
+	if (c == '-' || c == '+')
 		option = 1;
 	return (option);
 }
