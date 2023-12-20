@@ -54,7 +54,7 @@ int	ft_atoif(const char *str, int *flag)
 		x = (x * 10) + (cpy[i] - '0');
 		i++;
 	}
-	if (x > INT_MAX || x < INT_MIN)
+	if ((x * sign) < INT_MIN || ((sign == 1) && (x > INT_MAX)))
 		*flag = -1;
 	return (x * sign);
 }
