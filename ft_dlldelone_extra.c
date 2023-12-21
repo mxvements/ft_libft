@@ -14,8 +14,9 @@
 
 void	ft_dlldelone(t_dll *lst, void (*del)(void *))
 {
-	t_dll *prev;
-	t_dll *next;
+	t_dll	*prev;
+	t_dll	*next;
+
 	del(lst->content);
 	if (lst->prev != NULL)
 	{
@@ -23,7 +24,7 @@ void	ft_dlldelone(t_dll *lst, void (*del)(void *))
 		next = lst->next;
 		prev->next = next;
 		if (next != NULL)
-			next->prev = prev;		
+			next->prev = prev;
 	}
 	free(lst);
 	return ;

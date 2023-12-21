@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_dllsize(t_dll *lst)
+int	ft_dllsize(t_dll *lst)
 {
 	t_dll	*tmp;
 	int		count;
