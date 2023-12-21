@@ -52,9 +52,9 @@ int	ft_atoif(const char *str, int *flag)
 	while (ft_isdigit(cpy[i]) == 1)
 	{
 		x = (x * 10) + (cpy[i] - '0');
+		if ((x * sign) < INT_MIN || ((sign == 1) && (x > INT_MAX)))
+			*flag = -1;
 		i++;
 	}
-	if ((x * sign) < INT_MIN || ((sign == 1) && (x > INT_MAX)))
-		*flag = -1;
 	return (x * sign);
 }
