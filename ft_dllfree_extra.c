@@ -21,6 +21,8 @@ void	ft_dllfree(t_dll **head)
 	while (tmp != NULL)
 	{
 		tmpnext = tmp->next;
+		free(tmp->content);
+		tmp->content = NULL;
 		free(tmp);
 		tmp = tmpnext;
 	}
