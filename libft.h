@@ -54,6 +54,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
+int		ft_strchri(const char *s, int c);
+int		ft_strchr_count(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
@@ -98,6 +100,6 @@ void	ft_dlldelone(t_dll *lst, void (*del)(void *));
 void	ft_dllclear(t_dll **lst, void (*del)(void *));
 void	ft_dlliter(t_dll *lst, void (*f)(void *));
 t_dll	*ft_dllmap(t_dll *lst, void *(*f)(void *), void (*del)(void *));
-int		ft_strchr_i(const char *s, int c);
+
 
 #endif

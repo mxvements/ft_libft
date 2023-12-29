@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr_i_extra.c                                :+:      :+:    :+:   */
+/*   ft_strchr_count_extra.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/29 15:40:41 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/29 15:40:43 by luciama2         ###   ########.fr       */
+/*   Created: 2023/12/29 16:23:54 by luciama2          #+#    #+#             */
+/*   Updated: 2023/12/29 16:28:20 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strchri(const char *s, int c)
+int	ft_strchr_count(const char *s, int c)
 {
-	char	*cpy;
-	int		i;
+	int	count;
+	int	i;
 
-	cpy = (char *)s;
+	count = 0;
 	i = 0;
-	while (cpy[i] != '\0')
+	while (s[i] != '\0')
 	{
-		if (cpy[i] == c)
-			return (i);
+		if (s[i] == c)
+			count++;
 		i++;
 	}
-	return (i);
+	return (count);
 }
