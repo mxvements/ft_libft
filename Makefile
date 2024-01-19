@@ -67,6 +67,7 @@ MY_EXTRA_SOURCES=	ft_islower_extra.c \
 					ft_dllfree_extra.c \
 					ft_atoif_extra.c \
 					ft_atohf_extra.c \
+					ft_atoh_extra.c \
 					ft_issign_extra.c \
 					ft_strchr_i_extra.c \
 					ft_strchr_count_extra.c
