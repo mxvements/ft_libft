@@ -25,5 +25,7 @@ int	ft_strchri(const char *s, int c)
 			return (i);
 		i++;
 	}
-	return (i);
+	if (cpy[i] == '\0' && c != '\0')
+		return (-1);
+	return (-1);
 }
