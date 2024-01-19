@@ -19,7 +19,7 @@ static int	ft_hexaprefix(char *str)
 	return (0);
 }
 
-int	ft_atohf(const char *str, int *flag)
+int	ft_atoh(const char *str)
 {
 	const char	*dict_m = "0123456789abcdef";
 	long		x;
@@ -41,8 +41,6 @@ int	ft_atohf(const char *str, int *flag)
 	while (ft_strchri(dict_m, ft_tolower(str[i])) != -1)
 	{
 		x = (x * 16) + ft_strchri(dict_m, ft_tolower(str[i]));
-		if ((x * sign) < INT_MIN || ((sign == 1) && (x > INT_MAX)))
-			*flag = 1;
 		i++;
 	}
 	return (x * sign);
