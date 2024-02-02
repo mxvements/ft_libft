@@ -72,11 +72,13 @@ MY_EXTRA_SOURCES=	ft_islower_extra.c \
 					ft_strchr_i_extra.c \
 					ft_strchr_count_extra.c
 
-MY_OBJECTS=$(MY_SOURCES:%.c=%.o)	
+MY_OBJECTS_DIR=		./objs/
 
-MY_BONUS_OBJECTS=$(MY_BONUS_SOURCES:%.c=%.o)
+MY_OBJECTS=			$(MY_SOURCES:%.c=$(MY_OBJECTS_DIR)%.o)	
 
-MY_EXTRA_OBJECTS=$(MY_EXTRA_SOURCES:%.c=%.o)
+MY_BONUS_OBJECTS=	$(MY_BONUS_SOURCES:%.c=$(MY_OBJECTS_DIR)%.o)
+
+MY_EXTRA_OBJECTS=	$(MY_EXTRA_SOURCES:%.c=$(MY_OBJECTS_DIR)%.o)
 
 all: $(NAME)
 
@@ -92,11 +94,12 @@ extra: $(NAME) $(MY_BONUS_OBJECTS) $(MY_EXTRA_OBJECTS)
 test: test_libft.o
 	$(CC) test_libft.o -o $(TEST_NAME) -L. -lft
 
-%.o: %.c
-	$(CC) $(CFLAGS)	-c $<
+$(MY_OBJECTS_DIR)%.o: %.c
+	@mkdir -p $(MY_OBJECTS_DIR)
+	$(CC) $(CFLAGS)	-c $< -o $@
 
 clean:
-	rm -rf *.o $(MY_OBJECTS) $(MY_BONUS_OBJECTS) $(MY_EXTRA_OBJECTS)
+	rm -rf *.o $(MY_OBJECTS_DIR)
 
 fclean: clean
 	rm -rf $(NAME)
