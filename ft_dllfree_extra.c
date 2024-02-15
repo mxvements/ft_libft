@@ -26,5 +26,4 @@ void	ft_dllfree(t_dll **head)
 		free(tmp);
 		tmp = tmpnext;
 	}
-	//free(head);
 }
