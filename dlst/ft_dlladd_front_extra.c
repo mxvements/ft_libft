@@ -14,16 +14,12 @@
 
 void	ft_dlladd_front(t_dll **lst, t_dll *new)
 {
-	t_dll *oldhead;
+	t_dll	*oldhead;
 
 	if (!lst || !new)
 		return ;
-	
 	oldhead = *lst;
-	//*lst = new; //esto me da problemas con los nodos,
 	new->next = oldhead;
 	oldhead->prev = new;
-	
 	return ;
 }
- 

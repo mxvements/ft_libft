@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dllnew_extra.c                                  :+:      :+:    :+:   */
+/*   ft_strchr_count_extra.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciammielgo <luciammielgo@student.42.f    +#+  +:+       +#+        */
+/*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 17:13:13 by luciama2          #+#    #+#             */
-/*   Updated: 2024/06/21 18:58:08 by luciammielg      ###   ########.fr       */
+/*   Created: 2023/12/29 16:23:54 by luciama2          #+#    #+#             */
+/*   Updated: 2023/12/29 16:28:20 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-t_dll	*ft_dllnew(void *content)
+int	ft_strchr_count(const char *s, int c)
 {
-	t_dll	*newnode;
+	int	count;
+	int	i;
 
-	newnode = (t_dll *)malloc(sizeof(t_dll) * 1);
-	if (!newnode)
-		return (0);
-	newnode ->content = content;
-	newnode ->next = NULL;
-	newnode->prev = NULL;
-	return (newnode);
+	count = 0;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			count++;
+		i++;
+	}
+	return (count);
 }

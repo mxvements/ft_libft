@@ -28,7 +28,6 @@ void	ft_dllclear(t_dll **lst, void (*del)(void *))
 		del(tmp->content);
 		free(tmp);
 	}
-	*lst = NULL; //need to check this
+	*lst = NULL;
 	return ;
-
 }

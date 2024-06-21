@@ -44,6 +44,7 @@ int	main(void)
 	ft_lstadd_front(&testlist, ft_lstnew(newnode2));
 	ft_lstadd_front(&testlist, ft_lstnew(newnode3));
 	
-	printf("testlist last's content: %s\n", (char *)ft_lstlast(testlist)->content);
+	printf("testlist last's content: %s\n", 
+		(char *)ft_lstlast(testlist)->content);
 	return(0);
 }*/

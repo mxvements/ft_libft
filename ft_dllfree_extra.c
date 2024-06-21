@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dllnew_extra.c                                  :+:      :+:    :+:   */
+/*   ft_dllfree_extra.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciammielgo <luciammielgo@student.42.f    +#+  +:+       +#+        */
+/*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 17:13:13 by luciama2          #+#    #+#             */
-/*   Updated: 2024/06/21 18:58:08 by luciammielg      ###   ########.fr       */
+/*   Created: 2023/12/28 20:22:01 by luciama2          #+#    #+#             */
+/*   Updated: 2023/12/28 20:22:03 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-t_dll	*ft_dllnew(void *content)
+void	ft_dllfree(t_dll **head)
 {
-	t_dll	*newnode;
+	t_dll	*tmp;
+	t_dll	*tmpnext;
 
-	newnode = (t_dll *)malloc(sizeof(t_dll) * 1);
-	if (!newnode)
-		return (0);
-	newnode ->content = content;
-	newnode ->next = NULL;
-	newnode->prev = NULL;
-	return (newnode);
+	tmp = *head;
+	while (tmp != NULL)
+	{
+		tmpnext = tmp->next;
+		free(tmp->content);
+		tmp->content = NULL;
+		free(tmp);
+		tmp = tmpnext;
+	}
 }

@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dllnew_extra.c                                  :+:      :+:    :+:   */
+/*   ft_strchr_i_extra.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciammielgo <luciammielgo@student.42.f    +#+  +:+       +#+        */
+/*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 17:13:13 by luciama2          #+#    #+#             */
-/*   Updated: 2024/06/21 18:58:08 by luciammielg      ###   ########.fr       */
+/*   Created: 2023/12/29 15:40:41 by luciama2          #+#    #+#             */
+/*   Updated: 2023/12/29 15:40:43 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-t_dll	*ft_dllnew(void *content)
+int	ft_strchri(const char *s, int c)
 {
-	t_dll	*newnode;
+	char	*cpy;
+	int		i;
 
-	newnode = (t_dll *)malloc(sizeof(t_dll) * 1);
-	if (!newnode)
-		return (0);
-	newnode ->content = content;
-	newnode ->next = NULL;
-	newnode->prev = NULL;
-	return (newnode);
+	cpy = (char *)s;
+	i = 0;
+	while (cpy[i] != '\0')
+	{
+		if (cpy[i] == c)
+			return (i);
+		i++;
+	}
+	if (cpy[i] == '\0' && c != '\0')
+		return (-1);
+	return (-1);
 }
