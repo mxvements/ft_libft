@@ -68,26 +68,6 @@ The first project at 42, libft, involves learning how the standard functions of 
   + [x] `ft_lstiter`
   + [x] `ft_lstmap`
 + Other functions added to the library (included after validating the project on the intra)
-  + [x] `ft_isupper`
-  + [x] `ft_islower`
-  + [x] `ft_isspace`
-  + [ ] `ft_countwords` - used static in split
-  + [ ] `ft_putnbr_base` - for ft_printf
-  + [ ] `ft_itoa_base` - for ft_printf
-  + [ ] `ft_atoi_base`
-  + [x] `ft_intdup` - copying int in heap
-  + [x] `ft_atoif` - includes a flag to know when there is int overflow
-  + [x] `ft_issign` - checks '-' and '+', useful for push_swap 
-  + DLL functions for 'push_swap'
-    + [x] ft_dlladd_back.c
-    + [x] ft_dlladd_fron.c
-    + [x] ft_dllclear.c
-    + [x] ft_dlldelone.c
-    + [x] ft_dlliter.c
-    + [x] ft_dlllast.c
-    + [x] ft_dllmap.c
-    + [x] ft_dllnew.c
-    + [x] ft_dllsize.c
 
 ## How to use
 
@@ -141,7 +121,6 @@ git clone git@github.com:mxvements/ft_libft.git
 | **ft_strncmp**  | string.h | int ft_strncmp(const char *s1, const char *s2, size_t n) | compare strings, not more than n characters compare strings, not more than n characters, the comparison is done using unsigned characters | - |
 | **ft_strnstr**  | string.h | char *ft_strnstr(const char *haystack, const char *needle, size_t len) | locates the first occurrence of the null-terminate string needle' in the string 'haystack', where not more than 'len' characters are searched. | - |
 | **ft_substr**  | - | char *ft_substr(char const *s, unsigned int start, size_t len) |  allocates (with malloc(3)) and returns a substring from 's' the substring begins at start and is max of size len | malloc |
-| **ft_strjoin**  |  - | char *ft_strjoin(char const *s1, char const *s2) | allocates (with malloc(3)) and returns a new sring, which is the result of the concatenation of s1 and s2 | malloc |
 | **ft_strjoin**  |  - | char *ft_strjoin(char const *s1, char const *s2) | allocates (with malloc(3)) and returns a new sring, which is the result of the concatenation of s1 and s2 | malloc |
 | **ft_strtrim**  |  - | char *ft_strtrim(char const *s1, char const *set) | allocates (with malloc(3)) and returns a copy of s1 with the characters specified in 'set' removed from the beginning and the end of the string | malloc, ft_strlen, ft_substr, ft_getfirstindex, ft_getlastindex, ft_strchr |
 | **ft_split**  |  - | char **ft_split(char const *s, char c) | allocates (with malloc(3)) and returns an array of strings obtained by splitting 's' using the character 'c' as a delimiter. The array must end with a NULL pointer. | malloc, ft_strtrimwrapper, t_substr, ft_countwords |

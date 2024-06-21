@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   test_libft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmmielgo <lmmielgo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: luciammielgo <luciammielgo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:05:46 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/06 17:02:44 by lmmielgo         ###   ########.fr       */
+/*   Updated: 2024/06/21 19:02:39 by luciammielg      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./libft.h"
 
 
 /*
