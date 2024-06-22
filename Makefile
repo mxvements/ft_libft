@@ -21,7 +21,9 @@ CHAR_FILES=	ft_isalpha.c \
 NBR_PATH=	./nbr/
 NBR_FILES=	ft_atoi.c \
 			ft_itoa.c \
-			ft_atoif_extra.c
+			ft_atoif_extra.c \
+			ft_atoh_extra.c \
+			ft_atohf_exta.c
 
 # memory manipulation
 MEM_PATH=	./mem/
@@ -45,10 +47,15 @@ STR_FILES=	ft_substr.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
 			ft_strjoin.c \
-			ft_strtrim.c \
+			ft_strtrim.c \ 
 			ft_split.c \
 			ft_strmapi.c \
-			ft_striteri.c
+			ft_striteri.c \
+			ft_strchri_extra.c \
+			ft_strchr_count_extra.c
+
+# string array manipulation
+
 
 # put text on outfile
 PUT_PATH=	./put/
@@ -56,6 +63,8 @@ PUT_FILES=	ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
+
+# free functions
 
 # linked lists
 LST_PATH=	./lst/
@@ -79,7 +88,11 @@ DLST_FILES=	ft_dllnew_extra.c \
 			ft_dlldelone_extra.c \
 			ft_dllclear_extra.c \
 			ft_dlliter_extra.c \
-			ft_dllmap_extra.c
+			ft_dllmap_extra.c \
+			ft_dllfree_extra.c
+
+# binary-tree
+
 # objs
 OBJ_PATH =	./.obj/
 OBJ=		$(CHAR_FILES:%.c=$(OBJ_PATH)%.o) \
