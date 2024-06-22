@@ -1,5 +1,7 @@
 #include "../libft.h"
 
+//todo: this should be named concat
+
 char	**strarr_join(char **sa1, char **sa2)
 {
 	char 		**sa_rslt;

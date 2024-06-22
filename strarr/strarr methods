@@ -1,0 +1,18 @@
+join -> concat
+
+includes
+find(element),
+findidx
+findlast
+findlastidx
+
+flat, version of flatten
+slice(start, end)
+splice(start, deleteCount, item1...itemN)
+reverse
+
+map(callbackFunctio), apply funct to array
+
+pop(void), removes de last element
+push(void), adds to the end
+shift(void), removes the 1st element
