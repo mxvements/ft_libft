@@ -1,15 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_treeclear_extra.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/28 20:19:35 by luciama2          #+#    #+#             */
+/*   Updated: 2024/11/28 20:23:25 by luciama2         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "./tree.h"
 
 static void	strarr_free(char **strarr)
 {
-	while(strarr)
+	while (strarr)
 	{
 		free(strarr);
 		strarr++;
 	}
 }
-
+/*
 void	del_token(void *content)
 {
 	t_token	*token;
@@ -29,7 +40,7 @@ void	del_token(void *content)
 	if (token->varname)
 		free(token->varname);
 	free(token);
-}
+}*/
 
 void	del(void *content)
 {

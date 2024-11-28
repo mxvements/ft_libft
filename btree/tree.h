@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tree.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/28 20:24:13 by luciama2          #+#    #+#             */
+/*   Updated: 2024/11/28 20:24:49 by luciama2         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef TREE_H
 # define TREE_H
 
@@ -6,7 +18,7 @@
 
 typedef struct s_tree
 {
-	void 			*content;
+	void			*content;
 	struct s_tree	*right;
 	struct s_tree	*left;
 	struct s_tree	*parent;
@@ -31,8 +43,9 @@ int		ft_treesize(t_tree **root);
 //tree print
 void	ft_treeprint(t_tree **root); //depends on t_content
 //tree clear
-void	ft_treeclear(t_tree **root, void (*del)(void  *));
+void	ft_treeclear(t_tree **root, void (*del)(void *));
 void	del(void *content); //depends on t_content
 //tree iter
 void	ft_treeiter(t_tree **root, void (*f)(void *));
+
 #endif
