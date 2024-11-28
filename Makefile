@@ -1,7 +1,7 @@
-CC=gcc
-CFLAGS=-Wall -Wextra -Werror -g3
-NAME=libft.a
-TEST_NAME=libft.out
+CC=			cc
+CFLAGS=		-Wall -Wextra -Werror -g3
+NAME=		libft.a
+TEST_NAME=	libft.out
 
 # char check & manipulation files
 CHAR_PATH=	./char/
@@ -23,7 +23,7 @@ NBR_FILES=	ft_atoi.c \
 			ft_itoa.c \
 			ft_atoif_extra.c \
 			ft_atoh_extra.c \
-			ft_atohf_exta.c
+			ft_atohf_extra.c
 
 # memory manipulation
 MEM_PATH=	./mem/
@@ -47,7 +47,7 @@ STR_FILES=	ft_substr.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
 			ft_strjoin.c \
-			ft_strtrim.c \ 
+			ft_strtrim.c \
 			ft_split.c \
 			ft_strmapi.c \
 			ft_striteri.c \

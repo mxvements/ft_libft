@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dllfree_extra.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciama2 <luciama2@student.42madrid>       +#+  +:+       +#+        */
+/*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 20:22:01 by luciama2          #+#    #+#             */
-/*   Updated: 2023/12/28 20:22:03 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/11/28 18:54:22 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_dllfree(t_dll **head)
 {
