@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 20:30:43 by luciama2          #+#    #+#             */
-/*   Updated: 2024/11/28 20:37:44 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/11/28 20:51:11 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,14 @@ char	**strarr_concat(char **sa1, char **sa2)
 	{
 		sa_rslt[i] = ft_strdup(sa1[i]);
 		if (!sa_rslt[i])
-		{
-			strarr_free_element(sa_rslt);
-			return (free(sa_rslt), NULL);
-		}
+			return (strarr_free_element(sa_rslt), free(sa_rslt), NULL);
 	}
 	j = -1;
 	while (sa2[++j])
 	{
 		sa_rslt[i + j] = ft_strdup(sa2[j]);
 		if (!sa_rslt[i + j])
-		{
-			strarr_free_element(sa_rslt);
-			free(sa_rslt);
-			return (free(sa_rslt), NULL);
-
-		}
+			return (strarr_free_element(sa_rslt), free(sa_rslt), NULL);
 	}
 	sa_rslt[i + j] = NULL;
 	return (sa_rslt);

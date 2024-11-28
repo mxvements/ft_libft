@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciammielgo <luciammielgo@student.42.f    +#+  +:+       +#+        */
+/*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:23:04 by luciama2          #+#    #+#             */
-/*   Updated: 2024/06/22 08:47:24 by luciammielg      ###   ########.fr       */
+/*   Updated: 2024/11/28 20:49:44 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <ctype.h>
 # include <unistd.h>
@@ -20,21 +21,12 @@
 # include <limits.h>
 # include <string.h>
 # include <strings.h>
-#include <stdarg.h>
+# include <stdarg.h>
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
-
-typedef struct s_dll
-{
-	void			*content;
-	struct s_dll	*next;
-	struct s_dll	*prev;
-
-}	t_dll;
+# include "strarr/strarr.h"
+# include "btree/tree.h"
+# include "lst/lst.h"
+# include "dlst/dlst.h"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -80,28 +72,5 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		*ft_intdup(const int nbr);
-
-/* LL */
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void*));
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-/* DLL */
-void	ft_dllfree(t_dll **head);
-t_dll	*ft_dllnew(void *content);
-void	ft_dlladd_front(t_dll **lst, t_dll *new);
-int		ft_dllsize(t_dll *lst);
-t_dll	*ft_dlllast(t_dll *lst);
-void	ft_dlladd_back(t_dll **lst, t_dll *new);
-void	ft_dlldelone(t_dll *lst, void (*del)(void *));
-void	ft_dllclear(t_dll **lst, void (*del)(void *));
-void	ft_dlliter(t_dll *lst, void (*f)(void *));
-t_dll	*ft_dllmap(t_dll *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
