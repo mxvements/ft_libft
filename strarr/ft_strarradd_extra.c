@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strarradd_extra.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/28 20:30:30 by luciama2          #+#    #+#             */
+/*   Updated: 2024/11/28 20:31:01 by luciama2         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
 
-char **strarr_add(char **sa_src, char *s)
+char	**strarr_add(char **sa_src, char *s)
 {
-	char **sa_dst;
-	int		i;
-	int const len = strarr_len(sa_src);
+	char		**sa_dst;
+	int			i;
+	int const	len = strarr_len(sa_src);
 
 	sa_dst = (char **)ft_calloc(len + 2, sizeof(char *));
 	i = 0;

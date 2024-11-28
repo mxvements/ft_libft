@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strarrflatten_extra.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/28 20:30:37 by luciama2          #+#    #+#             */
+/*   Updated: 2024/11/28 20:31:29 by luciama2         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
 
 char	*strarr_flatten(int idx, char **sa, char *sep)
@@ -14,14 +26,13 @@ char	*strarr_flatten(int idx, char **sa, char *sep)
 	while (sa[++i])
 	{
 		tmp = rslt;
-		if (i == idx) //en el primero no
+		if (i == idx)
 			tmp_sp = ft_strdup(tmp);
 		else
 			tmp_sp = ft_strjoin(tmp, sep);
-		if (!tmp_sp) //protection
+		if (!tmp_sp)
 			return (free(tmp), NULL);
 		free(tmp);
-		//printf("starr_flatten: [%s]\n", tmp_sp);
 		rslt = ft_strjoin(tmp_sp, sa[i]);
 		if (!rslt)
 			return (free(tmp_sp), NULL);

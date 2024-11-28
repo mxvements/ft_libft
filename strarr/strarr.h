@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strarrlen_extra.c                               :+:      :+:    :+:   */
+/*   strarr.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/28 20:30:45 by luciama2          #+#    #+#             */
-/*   Updated: 2024/11/28 20:30:46 by luciama2         ###   ########.fr       */
+/*   Created: 2024/11/28 20:38:17 by luciama2          #+#    #+#             */
+/*   Updated: 2024/11/28 20:38:39 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#ifndef STRARR_H
+#define STRARR_H
 
-int	strarr_len(char **sa)
-{
-	int	i;
-
-	i = 0;
-	while (sa[i])
-		i++;
-	return (i);
-}
+#endif
