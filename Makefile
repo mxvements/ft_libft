@@ -55,7 +55,12 @@ STR_FILES=	ft_substr.c \
 			ft_strchr_count_extra.c
 
 # string array manipulation
-
+STRAR_PATH=		./strarr/
+STRAR_FILES=	ft_strarradd_extra.c \
+				ft_strarrconcat_extra.c \
+				ft_strarrflatten_extra.c \
+				ft_strarrfree_extra.c \
+				ft_strarrlen_extra.c
 
 # put text on outfile
 PUT_PATH=	./put/
@@ -65,6 +70,9 @@ PUT_FILES=	ft_putchar_fd.c \
 			ft_putnbr_fd.c
 
 # free functions
+FR_PATH=	./free/
+FR_FILES=	ft_freenull_extra.c \
+			ft_freenullva_extra.c
 
 # linked lists
 LST_PATH=	./lst/
@@ -101,7 +109,9 @@ OBJ=		$(CHAR_FILES:%.c=$(OBJ_PATH)%.o) \
 			$(STR_FILES:%.c=$(OBJ_PATH)%.o) \
 			$(PUT_FILES:%.c=$(OBJ_PATH)%.o) \
 			$(LST_FILES:%.c=$(OBJ_PATH)%.o) \
-			$(DLST_FILES:%.c=$(OBJ_PATH)%.o) 
+			$(DLST_FILES:%.c=$(OBJ_PATH)%.o) \
+			$(STRAR_FILES:%.c=$(OBJ_PATH)%.o) \
+			$(FR_FILES:%.c=$(OBJ_PATH)%.o)
 			
 
 #rules
@@ -138,6 +148,13 @@ $(OBJ_PATH)%.o: $(DLST_PATH)%.c
 	@mkdir -p $(OBJ_PATH)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+$(OBJ_PATH)%.o: $(STRAR_PATH)%.c
+	@mkdir -p $(OBJ_PATH)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_PATH)%.o: $(FR_PATH)%.c
+	@mkdir -p $(OBJ_PATH)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 test: test_libft.o
 	$(CC) test_libft.o -o $(TEST_NAME) -L. -lft

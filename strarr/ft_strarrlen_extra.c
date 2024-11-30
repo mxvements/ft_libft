@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 20:30:45 by luciama2          #+#    #+#             */
-/*   Updated: 2024/11/28 20:30:46 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/11/30 20:54:16 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	strarr_len(char **sa)
 	int	i;
 
 	i = 0;
+	if (!sa || !*sa)
+		return (0);
 	while (sa[i])
 		i++;
 	return (i);

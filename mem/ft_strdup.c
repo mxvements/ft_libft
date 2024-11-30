@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciammielgo <luciammielgo@student.42.f    +#+  +:+       +#+        */
+/*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 13:49:14 by luciama2          #+#    #+#             */
-/*   Updated: 2024/06/21 18:58:08 by luciammielg      ###   ########.fr       */
+/*   Updated: 2024/11/30 21:05:47 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
  * 					allocates at most 'n' char from 's1' always terminating
  * 					the copied str.
  */
-
 char	*ft_strdup(const char *s1)
 {
 	char			*cpy;

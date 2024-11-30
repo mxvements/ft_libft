@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:23:04 by luciama2          #+#    #+#             */
-/*   Updated: 2024/11/28 20:49:44 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/11/30 20:39:05 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # include "btree/tree.h"
 # include "lst/lst.h"
 # include "dlst/dlst.h"
+# include "free/free.h"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
