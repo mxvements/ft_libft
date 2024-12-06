@@ -60,7 +60,8 @@ STRAR_FILES=	ft_strarradd_extra.c \
 				ft_strarrconcat_extra.c \
 				ft_strarrflatten_extra.c \
 				ft_strarrfree_extra.c \
-				ft_strarrlen_extra.c
+				ft_strarrlen_extra.c \
+				ft_strarrprint_extra.c
 
 # put text on outfile
 PUT_PATH=	./put/
