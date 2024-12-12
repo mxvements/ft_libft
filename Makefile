@@ -53,7 +53,8 @@ STR_FILES=	ft_substr.c \
 			ft_striteri.c \
 			ft_strchri_extra.c \
 			ft_strchr_count_extra.c \
-			ft_strstrip_extra.c
+			ft_strstrip_extra.c \
+			ft_strjoin_free_extra.c
 
 # string array manipulation
 STRAR_PATH=		./strarr/

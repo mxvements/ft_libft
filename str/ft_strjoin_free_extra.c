@@ -1,52 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin_free_extra.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/29 18:16:57 by luciama2          #+#    #+#             */
-/*   Updated: 2024/12/12 20:20:40 by luciama2         ###   ########.fr       */
+/*   Created: 2024/12/12 20:20:05 by luciama2          #+#    #+#             */
+/*   Updated: 2024/12/12 20:27:33 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* ft_strjoin
+/* ft_strjoin_free
  * LIB				-
  * PROTOTYPE		char *ft_strjoin(char const *s1, char const *s2)
- * PARAMS			s1: the prefix string
- *					s2: the suffix string
+ * PARAMS			s1(dst): the prefix string, will be free
+ *					s2(s): the suffix string
  * RETURN VALUES	char *, the new string
  *					NULL if the allocation fails.
  * EXTERNAL FUNCTS	malloc
  * DESCRIPTION		allocates (with malloc(3)) and returns a new sring, which
- * 					is the result of the concatenation of s1 and s2
+ * 					is the result of the concatenation of s1 and s2. Frees s1.
 */
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin_free(char **dst, char **s)
 {
-	char			*strjoin;
-	char const		*cpy1;
-	char const		*cpy2;
-	size_t			i;
-	size_t const	len = ft_strlen(s1) + ft_strlen(s2);
+	char	*tmp;
+	char	*s1;
+	char	*s2;
 
-	cpy1 = s1;
-	cpy2 = s2;
-	strjoin = (char *)malloc(sizeof(char) * (len + 1));
-	if (!strjoin)
-		return (0);
-	i = 0;
-	while (*cpy1 != '\0' && i < len)
+	s1 = *dst;
+	s2 = *s;
+	tmp = ft_strdup(s1);
+	if (!tmp)
+		return (NULL);
+	free(s1);
+	s1 = ft_strjoin(tmp, s2);
+	if (!s1)
 	{
-		strjoin[i++] = *cpy1;
-		cpy1++;
+		free(tmp);
+		return (NULL);
 	}
-	while (*cpy2 != '\0' && i < len)
-	{
-		strjoin[i++] = *cpy2;
-		cpy2++;
-	}
-	strjoin[i] = '\0';
-	return (strjoin);
+	free(tmp);
+	return (s1);
 }

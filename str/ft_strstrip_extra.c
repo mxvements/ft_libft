@@ -6,13 +6,13 @@
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 20:14:00 by luciama2          #+#    #+#             */
-/*   Updated: 2024/12/12 20:17:16 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/12/12 20:20:19 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* ft_strtrim
+/* ft_strstrip
  * LIB					-
  * PROTOTYPE			void	strip_line(char **src, size_t src_len, char c)
  * PARAMS				s1: the string to be trimmed
