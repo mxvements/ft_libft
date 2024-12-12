@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 20:38:17 by luciama2          #+#    #+#             */
-/*   Updated: 2024/11/28 20:50:39 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/12/06 12:44:24 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ char	*strarr_flatten(int idx, char **sa, char *sep);
 int		strarr_len(char **sa);
 char	*strarr_free_element(char **sa);
 char	*strarr_freenull(char ***sa);
+void	strarr_print(char **str);
 
 #endif
