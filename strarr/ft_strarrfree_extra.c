@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 20:30:40 by luciama2          #+#    #+#             */
-/*   Updated: 2024/11/30 21:01:56 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/12/16 20:07:55 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 char	*strarr_free_element(char **sa)
 {
+	const int	len = strarr_len(sa);
 	char	*tmp;
+	int		i;
 
-	while (*sa)
+	i = -1;
+	while (sa[++i] && i < len)
 	{
-		tmp = *sa;
-		sa++;
+		tmp = sa[i];
 		ft_freenull(&tmp);
 	}
 	return (NULL);
