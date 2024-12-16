@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 20:30:30 by luciama2          #+#    #+#             */
-/*   Updated: 2024/11/30 21:01:08 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/12/16 20:08:03 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ char	**strarr_add(char **sa_src, char *s)
 	if (!sa_dst[i])
 		return ((char **)strarr_freenull(&sa_dst));
 	sa_dst[i + 1] = NULL;
-	strarr_freenull(&sa_src);
+	if (sa_src && *sa_src)
+		strarr_freenull(&sa_src);
 	return (sa_dst);
 }

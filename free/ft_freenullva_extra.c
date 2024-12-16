@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 20:25:56 by luciama2          #+#    #+#             */
-/*   Updated: 2024/11/28 20:26:10 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/12/14 15:55:45 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_freenull_va(char **first, ...)
 	va_start(vargs, first);
 	ft_freenull(first);
 	current = va_arg(vargs, char **);
-	while (*current)
+	while (current)
 	{
 		ft_freenull(current);
 		current = va_arg(vargs, char **);

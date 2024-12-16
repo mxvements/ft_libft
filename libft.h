@@ -6,7 +6,7 @@
 /*   By: luciama2 <luciama2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:23:04 by luciama2          #+#    #+#             */
-/*   Updated: 2024/12/12 20:22:17 by luciama2         ###   ########.fr       */
+/*   Updated: 2024/12/16 20:11:50 by luciama2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-char 	*ft_strjoin_free(char **dst, char **s);
+char	*ft_strjoin_free(char **dst, char **s);
 char	*ft_strtrim(char const *s1, const char *set);
 void	ft_strstrip(char **src, size_t src_len, char c);
 char	**ft_split(char const *s, char c);
